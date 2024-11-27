@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FhK-N6-xZq">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="UIMenu" message="Requires Xcode 11 or later." minToolsVersion="11.0" requiredIntegratedClassName="UICommandDiff"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Evant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vma-IO-6yb">
-                                <rect key="frame" x="10" y="137" width="373" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Evant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vma-IO-6yb">
+                                <rect key="frame" x="10" y="123" width="373" height="34"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -29,22 +29,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oN8-3b-VT5">
-                                <rect key="frame" x="10" y="254" width="373" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-ij-yj4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez9-ij-yj4">
                                 <rect key="frame" x="10" y="78" width="373" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Upload Photos"/>
@@ -52,9 +38,8 @@
                                     <action selector="Button:" destination="dEA-ei-unc" eventType="touchUpInside" id="jpZ-ai-FCm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-fR-cga">
-                                <rect key="frame" x="10" y="198" width="373" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-fR-cga">
+                                <rect key="frame" x="10" y="167" width="373" height="30"/>
                                 <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -67,21 +52,29 @@
                                 <state key="normal" title="Venu"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4N-6v-bOl">
-                                <rect key="frame" x="10" y="321" width="77.333333333333329" height="44"/>
+                                <rect key="frame" x="10" y="236" width="77.333333333333329" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8k4-pF-xhx">
-                                <rect key="frame" x="10" y="360" width="383" height="49"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8k4-pF-xhx">
+                                <rect key="frame" x="10" y="275" width="393" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                <date key="date" timeIntervalSinceReferenceDate="754388306.19181705">
+                                    <!--2024-11-27 08:18:26 +0000-->
+                                </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-59-5Ca">
-                                <rect key="frame" x="5" y="434" width="383" height="49"/>
-                            </datePicker>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAN-F5-wcy">
-                                <rect key="frame" x="10" y="510" width="373" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-nE-zOv">
+                                <rect key="frame" x="159" y="771" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKs-ko-v4p">
+                                <rect key="frame" x="10" y="207" width="373" height="34"/>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -92,35 +85,44 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-nE-zOv">
-                                <rect key="frame" x="159" y="771" width="75" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9X-uH-mrj">
+                                <rect key="frame" x="16" y="433" width="77.333333333333329" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Create"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-Zp-7eS">
-                                <rect key="frame" x="5" y="686" width="378" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <menu key="menu" id="4rb-vt-GGS">
-                                    <children>
-                                        <command title="Item 1" id="K9V-EK-bI7"/>
-                                        <command title="Item 2" id="sb0-2Z-Yh2"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Event Statue"/>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cah-Sn-L4p">
+                                <rect key="frame" x="0.0" y="575" width="393" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemGray4Color"/>
+                                <date key="date" timeIntervalSinceReferenceDate="754388306.19181705">
+                                    <!--2024-11-27 08:18:26 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Yq-8M-9AO"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="IAN-F5-wcy" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="Doe-8R-EEV"/>
-                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="IAN-F5-wcy" secondAttribute="trailing" constant="10" id="NRZ-Rk-u9c"/>
-                            <constraint firstItem="IAN-F5-wcy" firstAttribute="top" secondItem="Pj7-59-5Ca" secondAttribute="bottom" constant="10" id="WbD-Lv-lhg"/>
+                            <constraint firstItem="ez9-ij-yj4" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="0sF-fk-gX2"/>
+                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="OBB-fR-cga" secondAttribute="trailing" constant="10" id="5aj-Kf-2fp"/>
+                            <constraint firstItem="OBB-fR-cga" firstAttribute="top" secondItem="Vma-IO-6yb" secondAttribute="bottom" constant="10" id="81o-dJ-REO"/>
+                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="ez9-ij-yj4" secondAttribute="trailing" constant="10" id="AwW-RG-eEe"/>
+                            <constraint firstItem="mKs-ko-v4p" firstAttribute="top" secondItem="OBB-fR-cga" secondAttribute="bottom" constant="10" id="T4m-Wt-A9E"/>
+                            <constraint firstItem="Vma-IO-6yb" firstAttribute="top" secondItem="ez9-ij-yj4" secondAttribute="bottom" constant="10" id="VKe-FN-hJe"/>
+                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="Vma-IO-6yb" secondAttribute="trailing" constant="10" id="XmG-Oj-z9E"/>
+                            <constraint firstItem="mKs-ko-v4p" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="ZHt-xq-xXu"/>
+                            <constraint firstItem="OBB-fR-cga" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="Zqb-Qy-FH2"/>
+                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="mKs-ko-v4p" secondAttribute="trailing" constant="10" id="cmu-ll-v4f"/>
+                            <constraint firstItem="ez9-ij-yj4" firstAttribute="top" secondItem="6Yq-8M-9AO" secondAttribute="top" constant="19" id="rR6-3o-bXJ"/>
+                            <constraint firstItem="Vma-IO-6yb" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="uWh-f2-1g9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wx8-FH-pgt"/>
                     <connections>
                         <outlet property="event_photo" destination="ez9-ij-yj4" id="f23-GO-emu"/>
+                        <outlet property="start_dtpicker" destination="8k4-pF-xhx" id="8Bw-3N-Xdh"/>
                     </connections>
                 </viewController>
                 <exit id="dEA-ei-unc" userLabel="Exit" sceneMemberID="exit"/>
@@ -130,4 +132,12 @@
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
