@@ -77,27 +77,13 @@
                                 <rect key="frame" x="10" y="360" width="383" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-59-5Ca">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-59-5Ca">
                                 <rect key="frame" x="5" y="434" width="383" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-Zp-7eS">
-                                <rect key="frame" x="5" y="686" width="378" height="30"/>
-                                <menu key="menu" id="4rb-vt-GGS">
-                                    <children>
-                                        <command title="Item 1" id="K9V-EK-bI7"/>
-                                        <command title="Item 2" id="sb0-2Z-Yh2"/>
-                                    </children>
-                                </menu>
-                                <state key="normal" title="Event Statue"/>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IAN-F5-wcy">
                                 <rect key="frame" x="10" y="510" width="373" height="34"/>
                                 <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="oui-v8-4LK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
@@ -112,17 +98,24 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Create"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-Zp-7eS">
+                                <rect key="frame" x="5" y="686" width="378" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <menu key="menu" id="4rb-vt-GGS">
+                                    <children>
+                                        <command title="Item 1" id="K9V-EK-bI7"/>
+                                        <command title="Item 2" id="sb0-2Z-Yh2"/>
+                                    </children>
+                                </menu>
+                                <state key="normal" title="Event Statue"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Yq-8M-9AO"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="IAN-F5-wcy" secondAttribute="trailing" constant="10" id="5ca-HA-6KT"/>
-                            <constraint firstItem="IAN-F5-wcy" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="a3q-tT-PI9"/>
-                            <constraint firstItem="Nih-Zp-7eS" firstAttribute="top" secondItem="IAN-F5-wcy" secondAttribute="bottom" constant="1" id="caC-RZ-mqa"/>
-                            <constraint firstItem="IAN-F5-wcy" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="h0t-gd-IVe"/>
-                            <constraint firstItem="IAN-F5-wcy" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="jPa-LX-SjA"/>
-                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="IAN-F5-wcy" secondAttribute="trailing" constant="10" id="rRW-X2-nbE"/>
-                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="IAN-F5-wcy" secondAttribute="trailing" constant="10" id="zdW-8p-yLq"/>
+                            <constraint firstItem="IAN-F5-wcy" firstAttribute="leading" secondItem="6Yq-8M-9AO" secondAttribute="leading" constant="10" id="Doe-8R-EEV"/>
+                            <constraint firstItem="6Yq-8M-9AO" firstAttribute="trailing" secondItem="IAN-F5-wcy" secondAttribute="trailing" constant="10" id="NRZ-Rk-u9c"/>
+                            <constraint firstItem="IAN-F5-wcy" firstAttribute="top" secondItem="Pj7-59-5Ca" secondAttribute="bottom" constant="10" id="WbD-Lv-lhg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wx8-FH-pgt"/>
