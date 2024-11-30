@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         event_photo.layer.cornerRadius = 5
         start_dtpicker.setValue(UIColor.white, forKey: "textColor")
         
+   
+        
         
         // Set the tint color to white
        
