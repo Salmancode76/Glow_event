@@ -1,0 +1,75 @@
+
+/* Class = "UICommand"; title = "Item 1"; ObjectID = "E7B-qd-Ed7"; */
+"E7B-qd-Ed7.title" = "Item 1";
+
+/* Class = "UICommand"; title = "Item 1"; ObjectID = "FF2-3w-46Z"; */
+"FF2-3w-46Z.title" = "Item 1";
+
+/* Class = "UICommand"; title = "Item 2"; ObjectID = "GOh-bb-XX6"; */
+"GOh-bb-XX6.title" = "Item 2";
+
+/* Class = "UICommand"; title = "Item 2"; ObjectID = "GmF-qs-qjC"; */
+"GmF-qs-qjC.title" = "Item 2";
+
+/* Class = "UICommand"; title = "Item 1"; ObjectID = "Jxm-vQ-uci"; */
+"Jxm-vQ-uci.title" = "Item 1";
+
+/* Class = "UIButton"; normalTitle = "Venu"; ObjectID = "OBB-fR-cga"; */
+"OBB-fR-cga.normalTitle" = "Venu";
+
+/* Class = "UILabel"; text = "Start Date"; ObjectID = "P4N-6v-bOl"; */
+"P4N-6v-bOl.text" = "Start Date";
+
+/* Class = "UILabel"; text = "End Date"; ObjectID = "P9A-q1-6Fo"; */
+"P9A-q1-6Fo.text" = "End Date";
+
+/* Class = "UIButton"; configuration.title = "Create"; ObjectID = "PX9-nE-zOv"; */
+"PX9-nE-zOv.configuration.title" = "Create";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "PX9-nE-zOv"; */
+"PX9-nE-zOv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Start Date"; ObjectID = "Qmb-fs-vJF"; */
+"Qmb-fs-vJF.text" = "Start Date";
+
+/* Class = "UICommand"; title = "Item 2"; ObjectID = "Raw-8t-S7V"; */
+"Raw-8t-S7V.title" = "Item 2";
+
+/* Class = "UIButton"; configuration.title = "Create Event"; ObjectID = "SRu-Sa-2Ql"; */
+"SRu-Sa-2Ql.configuration.title" = "Create Event";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SRu-Sa-2Ql"; */
+"SRu-Sa-2Ql.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Evant Name"; ObjectID = "Vma-IO-6yb"; */
+"Vma-IO-6yb.placeholder" = "Evant Name";
+
+/* Class = "UIButton"; configuration.title = "Upload Photos"; ObjectID = "ez9-ij-yj4"; */
+"ez9-ij-yj4.configuration.title" = "Upload Photos";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ez9-ij-yj4"; */
+"ez9-ij-yj4.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Venu"; ObjectID = "kpQ-FH-OWM"; */
+"kpQ-FH-OWM.normalTitle" = "Venu";
+
+/* Class = "UITextField"; placeholder = "Price"; ObjectID = "mKs-ko-v4p"; */
+"mKs-ko-v4p.placeholder" = "Price";
+
+/* Class = "UIButton"; normalTitle = "Event Status"; ObjectID = "pXu-Yn-ZRQ"; */
+"pXu-Yn-ZRQ.normalTitle" = "Event Status";
+
+/* Class = "UIButton"; configuration.title = "Upload Photo"; ObjectID = "qPc-Il-G08"; */
+"qPc-Il-G08.configuration.title" = "Upload Photo";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qPc-Il-G08"; */
+"qPc-Il-G08.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Description"; ObjectID = "sGK-5k-UGh"; */
+"sGK-5k-UGh.placeholder" = "Description";
+
+/* Class = "UITextField"; placeholder = "Evant Name"; ObjectID = "siP-OK-rCw"; */
+"siP-OK-rCw.placeholder" = "Evant Name";
+
+/* Class = "UITextField"; placeholder = "Price"; ObjectID = "yb2-KO-ez0"; */
+"yb2-KO-ez0.placeholder" = "Price";
