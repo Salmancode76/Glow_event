@@ -7,15 +7,19 @@
 
 import UIKit
 import Foundation
+import Firebase
+import FirebaseDatabase
+import FirebaseStorage
 
-class ViewController: UIViewController  {
 
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     @IBOutlet weak var priceLbl: UITextField!
     @IBOutlet weak var venu_options: UIButton!
     @IBOutlet weak var startpicker: UIDatePicker!
     @IBOutlet weak var endpicker: UIDatePicker!
     @IBOutlet weak var event_photo: UIButton!
-
+    
     @IBOutlet weak var startDate: UIDatePicker!
     
     @IBOutlet weak var EventNameLbl: UITextField!
@@ -25,14 +29,24 @@ class ViewController: UIViewController  {
     @IBOutlet weak var endDate: UIDatePicker!
     @IBOutlet weak var event_status: UIButton!
     
+    @IBOutlet weak var EventPhoto: UIButton!
+    var selectedEventImage: UIImage?
+    
+    var eventData: [String: Any] = [:]
+    
+    
+    
+    
     @IBAction func venu_options(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-      //  priceLbl.keyboardType =  UIKeyboardTypeNumberPad;
+        
 
+
+      
     
         startpicker.tintColor = .white
         startpicker.backgroundColor = .black
@@ -52,6 +66,76 @@ class ViewController: UIViewController  {
         
     }
     
+    // This function is triggered when the "Event Photo" button is tapped
+     @IBAction func eventPhotoButtonTapped(_ sender: UIButton) {
+         let imagePickerController = UIImagePickerController()
+         imagePickerController.delegate = self
+         imagePickerController.sourceType = .photoLibrary  // Allow the user to pick a photo from the photo library
+         imagePickerController.allowsEditing = true        // Optional: Allow editing of the photo (e.g., cropping)
+         
+         present(imagePickerController, animated: true, completion: nil)
+     }
+    
+    // Delegate method that is called after an image is selected or a photo is taken
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[.originalImage] as? UIImage {
+            // Store the selected image in the variable
+            selectedEventImage = selectedImage
+            
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        
+        
+        print(selectedEventImage)
+    }
+    
+    // Delegate method that is called if the user cancels the image picker
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    // This function uploads the image to Firebase Storage
+    func uploadImageToFirebase(_ image: UIImage, completion: @escaping (String?) -> Void) {
+        guard let imageData = image.jpegData(compressionQuality: 0.75) else {
+            print("Error: Failed to convert image to data")
+            completion(nil)
+            return
+        }
+
+        // Reference to Firebase Storage
+        let storageRef = Storage.storage().reference()
+        let imageRef = storageRef.child("event_images/\(UUID().uuidString).jpg") // Unique name for the image
+
+        // Upload the image
+        imageRef.putData(imageData, metadata: nil) { metadata, error in
+            if let error = error {
+                print("Error uploading image: \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            // Get the download URL once the image is uploaded
+            imageRef.downloadURL { url, error in
+                if let error = error {
+                    print("Error getting download URL: \(error.localizedDescription)")
+                    completion(nil)
+                    return
+                }
+
+                // If successful, return the URL
+                if let downloadURL = url {
+                    completion(downloadURL.absoluteString)
+                }
+            }
+        }
+    }
+
+    
+    
+    
+    
     @IBAction func optionSelection(_ sender:UIAction)
     {
         print(sender.title)
@@ -62,40 +146,95 @@ class ViewController: UIViewController  {
         print(sender.title)
         self.event_status.setTitle(sender.title, for: .normal)
     }
+    // This function saves event data to Firebase Realtime Database
+    func saveEventDataToFirebase(_ eventData: [String: Any]) {
+        let ref = Database.database(url: "https://glowevent-9be31-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+        
+        ref.child("events").childByAutoId().setValue(eventData) { error, reference in
+            if let error = error {
+                print("Error saving event: \(error.localizedDescription)")
+            } else {
+                print("Event saved successfully!")
+            }
+        }
+}
    
     
     // Create event action
-      @IBAction func CreateEvent(_ sender: Any) {
-          guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
-              print("Event name is empty.")
-              return
-          }
-          guard let selectedVenue = self.venu_options.title(for: .normal), !selectedVenue.isEmpty else {
-                print("Venue is not selected.")
-                return
+    @IBAction func CreateEvent(_ sender: Any) {
+        guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
+            print("Event name is empty.")
+            return
+        }
+        guard let selectedVenue = self.venu_options.title(for: .normal), !selectedVenue.isEmpty else {
+            print("Venue is not selected.")
+            return
+        }
+        guard let enteredPriceText = priceLbl.text, !enteredPriceText.isEmpty else {
+            print("Price is empty.")
+            return
+        }
+        
+        // Attempt to convert the entered string to a Double
+        guard let enteredPrice = Double(enteredPriceText) else {
+            print("Invalid price format.")
+            return
+        }
+        guard let eventdesc = decriptionLbl.text, !eventdesc.isEmpty else {
+            print("Event description is empty.")
+            return
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let startDateValue = startDate.date  // Getting Date from UIDatePicker
+        
+        let endDateValue = endDate.date
+        
+        
+        
+        
+        guard let selectedStatus = self.event_status.title(for: .normal), !selectedStatus.isEmpty else {
+            print("Venue is not selected.")
+            return
+        }
+        let eventImage = selectedEventImage ?? UIImage(named: "defaultImage")! // Replace "defaultImage" with your actual default image name if needed
+        
+        // Initialize the Event struct with the values
+        let event = Event(EventName: eventName, venu_options: selectedVenue, price: enteredPrice, startDate: startDateValue,endDate: endDateValue,descrip:  eventdesc,EventStatus: selectedStatus, EventPhoto:eventImage )
+        
+        
+        
+        // Print the event to verify
+        print("Event created: \(event)")
+       
+        // Create the event dictionary
+        
+         let eventData: [String: Any] = [
+         "EventName": eventName,
+         "venue_options": selectedVenue,
+         "price": enteredPrice,
+         "startDate": startDateValue.timeIntervalSince1970,  // Firebase stores time as timestamp
+         "endDate": endDateValue.timeIntervalSince1970,
+         "description": eventdesc
+         ,
+         "EventStatus": selectedStatus
+         ]
+         
+        
+        // Reference to the Firebase Realtime Database
+        let ref = Database.database(url: "https://glowevent-9be31-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+        
+        // Push the event data into the "events" node
+        ref.child("events").childByAutoId().setValue(eventData) { (error, reference) in
+            if let error = error {
+                print("Error saving event: \(error.localizedDescription)")
+            } else {
+                print("Event saved successfully!")
             }
-          guard let enteredPriceText = priceLbl.text, !enteredPriceText.isEmpty else {
-              print("Price is empty.")
-              return
-          }
-
-          // Attempt to convert the entered string to a Double
-          guard let enteredPrice = Double(enteredPriceText) else {
-              print("Invalid price format.")
-              return
-          }
-          
-          let startDateValue = startDate.date  // Getting Date from UIDatePicker
-          
-          let endDateValue = endDate.date
-          
-          // Initialize the Event struct with the values
-          let event = Event(EventName: eventName, venu_options: selectedVenue, price: enteredPrice, startDate: startDateValue,endDate: endDateValue)
-          
-
-
-          // Print the event to verify
-          print("Event created: \(event)")
-      }
+        }
+    }
+    
+    
     
 }

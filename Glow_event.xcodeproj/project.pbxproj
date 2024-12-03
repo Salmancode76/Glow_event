@@ -38,6 +38,7 @@
 		D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB855C2CF45A9D001082C0 /* Main.storyboard */; };
 		D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BB855F2CF45A9E001082C0 /* Assets.xcassets */; };
 		D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */; };
+		D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D5BB855F2CF45A9E001082C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5BB85622CF45A9E001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5BB85642CF45A9E001082C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
+				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D54A3E1A2CFDA88000DE3870 /* Event.swift */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
@@ -207,6 +210,7 @@
 			files = (
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
+				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

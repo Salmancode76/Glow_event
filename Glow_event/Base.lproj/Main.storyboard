@@ -388,6 +388,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Upload Photo">
                                                             <color key="baseBackgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="eventPhotoButtonTapped:" destination="63Q-lS-W7Z" eventType="touchUpInside" id="7ch-QT-7It"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -401,6 +404,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="S3i-jE-I1F"/>
                                                         </constraints>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" returnKeyType="continue"/>
                                                         <userDefinedRuntimeAttributes>
@@ -421,6 +425,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="XKW-R1-jUJ"/>
                                                         </constraints>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
@@ -599,7 +604,6 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="CreateEvent:" destination="63Q-lS-W7Z" eventType="touchUpInside" id="JdO-PO-pnx"/>
-                                                            <action selector="CreateEvent:" destination="ph1-9f-tNx" eventType="touchUpInside" id="ttj-Hq-wmy"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -641,6 +645,7 @@
                     <navigationItem key="navigationItem" id="YPH-al-lEZ"/>
                     <connections>
                         <outlet property="EventNameLbl" destination="chl-0S-ptB" id="f88-53-WJh"/>
+                        <outlet property="EventPhoto" destination="qYf-r7-4lH" id="CLS-l5-3fz"/>
                         <outlet property="decriptionLbl" destination="yUj-R5-vHj" id="QHF-VH-rc1"/>
                         <outlet property="endDate" destination="raA-re-73z" id="TdO-Fy-vsY"/>
                         <outlet property="endpicker" destination="raA-re-73z" id="BmP-Be-J7b"/>
@@ -653,7 +658,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63Q-lS-W7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899.6093749999998" y="693.99707174231332"/>
+            <point key="canvasLocation" x="2863" y="709"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nqi-JQ-Qaq">
@@ -667,7 +672,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hk5-1G-ZXQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="1439"/>
+            <point key="canvasLocation" x="1723" y="709"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

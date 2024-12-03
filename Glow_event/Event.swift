@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Event {
        var EventName: String
@@ -13,5 +14,11 @@ struct Event {
     var price : Double
     var startDate: Date  // Adding startDate property
     var endDate : Date
+    
+    var descrip : String
+    
+    var EventStatus : String
+    
+    var EventPhoto : UIImage
 
    }
