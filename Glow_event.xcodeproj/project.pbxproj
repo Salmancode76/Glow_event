@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A3E1A2CFDA88000DE3870 /* Event.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D54A3E1A2CFDA88000DE3870 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
+				D54A3E1A2CFDA88000DE3870 /* Event.swift */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,

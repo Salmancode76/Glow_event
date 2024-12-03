@@ -6,23 +6,45 @@
 //
 
 import UIKit
+import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController  {
 
+    @IBOutlet weak var priceLbl: UITextField!
+    @IBOutlet weak var venu_options: UIButton!
+    @IBOutlet weak var startpicker: UIDatePicker!
+    @IBOutlet weak var endpicker: UIDatePicker!
     @IBOutlet weak var event_photo: UIButton!
-    @IBOutlet weak var start_dtpicker: UIDatePicker!
 
+    @IBOutlet weak var startDate: UIDatePicker!
     
-    @IBAction func Button(_ sender: UIButton) {
+    @IBOutlet weak var EventNameLbl: UITextField!
+    
+    @IBOutlet weak var decriptionLbl: UITextView!
+    
+    @IBOutlet weak var endDate: UIDatePicker!
+    @IBOutlet weak var event_status: UIButton!
+    
+    @IBAction func venu_options(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
-        event_photo.layer.cornerRadius = 5
-        start_dtpicker.setValue(UIColor.white, forKey: "textColor")
         
-   
+      //  priceLbl.keyboardType =  UIKeyboardTypeNumberPad;
+
+    
+        startpicker.tintColor = .white
+        startpicker.backgroundColor = .black
+        
+        
+  
+
+        
+        startpicker.contentHorizontalAlignment = .left
+        endpicker.contentHorizontalAlignment = .left
+        
+    
         
         
         // Set the tint color to white
@@ -30,9 +52,50 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func optionSelection(_ sender:UIAction)
+    {
+        print(sender.title)
+        self.venu_options.setTitle(sender.title, for: .normal)
+    }
+    @IBAction func optionSelectionEventStatus(_ sender:UIAction)
+    {
+        print(sender.title)
+        self.event_status.setTitle(sender.title, for: .normal)
+    }
    
     
-  
+    // Create event action
+      @IBAction func CreateEvent(_ sender: Any) {
+          guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
+              print("Event name is empty.")
+              return
+          }
+          guard let selectedVenue = self.venu_options.title(for: .normal), !selectedVenue.isEmpty else {
+                print("Venue is not selected.")
+                return
+            }
+          guard let enteredPriceText = priceLbl.text, !enteredPriceText.isEmpty else {
+              print("Price is empty.")
+              return
+          }
+
+          // Attempt to convert the entered string to a Double
+          guard let enteredPrice = Double(enteredPriceText) else {
+              print("Invalid price format.")
+              return
+          }
+          
+          let startDateValue = startDate.date  // Getting Date from UIDatePicker
+          
+          let endDateValue = endDate.date
+          
+          // Initialize the Event struct with the values
+          let event = Event(EventName: eventName, venu_options: selectedVenue, price: enteredPrice, startDate: startDateValue,endDate: endDateValue)
+          
+
+
+          // Print the event to verify
+          print("Event created: \(event)")
+      }
+    
 }
-
-
