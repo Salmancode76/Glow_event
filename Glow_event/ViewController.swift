@@ -10,9 +10,16 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 import FirebaseStorage
+import Cloudinary
+
+
 
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let cloudinary = CloudinarySetup.cloudinarySetup()
+    
+    
     
     @IBOutlet weak var priceLbl: UITextField!
     @IBOutlet weak var venu_options: UIButton!
@@ -44,7 +51,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Do any additional setup after loading the view.
         
         
-
 
       
     
@@ -158,6 +164,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
 }
+    /*
+    private func uploadImage(image: UIImage) {
+        guard let data = image.jpegData(compressionQuality: 0.9) else {
+            print("Error converting image to data")
+            return
+        }
+        
+        let uniqueID = UUID().uuidString //Generate a unique ID for the image
+        let publicID = "images/user/\(uniqueID)" //Specify the folder reference
+        
+        let uploadParams = CLDUploadRequestParams()
+        uploadParams.setPublicId(publicID) //Set the public ID
+        
+        cloudinary.createUploader().upload(data: data, uploadPreset: CloudinarySetup.uploadPreset, params: uploadParams, completionHandler: { response, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Error uploading image: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let secureUrl = response?.secureUrl {
+                    print("Image uploaded successfully: \(secureUrl)") //Get the image URL
+                    print("Public ID: \(response?.publicId ?? "N/A")") //Log the public ID
+                    self.selectedEventImage.cldSetImage(secureUrl, cloudinary: self.cloudinary)
+                }
+            }
+        })
+    }
+     */
    
     
     // Create event action
@@ -200,8 +235,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         let eventImage = selectedEventImage ?? UIImage(named: "defaultImage")! // Replace "defaultImage" with your actual default image name if needed
         
+
+        
         // Initialize the Event struct with the values
         let event = Event(EventName: eventName, venu_options: selectedVenue, price: enteredPrice, startDate: startDateValue,endDate: endDateValue,descrip:  eventdesc,EventStatus: selectedStatus, EventPhoto:eventImage )
+        
+        
         
         
         
@@ -237,4 +276,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
+    
+  
+
+    
+  
+    
+    
+    
 }
+
+
