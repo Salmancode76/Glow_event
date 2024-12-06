@@ -17,9 +17,9 @@ import Cloudinary
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    let cloudinary = CloudinarySetup.cloudinarySetup()
     
     
+    @IBOutlet weak var imageview: UIImageView!
     
     @IBOutlet weak var priceLbl: UITextField!
     @IBOutlet weak var venu_options: UIButton!
@@ -38,10 +38,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var EventPhoto: UIButton!
     var selectedEventImage: UIImage?
+    var Eventurl = "nil"
     
     var eventData: [String: Any] = [:]
     
+    let cloudinary = CloudinarySetup.cloudinarySetup()
     
+
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     @IBAction func venu_options(_ sender: Any) {
@@ -49,16 +53,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        
+        CloudinarySetup.testCloudinaryConnection() // Test connection
 
-      
+
+ 
+        print(cloudinary)
+
+
+        imageview.image = UIImage(systemName: "photo.fill")  // A filled photo symbol
+
     
         startpicker.tintColor = .white
         startpicker.backgroundColor = .black
         
         
-  
+
 
         
         startpicker.contentHorizontalAlignment = .left
@@ -84,18 +93,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // Delegate method that is called after an image is selected or a photo is taken
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
         if let selectedImage = info[.originalImage] as? UIImage {
+          //  uploadImage(image: selectedImage)
+
             // Store the selected image in the variable
             selectedEventImage = selectedImage
             
+            // Update the imageview with the selected image
+            DispatchQueue.main.async {
+                self.imageview.image = selectedImage
+            }
         }
         
         picker.dismiss(animated: true, completion: nil)
         
-        
+
         
         print(selectedEventImage)
     }
+
     
     // Delegate method that is called if the user cancels the image picker
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -164,6 +181,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
 }
+    func uploadImage(image: UIImage) {
+       // Try to convert the image to JPEG data
+       guard let imageData = image.jpegData(compressionQuality: 0.9) else {
+           print("Failed to convert image to data.")
+           return
+       }
+       
+       let uniqueID = UUID().uuidString // Generate a unique ID for the image
+       let publicID = "event/images/\(uniqueID)" // Cloudinary public ID
+        Eventurl = publicID
+       
+       let uploadParams = CLDUploadRequestParams()
+       uploadParams.setPublicId(publicID) // Set the public ID
+       
+       cloudinary.createUploader().upload(data: imageData, uploadPreset: CloudinarySetup.uploadPreset, params: uploadParams) { response, error in
+           if let error = error {
+               print("Error uploading image: \(error.localizedDescription)")
+           } else if let secureUrl = response?.secureUrl {
+               print("Image uploaded successfully! URL: \(secureUrl)")
+
+               guard let secureUrl = response?.secureUrl else {
+                   print("Failed to get secure URL from Cloudinary.")
+                   return
+               }
+               
+               // Now that secureUrl is unwrapped, assign it to self.Eventurl
+               self.Eventurl =  "https://res.cloudinary.com/doctomog7/image/upload/v1733502346/event/images/" + secureUrl
+               
+               
+               print(self.Eventurl)
+
+           }
+       }
+   }
+    
+  
+    
+    
     /*
     private func uploadImage(image: UIImage) {
         guard let data = image.jpegData(compressionQuality: 0.9) else {
@@ -235,6 +290,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         let eventImage = selectedEventImage ?? UIImage(named: "defaultImage")! // Replace "defaultImage" with your actual default image name if needed
         
+        
+        uploadImage(image: eventImage)
+
 
         
         // Initialize the Event struct with the values
@@ -257,8 +315,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          "endDate": endDateValue.timeIntervalSince1970,
          "description": eventdesc
          ,
-         "EventStatus": selectedStatus
+         "EventStatus": selectedStatus,
+         "EventImg": Eventurl
          ]
+        
          
         
         // Reference to the Firebase Realtime Database
@@ -273,6 +333,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
+    
+    
     
     
     

@@ -4,7 +4,6 @@ import Cloudinary
 
 class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-
     @IBOutlet weak var imageUpload: UIImageView!
     
     let cloudinary = CloudinarySetup.cloudinarySetup()
@@ -13,14 +12,14 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         super.viewDidLoad()
     }
     
-     func  uploadImage(image: UIImage) {
+    private func uploadImage(image: UIImage) {
         guard let data = image.jpegData(compressionQuality: 0.9) else {
             print("Error converting image to data")
             return
         }
         
         let uniqueID = UUID().uuidString //Generate a unique ID for the image
-        let publicID = "images/Events/\(uniqueID)" //Specify the folder reference
+        let publicID = "images/user/\(uniqueID)" //Specify the folder reference
         
         let uploadParams = CLDUploadRequestParams()
         uploadParams.setPublicId(publicID) //Set the public ID

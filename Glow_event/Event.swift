@@ -20,5 +20,6 @@ struct Event {
     var EventStatus : String
     
     var EventPhoto : UIImage
+    
 
    }
