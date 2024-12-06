@@ -296,7 +296,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
         
         // Initialize the Event struct with the values
-        let event = Event(EventName: eventName, venu_options: selectedVenue, price: enteredPrice, startDate: startDateValue,endDate: endDateValue,descrip:  eventdesc,EventStatus: selectedStatus, EventPhoto:eventImage )
+        let event = Event(EventName: eventName,
+                          venu_options: selectedVenue,
+                          price: enteredPrice,
+                          startDate: startDateValue,
+                          endDate: endDateValue,
+                          descrip: eventdesc,
+                          EventStatus: selectedStatus,
+                          EventPhotoURL: Eventurl)
         
         
         
