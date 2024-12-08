@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D50E69522D033A8F00629AE1 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69512D033A8F00629AE1 /* Cloudinary.swift */; };
+		3FC9350C2D05D79A002B4592 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9350B2D05D79A002B4592 /* Cloudinary.swift */; };
 		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
 		D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A3E1A2CFDA88000DE3870 /* Event.swift */; };
 		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
@@ -48,7 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D50E69512D033A8F00629AE1 /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cloudinary.swift; path = ../../../Downloads/ImageListing/ImageListing/Cloudinary.swift; sourceTree = "<group>"; };
+		3FC9350B2D05D79A002B4592 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D54A3E1A2CFDA88000DE3870 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
@@ -126,7 +126,6 @@
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
-				D50E69512D033A8F00629AE1 /* Cloudinary.swift */,
 				D50E69532D033AA100629AE1 /* ImageViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */,
@@ -134,6 +133,7 @@
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
+				3FC9350B2D05D79A002B4592 /* Cloudinary.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -242,7 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */,
-				D50E69522D033A8F00629AE1 /* Cloudinary.swift in Sources */,
+				3FC9350C2D05D79A002B4592 /* Cloudinary.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */,
 				D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */,

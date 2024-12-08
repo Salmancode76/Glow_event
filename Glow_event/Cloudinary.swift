@@ -7,7 +7,7 @@ struct CloudinarySetup {
 
     static let cloudName: String = "doctomog7" // Make this static
 
-    static let uploadPreset: String = "<upload preset here>" //Upload preset
+    static let uploadPreset: String = "glow_event" //Upload preset
     
     static func cloudinarySetup() -> CLDCloudinary {
         

@@ -67,15 +67,16 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
      
         
         cell.detailTextLabel?.textColor = .white // Set detail text color to white
-        cell.backgroundColor = .black // Set cell background color to black
+      //  cell.backgroundColor = .black // Set cell background color to black
         let selectedView = UIView()
         selectedView.backgroundColor = .darkGray // You can set any color for selection
         cell.selectedBackgroundView = selectedView
         cell.EventName.textColor = .white
+        //cell.EventStartDate.textColor = .white
         // Create the UIImage from the system name (returns UIImage?)
            if let photoImage = UIImage(systemName: "photo.fill") {
                // Safely unwrap the UIImage and pass it to the setupCell method
-               cell.setupCell(photo: photoImage,name: event.EventName)
+               cell.setupCell(photo: photoImage,name: event.EventName,startDate: event.startDate, venu: event.venu_options)
            }
     
         

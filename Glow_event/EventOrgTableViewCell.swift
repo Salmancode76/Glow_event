@@ -10,6 +10,8 @@ import UIKit
 class EventOrgTableViewCell: UITableViewCell {
     @IBOutlet weak var EventName: UILabel!
     
+    @IBOutlet weak var EventStartDate: UILabel!
+    @IBOutlet weak var Eventvenu: UILabel!
     @IBOutlet weak var EventImage: UIImageView!  
 
     override func awakeFromNib() {
@@ -20,11 +22,16 @@ class EventOrgTableViewCell: UITableViewCell {
     }
     
     // Set up the cell with a UIImage
-    func setupCell(photo: UIImage,name : String) {
-           EventImage.image = photo
+    func setupCell(photo: UIImage, name: String, startDate: Date,venu : String) {
+        EventImage.image = photo
         EventName.text = name
-
-       }
+        Eventvenu.text = venu
+        
+        // Format the start date to a string
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE, MMM d • h:mm a"// Adjust format as needed
+        EventStartDate.text = dateFormatter.string(from: startDate)
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

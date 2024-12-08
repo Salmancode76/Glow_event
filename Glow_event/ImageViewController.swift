@@ -19,7 +19,8 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }
         
         let uniqueID = UUID().uuidString //Generate a unique ID for the image
-        let publicID = "images/user/\(uniqueID)" //Specify the folder reference
+        let publicID = "event/images/\(uniqueID)"  // Cloudinary public ID
+
         
         let uploadParams = CLDUploadRequestParams()
         uploadParams.setPublicId(publicID) //Set the public ID
@@ -27,7 +28,7 @@ class ImageViewController: UIViewController, UIImagePickerControllerDelegate, UI
         cloudinary.createUploader().upload(data: data, uploadPreset: CloudinarySetup.uploadPreset, params: uploadParams, completionHandler: { response, error in
             DispatchQueue.main.async {
                 if let error = error {
-                    print("Error uploading image: \(error.localizedDescription)")
+                    print("Error uploading image \(error.localizedDescription)")
                     return
                 }
                 
