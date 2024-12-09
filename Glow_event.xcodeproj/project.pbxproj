@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F3038A12D06CFC400C2FC4D /* Event insights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3038A02D06CFC400C2FC4D /* Event insights.storyboard */; };
+		0F3038A62D072D9700C2FC4D /* SavedEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3038A52D072D9700C2FC4D /* SavedEventsViewController.swift */; };
+		0F3038A92D072E8800C2FC4D /* SavedEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3038A72D072E8800C2FC4D /* SavedEventsTableViewCell.swift */; };
+		0F3038AA2D072E8800C2FC4D /* SavedEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3038A82D072E8800C2FC4D /* SavedEventsTableViewCell.xib */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -40,6 +44,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F3038A02D06CFC400C2FC4D /* Event insights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event insights.storyboard"; sourceTree = "<group>"; };
+		0F3038A52D072D9700C2FC4D /* SavedEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEventsViewController.swift; sourceTree = "<group>"; };
+		0F3038A72D072E8800C2FC4D /* SavedEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEventsTableViewCell.swift; sourceTree = "<group>"; };
+		0F3038A82D072E8800C2FC4D /* SavedEventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavedEventsTableViewCell.xib; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F3038A22D0728D700C2FC4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F3038A52D072D9700C2FC4D /* SavedEventsViewController.swift */,
+				0F3038A72D072E8800C2FC4D /* SavedEventsTableViewCell.swift */,
+				0F3038A82D072E8800C2FC4D /* SavedEventsTableViewCell.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		D5BB854A2CF45A9C001082C0 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,7 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
+				0F3038A22D0728D700C2FC4D /* Controllers */,
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
@@ -111,6 +130,7 @@
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
+				0F3038A02D06CFC400C2FC4D /* Event insights.storyboard */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -205,6 +225,8 @@
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
+				0F3038AA2D072E8800C2FC4D /* SavedEventsTableViewCell.xib in Resources */,
+				0F3038A12D06CFC400C2FC4D /* Event insights.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
+				0F3038A92D072E8800C2FC4D /* SavedEventsTableViewCell.swift in Sources */,
+				0F3038A62D072D9700C2FC4D /* SavedEventsViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 			);
