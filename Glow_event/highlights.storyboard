@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,93 +56,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c81-AQ-AxS">
-                                <rect key="frame" x="110" y="248" width="263" height="34"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" systemColor="tertiarySystemBackgroundColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-k5-rEi">
-                                <rect key="frame" x="23" y="253" width="75" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMQ-AY-0eC">
-                                <rect key="frame" x="0.0" y="148" width="393" height="45"/>
+                                <rect key="frame" x="0.0" y="148" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="W5c-9k-JDj" id="QoO-Fy-aeV"/>
                                 </connections>
                             </searchBar>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-46-OPG">
-                                <rect key="frame" x="114" y="356" width="259" height="34"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5y-Lj-7nh">
-                                <rect key="frame" x="23" y="369" width="41" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piw-bX-Jzj">
-                                <rect key="frame" x="146" y="548" width="101" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Send">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <color key="strokeColor" systemColor="linkColor"/>
-                                    </backgroundConfiguration>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wJD-Ey-3gx"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="p5y-Lj-7nh" firstAttribute="top" secondItem="Tok-k5-rEi" secondAttribute="bottom" constant="95" id="0ID-Ra-0QR"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="leading" secondItem="Tok-k5-rEi" secondAttribute="trailing" constant="12" id="2o9-Jd-TiB"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="piw-bX-Jzj" secondAttribute="trailing" constant="146" id="3LM-Er-Wk2"/>
                             <constraint firstItem="eMQ-AY-0eC" firstAttribute="top" secondItem="wJD-Ey-3gx" secondAttribute="top" constant="45" id="8hY-bQ-uVM"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="yHb-46-OPG" secondAttribute="trailing" constant="20" id="9yH-pb-CcR"/>
-                            <constraint firstItem="p5y-Lj-7nh" firstAttribute="top" secondItem="Tok-k5-rEi" secondAttribute="bottom" constant="95" id="EcE-Io-QQy"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="60" id="FAq-6R-sx7"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="leading" secondItem="p5y-Lj-7nh" secondAttribute="trailing" constant="50" id="Khc-Rr-IMN"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="c81-AQ-AxS" secondAttribute="trailing" constant="20" id="MKP-Z4-eWM"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="bottom" secondItem="yHb-46-OPG" secondAttribute="bottom" constant="428" id="NUk-RW-VJ9"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="leading" secondItem="p5y-Lj-7nh" secondAttribute="trailing" constant="50" id="O6F-Lj-Ovk"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="top" secondItem="wJD-Ey-3gx" secondAttribute="top" constant="150" id="OtP-Il-uJX"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="top" secondItem="c81-AQ-AxS" secondAttribute="bottom" constant="74" id="PH3-BA-ddm"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="leading" secondItem="wJD-Ey-3gx" secondAttribute="leading" constant="23" id="PdN-BE-61X"/>
-                            <constraint firstItem="p5y-Lj-7nh" firstAttribute="leading" secondItem="wJD-Ey-3gx" secondAttribute="leading" constant="23" id="Rya-2Z-Kxx"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="leading" secondItem="Tok-k5-rEi" secondAttribute="trailing" constant="12" id="SMv-ze-jbs"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="top" secondItem="c81-AQ-AxS" secondAttribute="bottom" constant="74" id="WHi-nl-rjF"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="bottom" secondItem="yHb-46-OPG" secondAttribute="bottom" constant="428" id="WrP-ay-Ac9"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="leading" secondItem="wJD-Ey-3gx" secondAttribute="leading" constant="23" id="Yod-9B-MqT"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="leading" secondItem="wJD-Ey-3gx" secondAttribute="leading" constant="110" id="d92-in-Mra"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="bottom" secondItem="yHb-46-OPG" secondAttribute="bottom" constant="428" id="dIs-XX-rYq"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="top" secondItem="c81-AQ-AxS" secondAttribute="bottom" constant="74" id="diP-hk-rSt"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="70" id="doP-Fe-gbI"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="Tok-k5-rEi" secondAttribute="trailing" constant="295" id="glt-9A-nE5"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="leading" secondItem="Tok-k5-rEi" secondAttribute="trailing" constant="15" id="gly-gR-ex4"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="yHb-46-OPG" secondAttribute="trailing" constant="251" id="hIo-bN-wtg"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="55" id="kKu-0J-UKJ"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="c81-AQ-AxS" secondAttribute="trailing" constant="20" id="lck-5M-6N2"/>
-                            <constraint firstItem="piw-bX-Jzj" firstAttribute="top" secondItem="yHb-46-OPG" secondAttribute="bottom" constant="158" id="lt5-Vp-ErE"/>
-                            <constraint firstItem="piw-bX-Jzj" firstAttribute="leading" secondItem="wJD-Ey-3gx" secondAttribute="leading" constant="146" id="m4d-Tn-bVh"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="60" id="mMm-zx-RgP"/>
-                            <constraint firstItem="p5y-Lj-7nh" firstAttribute="top" secondItem="Tok-k5-rEi" secondAttribute="bottom" constant="95" id="nit-Pj-vaX"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="55" id="oQw-GQ-6dq"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="bottom" secondItem="p5y-Lj-7nh" secondAttribute="bottom" constant="428" id="rfh-dM-bal"/>
-                            <constraint firstItem="yHb-46-OPG" firstAttribute="top" secondItem="c81-AQ-AxS" secondAttribute="bottom" constant="74" id="thq-Nq-4mu"/>
-                            <constraint firstItem="c81-AQ-AxS" firstAttribute="leading" secondItem="Tok-k5-rEi" secondAttribute="trailing" constant="12" id="vLB-Yi-h2b"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="bottom" secondItem="piw-bX-Jzj" secondAttribute="bottom" constant="235" id="xLa-DT-mdX"/>
-                            <constraint firstItem="Tok-k5-rEi" firstAttribute="top" secondItem="eMQ-AY-0eC" secondAttribute="bottom" constant="60" id="ypg-0n-KfA"/>
-                            <constraint firstItem="wJD-Ey-3gx" firstAttribute="trailing" secondItem="yHb-46-OPG" secondAttribute="trailing" constant="20" id="zAr-T5-iYa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RMR-E7-w3z"/>
@@ -178,14 +102,5 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tertiarySystemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
