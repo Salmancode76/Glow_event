@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseCore
 
-@main
+@UIApplicationMain // Correct way to indicate that this is the AppDelegate
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

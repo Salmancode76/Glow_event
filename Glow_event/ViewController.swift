@@ -295,23 +295,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         uploadImage(image: eventImage)
 
 
-        
-        // Initialize the Event struct with the values
-        let event = Event(EventName: eventName,
-                          venu_options: selectedVenue,
-                          price: enteredPrice,
-                          startDate: startDateValue,
-                          endDate: endDateValue,
-                          descrip: eventdesc,
-                          EventStatus: selectedStatus,
-                          EventPhotoURL: Eventurl)
-        
-        
-        
-        
-        
-        // Print the event to verify
-        print("Event created: \(event)")
+
        
         // Create the event dictionary
         

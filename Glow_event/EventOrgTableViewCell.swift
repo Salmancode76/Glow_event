@@ -1,6 +1,6 @@
 //
 //  EventOrgTableViewCell.swift
-//  
+//
 //
 //  Created by BP-36-201-09 on 07/12/2024.
 //
@@ -18,6 +18,7 @@ class EventOrgTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         EventImage.contentMode = .scaleAspectFill // Adjust based on your needs
+
 
         // Initialization code
     }
