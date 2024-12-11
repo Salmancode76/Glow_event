@@ -11,6 +11,7 @@
 		D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */; };
 		D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */; };
 		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
+		D53D71D82D098E7000B88D24 /* Event_Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D71D72D098E7000B88D24 /* Event_Management.storyboard */; };
 		D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A3E1A2CFDA88000DE3870 /* Event.swift */; };
 		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
 		D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
 		D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		D53D71D72D098E7000B88D24 /* Event_Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event_Management.storyboard; sourceTree = "<group>"; };
 		D54A3E1A2CFDA88000DE3870 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
 		D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventTableViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
 				3FC9350B2D05D79A002B4592 /* Cloudinary.swift */,
+				D53D71D72D098E7000B88D24 /* Event_Management.storyboard */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D53D71D82D098E7000B88D24 /* Event_Management.storyboard in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
