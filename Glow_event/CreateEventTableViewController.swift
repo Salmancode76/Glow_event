@@ -1,10 +1,11 @@
 //
-//  ViewController.swift
+//  CreateEventTableViewController.swift
 //  Glow_event
 //
-//  Created by BP-36-201-09 on 25/11/2024.
+//  Created by BP-36-201-09 on 07/12/2024.
 //
 
+import UIKit
 import UIKit
 import Foundation
 import Firebase
@@ -12,13 +13,7 @@ import FirebaseDatabase
 import FirebaseStorage
 import Cloudinary
 
-
-
-
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    
-    
+class CreateEventTableViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageview: UIImageView!
     
     @IBOutlet weak var priceLbl: UITextField!
@@ -45,41 +40,86 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     let cloudinary = CloudinarySetup.cloudinarySetup()
     
 
-    @IBOutlet weak var scrollView: UIScrollView!
+
+
+    @IBOutlet var CreateEventTable: UITableView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        imageview.image = UIImage(systemName: "photo.fill")
+        // Change the background color of the table view
+        CreateEventTable.backgroundColor = UIColor.black // Or any color you prefer
+        
+        // Optional: Set the table view's separator color (if needed)
+        CreateEventTable.separatorColor = UIColor.white
+        
+        startDate.backgroundColor = UIColor.black
+        
+        
+        endpicker.backgroundColor = UIColor.black
+
+            
+            startDate.tintColor = UIColor.white
+        endpicker.tintColor = UIColor.black
+
+
+            // 3. For iOS 14+, change the text color of the UIDatePicker elements (e.g. day, month, year)
+            if #available(iOS 14.0, *) {
+                startDate.setValue(UIColor.white, forKeyPath: "textColor")
+                endpicker.setValue(UIColor.white, forKeyPath: "textColor")
+            }
+            
+            startDate.alpha = 1.0
+        endpicker.alpha = 1.0
+
+
+             // 2. Set the text color (and other UI elements) to white using tintColor
+        startDate.tintColor = UIColor.white
+        endpicker.tintColor = UIColor.black
+
+    }
+    // MARK: - Table view data source
+        
+    // MARK: - TableView Delegate Method to Customize Header Appearance
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        
+        // Set the background color of the header to white
+        header.contentView.backgroundColor = .black
+        
+        // Set the text color of the header to black
+        header.textLabel?.textColor = .white
+        
+        tableView.tableFooterView = UIView()
+
+    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 9
+        
+        
+        
+    }
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0  // Set the footer height to 0 to hide the footer
+    }
+
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 1
+    }
+
+
+    
+
+
+   // @IBOutlet weak var scrollView: UIScrollView!
     
     
     @IBAction func venu_options(_ sender: Any) {
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-
-
-
  
-        print(cloudinary)
-
-
-        imageview.image = UIImage(systemName: "photo.fill")  // A filled photo symbol
-
-    
-        startpicker.tintColor = .white
-        startpicker.backgroundColor = .black
-        
-        
-
-
-        
-        startpicker.contentHorizontalAlignment = .left
-        endpicker.contentHorizontalAlignment = .left
-        
-    
-        
-        
-        // Set the tint color to white
-       
-        
-    }
     
     // This function is triggered when the "Event Photo" button is tapped
      @IBAction func eventPhotoButtonTapped(_ sender: UIButton) {
@@ -118,7 +158,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
-/*
+
     // This function uploads the image to Firebase Storage
     func uploadImageToFirebase(_ image: UIImage, completion: @escaping (String?) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {
@@ -154,7 +194,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
- */
 
     
     
@@ -182,6 +221,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
 }
+    
     func uploadImage(image: UIImage) {
        // Try to convert the image to JPEG data
        guard let imageData = image.jpegData(compressionQuality: 0.9) else {
@@ -219,38 +259,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
   
     
-    
-    /*
-    private func uploadImage(image: UIImage) {
-        guard let data = image.jpegData(compressionQuality: 0.9) else {
-            print("Error converting image to data")
-            return
-        }
-        
-        let uniqueID = UUID().uuidString //Generate a unique ID for the image
-        let publicID = "images/user/\(uniqueID)" //Specify the folder reference
-        
-        let uploadParams = CLDUploadRequestParams()
-        uploadParams.setPublicId(publicID) //Set the public ID
-        
-        cloudinary.createUploader().upload(data: data, uploadPreset: CloudinarySetup.uploadPreset, params: uploadParams, completionHandler: { response, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    print("Error uploading image: \(error.localizedDescription)")
-                    return
-                }
-                
-                if let secureUrl = response?.secureUrl {
-                    print("Image uploaded successfully: \(secureUrl)") //Get the image URL
-                    print("Public ID: \(response?.publicId ?? "N/A")") //Log the public ID
-                    self.selectedEventImage.cldSetImage(secureUrl, cloudinary: self.cloudinary)
-                }
-            }
-        })
-    }
-     */
-   
-    
+
     // Create event action
     @IBAction func CreateEvent(_ sender: Any) {
         guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
@@ -355,5 +364,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
 }
+
+
 
 
