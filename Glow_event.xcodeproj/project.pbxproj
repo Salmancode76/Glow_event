@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3FC9350C2D05D79A002B4592 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9350B2D05D79A002B4592 /* Cloudinary.swift */; };
+		D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */; };
+		D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */; };
 		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
 		D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A3E1A2CFDA88000DE3870 /* Event.swift */; };
 		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
@@ -49,6 +51,8 @@
 
 /* Begin PBXFileReference section */
 		3FC9350B2D05D79A002B4592 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
+		D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
+		D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D54A3E1A2CFDA88000DE3870 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				D50E69532D033AA100629AE1 /* ImageViewController.swift */,
 				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
+				D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */,
+				D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */,
 				D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */,
 				D54A3E1A2CFDA88000DE3870 /* Event.swift */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
@@ -228,7 +234,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
+				D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
+				D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */,
 				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
 			);
