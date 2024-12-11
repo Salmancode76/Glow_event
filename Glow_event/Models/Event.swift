@@ -25,7 +25,7 @@ struct Event {
         self.EventPhotoURL = EventPhotoURL
     }
     
-    // Alternatively, this can be used if you're still fetching from Firebase DataSnapshot:
+    // Alternatively, this can be used if still fetching from Firebase DataSnapshot:
     init(snapshot: DataSnapshot) {
         let value = snapshot.value as? [String: Any] ?? [:]
         
@@ -40,5 +40,9 @@ struct Event {
         let endTimestamp = value["endDate"] as? Double ?? 0
         self.startDate = Date(timeIntervalSince1970: startTimestamp)
         self.endDate = Date(timeIntervalSince1970: endTimestamp)
+        
+        
     }
+    
+    
 }
