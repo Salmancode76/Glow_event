@@ -59,7 +59,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
         endpicker.backgroundColor = UIColor.black
 
             
-            // 2. Set the tint color to white to make the text (and other elements) white
             startDate.tintColor = UIColor.white
         endpicker.tintColor = UIColor.black
 
@@ -70,7 +69,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
                 endpicker.setValue(UIColor.white, forKeyPath: "textColor")
             }
             
-            // Optional: Adjust alpha or make sure the wheel isn't fully transparent
             startDate.alpha = 1.0
         endpicker.alpha = 1.0
 
@@ -116,7 +114,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
 
 
-    @IBOutlet weak var scrollView: UIScrollView!
+   // @IBOutlet weak var scrollView: UIScrollView!
     
     
     @IBAction func venu_options(_ sender: Any) {
@@ -223,6 +221,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
             }
         }
 }
+    
     func uploadImage(image: UIImage) {
        // Try to convert the image to JPEG data
        guard let imageData = image.jpegData(compressionQuality: 0.9) else {
@@ -260,38 +259,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
   
     
-    
-    /*
-    private func uploadImage(image: UIImage) {
-        guard let data = image.jpegData(compressionQuality: 0.9) else {
-            print("Error converting image to data")
-            return
-        }
-        
-        let uniqueID = UUID().uuidString //Generate a unique ID for the image
-        let publicID = "images/user/\(uniqueID)" //Specify the folder reference
-        
-        let uploadParams = CLDUploadRequestParams()
-        uploadParams.setPublicId(publicID) //Set the public ID
-        
-        cloudinary.createUploader().upload(data: data, uploadPreset: CloudinarySetup.uploadPreset, params: uploadParams, completionHandler: { response, error in
-            DispatchQueue.main.async {
-                if let error = error {
-                    print("Error uploading image: \(error.localizedDescription)")
-                    return
-                }
-                
-                if let secureUrl = response?.secureUrl {
-                    print("Image uploaded successfully: \(secureUrl)") //Get the image URL
-                    print("Public ID: \(response?.publicId ?? "N/A")") //Log the public ID
-                    self.selectedEventImage.cldSetImage(secureUrl, cloudinary: self.cloudinary)
-                }
-            }
-        })
-    }
-     */
-   
-    
+
     // Create event action
     @IBAction func CreateEvent(_ sender: Any) {
         guard let eventName = EventNameLbl.text, !eventName.isEmpty else {

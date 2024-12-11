@@ -12,7 +12,8 @@ class EventOrgTableViewCell: UITableViewCell {
     
     @IBOutlet weak var EventStartDate: UILabel!
     @IBOutlet weak var Eventvenu: UILabel!
-    @IBOutlet weak var EventImage: UIImageView!  
+    @IBOutlet weak var EventImage: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +40,8 @@ class EventOrgTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     
     
     

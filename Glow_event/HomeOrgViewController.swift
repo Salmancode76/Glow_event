@@ -2,13 +2,29 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var EventsOrgTable: UITableView!
     
     @IBOutlet weak var EvnentsOrgTable: UITableView!
     var events: [Event] = [] // Array to hold Event objects
  
+    
+    
+    var searchEvents : [Event] = []
+    var searching = false
+    
+    
+    
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false // Reset search state
+        searchBar.text = "" // Clear the search bar
+        searchBar.resignFirstResponder() // Dismiss the keyboard
+        EventsOrgTable.reloadData() // Reload the table to show all events
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,20 +57,32 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         })
     }
-
-    // UITableViewDataSource methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count // Return the count of events to display
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            searching = false
+        } else {
+            searching = true
+            searchEvents = events.filter { event in
+                return event.EventName.lowercased().contains(searchText.lowercased())
+            }
+        }
+        EventsOrgTable.reloadData() // Reload table view to display filtered results
     }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searching ? searchEvents.count : events.count
+    }
+
 
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         
         // Dequeue the cell with the identifier "event"
-        let event = events[indexPath.row]
+        //let event = events[indexPath.row]
 
-         
+        let event = searching ? searchEvents[indexPath.row] : events[indexPath.row]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! EventOrgTableViewCell
         // Customize cell appearance (black background and white text)
              cell.textLabel?.textColor = .white // Set text color to white
@@ -66,7 +94,6 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         //cell.textLabel?.text = event.EventName
      
         
-        cell.detailTextLabel?.textColor = .white // Set detail text color to white
       //  cell.backgroundColor = .black // Set cell background color to black
         let selectedView = UIView()
         selectedView.backgroundColor = .darkGray // You can set any color for selection
