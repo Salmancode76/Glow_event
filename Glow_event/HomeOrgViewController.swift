@@ -4,6 +4,7 @@ import FirebaseDatabase
 
 class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     
+    @IBOutlet weak var HomeNav: UINavigationItem!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searching ? searchEvents.count : events.count
     }
@@ -101,7 +102,11 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
        
-
+        if let navBar = self.navigationController?.navigationBar {
+             navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+             navBar.tintColor = UIColor.white // For buttons on the navigation bar (e.g., back button)
+         }
+         
         
         // Set data source and delegate for the table view
         EventsOrgTable.dataSource = self
