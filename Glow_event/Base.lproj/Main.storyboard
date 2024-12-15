@@ -204,14 +204,14 @@
                             <tableViewSection headerTitle="Select your Venu Location" id="Oj7-7Y-CN8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qax-Cz-WDc">
-                                        <rect key="frame" x="0.0" y="919.33332824707031" width="430" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="919.33332824707031" width="430" height="50.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qax-Cz-WDc" id="e9R-Ia-XsD">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="50.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="50.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-ZY-4dF">
-                                                    <rect key="frame" x="10" y="10" width="1004" height="30.5"/>
+                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Eb-ZY-4dF">
+                                                    <rect key="frame" x="10" y="9.9999999999999982" width="410" height="30.333333333333329"/>
                                                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <menu key="menu" id="EZb-7x-ggQ">
                                                         <children>
@@ -248,13 +248,13 @@
                             <tableViewSection headerTitle="Enter your Event Capacity" id="beo-gf-l8T">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ps9-E5-MsK">
-                                        <rect key="frame" x="0.0" y="1047.8333282470703" width="430" height="54.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="1047.6666603088379" width="430" height="54.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ps9-E5-MsK" id="JLW-Hn-O0H">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="54.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Capcity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1y-ES-fGU">
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Capcity" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o1y-ES-fGU">
                                                     <rect key="frame" x="10" y="10" width="410" height="34.333333333333336"/>
                                                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,13 +283,13 @@
                             <tableViewSection headerTitle="Select your Venu Location" id="iSN-ub-zmF" userLabel="Select your Age Group">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bDC-3B-0fz">
-                                        <rect key="frame" x="0.0" y="1180.1666603088379" width="430" height="50.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="1179.9999923706055" width="430" height="50.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bDC-3B-0fz" id="wr2-Ee-lJd">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="50.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbM-sC-2La">
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbM-sC-2La">
                                                     <rect key="frame" x="10" y="9.9999999999999982" width="410" height="30.333333333333329"/>
                                                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <menu key="menu" id="N3P-ZE-AkN">
@@ -334,13 +334,13 @@
                             <tableViewSection headerTitle="Start Date" id="aKO-9M-k5A">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wj8-YB-dcf">
-                                        <rect key="frame" x="0.0" y="1308.4999923706055" width="430" height="220.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="1308.333324432373" width="430" height="220.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wj8-YB-dcf" id="xUF-Zl-zXb">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="220.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvL-sX-Xbe">
+                                                <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvL-sX-Xbe">
                                                     <rect key="frame" x="2" y="2" width="426" height="216.33333333333334"/>
                                                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -364,14 +364,14 @@
                             <tableViewSection headerTitle="End Date" id="Aq0-CS-rGJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xvi-0t-xEP">
-                                        <rect key="frame" x="0.0" y="1606.8333206176758" width="430" height="220.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="1606.6666526794434" width="430" height="220.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xvi-0t-xEP" id="0dD-2i-lph">
-                                            <rect key="frame" x="0.0" y="0.0" width="430" height="220.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="220.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-2S-ayD">
-                                                    <rect key="frame" x="2" y="2" width="426" height="216.33333333333334"/>
+                                                <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-2S-ayD">
+                                                    <rect key="frame" x="2" y="2" width="1020" height="216.5"/>
                                                     <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                                     <color key="tintColor" systemColor="systemGray4Color"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="754388306.19181705">
@@ -394,14 +394,14 @@
                             <tableViewSection headerTitle="Enter your Event Description" id="MoO-km-yNZ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="350" id="fkz-2f-fly">
-                                        <rect key="frame" x="0.0" y="1905.1666488647461" width="430" height="350"/>
+                                        <rect key="frame" x="0.0" y="1905.1666526794434" width="430" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fkz-2f-fly" id="VH1-aW-agN">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Your description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="riD-4S-McF">
-                                                    <rect key="frame" x="30" y="21" width="370" height="308"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="Your description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="riD-4S-McF">
+                                                    <rect key="frame" x="30" y="25" width="964" height="300"/>
                                                     <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -426,7 +426,7 @@
                             <tableViewSection headerTitle="Select your Event Status" id="Pgj-xd-36A">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zoL-XT-h7o">
-                                        <rect key="frame" x="0.0" y="2333.1666488647461" width="430" height="50.5"/>
+                                        <rect key="frame" x="0.0" y="2333.1666526794434" width="430" height="50.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zoL-XT-h7o" id="vij-XX-daw">
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="50.5"/>
@@ -472,11 +472,10 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="G8E-iN-jTk" secondAttribute="bottom" constant="10" id="73U-36-98R"/>
-                                                <constraint firstItem="G8E-iN-jTk" firstAttribute="leading" secondItem="vij-XX-daw" secondAttribute="leading" constant="10" id="9Hr-FJ-uLV"/>
-                                                <constraint firstAttribute="trailing" secondItem="G8E-iN-jTk" secondAttribute="trailing" constant="10" id="Pzg-xj-9xI"/>
-                                                <constraint firstItem="G8E-iN-jTk" firstAttribute="top" secondItem="vij-XX-daw" secondAttribute="top" constant="10" id="dpO-ud-Qir"/>
-                                                <constraint firstAttribute="trailing" secondItem="G8E-iN-jTk" secondAttribute="trailing" constant="10" id="tN4-PV-q3h"/>
+                                                <constraint firstAttribute="bottom" secondItem="G8E-iN-jTk" secondAttribute="bottom" constant="10" id="Luj-I6-HIl"/>
+                                                <constraint firstItem="G8E-iN-jTk" firstAttribute="leading" secondItem="vij-XX-daw" secondAttribute="leading" constant="10" id="WIN-z2-k0h"/>
+                                                <constraint firstItem="G8E-iN-jTk" firstAttribute="top" secondItem="vij-XX-daw" secondAttribute="top" constant="10" id="d8E-9o-cf6"/>
+                                                <constraint firstAttribute="trailing" secondItem="G8E-iN-jTk" secondAttribute="trailing" constant="10" id="mHd-6o-Gzn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -810,7 +809,7 @@
         <!--Filter Table View Controller-->
         <scene sceneID="8VO-S8-9QV">
             <objects>
-                <tableViewController storyboardIdentifier="FilterPageOrg" id="ydk-F7-3uk" customClass="FilterTableViewController" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="FilterPageOrg" hidesBottomBarWhenPushed="YES" id="ydk-F7-3uk" customClass="FilterTableViewController" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SI8-qX-qid">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -826,8 +825,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-tF-ykV">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvr-tF-ykV">
                                                     <rect key="frame" x="10" y="10" width="410" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -862,12 +862,242 @@
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-1" id="wiV-Tv-eQw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hZM-en-ama">
+                                        <rect key="frame" x="0.0" y="208" width="430" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hZM-en-ama" id="82W-2T-5gW">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Any Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adl-Ro-j1b">
+                                                    <rect key="frame" x="30.000000000000007" y="20.999999999999996" width="106.66666666666669" height="32.666666666666657"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rT-BU-CLz">
+                                                    <rect key="frame" x="351" y="21" width="51" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="AnyDateSwitchChanged:" destination="ydk-F7-3uk" eventType="valueChanged" id="YzE-wj-R9g"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Filter Events From" id="RHs-P8-zUN">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="KZs-Xw-InV">
+                                        <rect key="frame" x="0.0" y="366" width="430" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KZs-Xw-InV" id="ldt-mj-kZJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="RNa-p9-Kpl" userLabel="EventFromPKR">
+                                                    <rect key="frame" x="2" y="2" width="426" height="216"/>
+                                                    <connections>
+                                                        <action selector="OptionFilterDateFrom:" destination="ydk-F7-3uk" eventType="valueChanged" id="1UM-9e-xgQ"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="Wvr-tF-ykV" firstAttribute="leading" secondItem="cFQ-Bu-wTF" secondAttribute="leading" constant="10" id="DeT-P7-YgF"/>
-                                                <constraint firstAttribute="bottom" secondItem="Wvr-tF-ykV" secondAttribute="bottom" constant="10" id="F90-f0-qLz"/>
-                                                <constraint firstAttribute="trailing" secondItem="Wvr-tF-ykV" secondAttribute="trailing" constant="10" id="LAv-hf-vkp"/>
-                                                <constraint firstItem="Wvr-tF-ykV" firstAttribute="top" secondItem="cFQ-Bu-wTF" secondAttribute="top" constant="10" id="gK5-tm-dyM"/>
+                                                <constraint firstAttribute="bottom" secondItem="RNa-p9-Kpl" secondAttribute="bottom" constant="2" id="KoR-2b-dA4"/>
+                                                <constraint firstItem="RNa-p9-Kpl" firstAttribute="top" secondItem="ldt-mj-kZJ" secondAttribute="top" constant="2" id="anc-D1-2b9"/>
+                                                <constraint firstItem="RNa-p9-Kpl" firstAttribute="leading" secondItem="ldt-mj-kZJ" secondAttribute="leading" constant="2" id="w2a-05-diQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="RNa-p9-Kpl" secondAttribute="trailing" constant="2" id="ztd-Fa-14o"/>
                                             </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Filter Events To" id="Na5-G8-ptG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="LwH-Hr-1Pf">
+                                        <rect key="frame" x="0.0" y="664" width="430" height="220"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LwH-Hr-1Pf" id="jhM-iI-l0z">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="220"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="tWQ-Rq-orw" userLabel="EventToPKR">
+                                                    <rect key="frame" x="2" y="2" width="426" height="216"/>
+                                                    <connections>
+                                                        <action selector="OptionFilterDateTo:" destination="ydk-F7-3uk" eventType="valueChanged" id="o29-WQ-66V"/>
+                                                    </connections>
+                                                </datePicker>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="tWQ-Rq-orw" firstAttribute="top" secondItem="jhM-iI-l0z" secondAttribute="top" constant="2" id="Dvg-he-hY1"/>
+                                                <constraint firstAttribute="trailing" secondItem="tWQ-Rq-orw" secondAttribute="trailing" constant="2" id="Ebo-cF-Zka"/>
+                                                <constraint firstAttribute="bottom" secondItem="tWQ-Rq-orw" secondAttribute="bottom" constant="2" id="ZfV-Ml-RTs"/>
+                                                <constraint firstItem="tWQ-Rq-orw" firstAttribute="leading" secondItem="jhM-iI-l0z" secondAttribute="leading" constant="2" id="gHM-TI-hs4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-1" id="biz-mJ-flf" userLabel="Age Group">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="guy-sp-iNK">
+                                        <rect key="frame" x="0.0" y="962" width="430" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="guy-sp-iNK" id="BDr-c7-qBW">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gK7-ok-Kkg">
+                                                    <rect key="frame" x="22" y="13" width="386" height="54"/>
+                                                    <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <menu key="menu" id="3QN-DE-fCY">
+                                                        <children>
+                                                            <command title="Any" id="3gS-NM-Fey">
+                                                                <connections>
+                                                                    <action selector="OptionFilterAge:" destination="kRa-WJ-lJv" id="GlV-3P-Wyi"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="18+" id="JCR-CZ-QSu">
+                                                                <connections>
+                                                                    <action selector="OptionFilterAge:" destination="kRa-WJ-lJv" id="XCr-uE-8Gi"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="12-17" id="C6F-hH-aOc">
+                                                                <connections>
+                                                                    <action selector="OptionFilterAge:" destination="kRa-WJ-lJv" id="LMG-3u-NK2"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="0-11" id="3Q6-Bq-O4f">
+                                                                <connections>
+                                                                    <action selector="OptionFilterAge:" destination="kRa-WJ-lJv" id="g2X-Ct-FRi"/>
+                                                                </connections>
+                                                            </command>
+                                                        </children>
+                                                    </menu>
+                                                    <state key="normal" title="Age Group"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="gK7-ok-Kkg" firstAttribute="leading" secondItem="BDr-c7-qBW" secondAttribute="leadingMargin" constant="2" id="97V-Yf-FvF"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gK7-ok-Kkg" secondAttribute="trailing" constant="2" id="Dbt-w5-gKr"/>
+                                                <constraint firstItem="gK7-ok-Kkg" firstAttribute="top" secondItem="BDr-c7-qBW" secondAttribute="topMargin" constant="2" id="HGn-Jj-LFU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gK7-ok-Kkg" secondAttribute="bottom" constant="2" id="i3J-nG-A4q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-1" id="FFm-ZU-ycZ" userLabel="Location">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="j0s-Gu-mfu">
+                                        <rect key="frame" x="0.0" y="1120" width="430" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j0s-Gu-mfu" id="zsD-DS-XM0">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldM-KK-Ao5">
+                                                    <rect key="frame" x="10" y="10" width="410" height="60"/>
+                                                    <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <menu key="menu" id="nQd-cj-ax9">
+                                                        <children>
+                                                            <command title="Manama" id="Csr-aF-eZq" userLabel="Manama">
+                                                                <connections>
+                                                                    <action selector="OptionFilterLocation:" destination="kRa-WJ-lJv" id="Tty-ZV-agc"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="Riffa" id="zLb-ip-7eN" userLabel="Riffa">
+                                                                <connections>
+                                                                    <action selector="OptionFilterLocation:" destination="kRa-WJ-lJv" id="BTy-MN-FpH"/>
+                                                                </connections>
+                                                            </command>
+                                                        </children>
+                                                    </menu>
+                                                    <state key="normal" title="Location"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="ldM-KK-Ao5" firstAttribute="top" secondItem="zsD-DS-XM0" secondAttribute="top" constant="10" id="IXs-fo-WHl"/>
+                                                <constraint firstAttribute="trailing" secondItem="ldM-KK-Ao5" secondAttribute="trailing" constant="10" id="TOc-FB-oCM"/>
+                                                <constraint firstItem="ldM-KK-Ao5" firstAttribute="leading" secondItem="zsD-DS-XM0" secondAttribute="leading" constant="10" id="amT-8T-9ef"/>
+                                                <constraint firstAttribute="bottom" secondItem="ldM-KK-Ao5" secondAttribute="bottom" constant="10" id="c6d-OJ-0xM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Section-1" id="Jzf-Qe-ao1" userLabel="Event Status">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4ax-5f-9TU">
+                                        <rect key="frame" x="0.0" y="1278" width="430" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ax-5f-9TU" id="8TP-YJ-Q7i">
+                                            <rect key="frame" x="0.0" y="0.0" width="430" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkR-bg-GZv" userLabel="Event Status">
+                                                    <rect key="frame" x="30" y="21" width="370" height="38"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.1372549236" green="0.1372549236" blue="0.1372549236" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <menu key="menu" id="eDj-aJ-qLs">
+                                                        <children>
+                                                            <command title="Ongoing" id="lN0-ms-gSi">
+                                                                <connections>
+                                                                    <action selector="OptionFilterStatus:" destination="kRa-WJ-lJv" id="NQU-rG-7Ps"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="Completed" id="MW8-bY-Xe8">
+                                                                <connections>
+                                                                    <action selector="OptionFilterStatus:" destination="kRa-WJ-lJv" id="H9u-6n-S6J"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="Postponed" id="aJU-mz-t67">
+                                                                <connections>
+                                                                    <action selector="OptionFilterStatus:" destination="kRa-WJ-lJv" id="dCL-e6-9Fs"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="Canceled" id="XfV-NR-AfX">
+                                                                <connections>
+                                                                    <action selector="OptionFilterStatus:" destination="kRa-WJ-lJv" id="fYX-kj-y8v"/>
+                                                                </connections>
+                                                            </command>
+                                                            <command title="Upcoming" id="VK5-Vj-YHh">
+                                                                <connections>
+                                                                    <action selector="OptionFilterStatus:" destination="kRa-WJ-lJv" id="lsz-yN-Ir2"/>
+                                                                </connections>
+                                                            </command>
+                                                        </children>
+                                                    </menu>
+                                                    <state key="normal" title="Status"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -880,7 +1110,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="Rfq-dV-YFm">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="XdW-Z6-RtC">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0bi-ZK-kJj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="0bi-ZK-kJj">
                                 <rect key="frame" x="315" y="5" width="95" height="34.333333333333336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -892,12 +1122,18 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="AnyDateSW" destination="8rT-BU-CLz" id="bQs-3W-K17"/>
+                        <outlet property="EventAge" destination="gK7-ok-Kkg" id="ais-Qw-csW"/>
                         <outlet property="EventCatgory" destination="Wvr-tF-ykV" id="b4J-Dp-mIE"/>
+                        <outlet property="EventStatusBtn" destination="HkR-bg-GZv" id="Cwq-wC-p4k"/>
+                        <outlet property="EventVen" destination="ldM-KK-Ao5" id="kJ2-CI-GUA"/>
+                        <outlet property="FromEventPKR" destination="RNa-p9-Kpl" id="ccU-8G-hVi"/>
+                        <outlet property="ToEventPKR" destination="tWQ-Rq-orw" id="N5b-XR-YuJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kRa-WJ-lJv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7125" y="725"/>
+            <point key="canvasLocation" x="7124.6511627906975" y="724.89270386266094"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dDS-KE-jgp">
@@ -983,7 +1219,7 @@
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="location.fill" catalog="system" width="32" height="32"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="plus" catalog="system" width="128" height="113"/>
@@ -991,10 +1227,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

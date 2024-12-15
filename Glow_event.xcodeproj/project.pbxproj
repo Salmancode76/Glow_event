@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F8CEE2E2D0F103300CB5C7D /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CEE2D2D0F103300CB5C7D /* Firebase.swift */; };
+		3F8CEE302D0F104F00CB5C7D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CEE2F2D0F104F00CB5C7D /* Event.swift */; };
+		3F8CEE322D0F106D00CB5C7D /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CEE312D0F106D00CB5C7D /* Cloudinary.swift */; };
 		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
-		D51AF4332D09C6DC00002CD4 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4302D09C6DC00002CD4 /* Event.swift */; };
-		D51AF4342D09C6DC00002CD4 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4312D09C6DC00002CD4 /* Cloudinary.swift */; };
-		D51AF4352D09C6DC00002CD4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4322D09C6DC00002CD4 /* Firebase.swift */; };
 		D51AF4392D0A0B3D00002CD4 /* SearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */; };
 		D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */; };
 		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
@@ -51,10 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F8CEE2D2D0F103300CB5C7D /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		3F8CEE2F2D0F104F00CB5C7D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		3F8CEE312D0F106D00CB5C7D /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		D51AF4302D09C6DC00002CD4 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = ../../../Main/Glow_event/Glow_event/Models/Event.swift; sourceTree = "<group>"; };
-		D51AF4312D09C6DC00002CD4 /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cloudinary.swift; path = ../../../Main/Glow_event/Glow_event/Models/Cloudinary.swift; sourceTree = "<group>"; };
-		D51AF4322D09C6DC00002CD4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Firebase.swift; path = ../../../Main/Glow_event/Glow_event/Models/Firebase.swift; sourceTree = "<group>"; };
 		D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventOrgViewController.swift; sourceTree = "<group>"; };
 		D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
@@ -110,9 +110,9 @@
 		D51AF42F2D09C69300002CD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D51AF4312D09C6DC00002CD4 /* Cloudinary.swift */,
-				D51AF4302D09C6DC00002CD4 /* Event.swift */,
-				D51AF4322D09C6DC00002CD4 /* Firebase.swift */,
+				3F8CEE2D2D0F103300CB5C7D /* Firebase.swift */,
+				3F8CEE2F2D0F104F00CB5C7D /* Event.swift */,
+				3F8CEE312D0F106D00CB5C7D /* Cloudinary.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,13 +258,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51AF4342D09C6DC00002CD4 /* Cloudinary.swift in Sources */,
-				D51AF4332D09C6DC00002CD4 /* Event.swift in Sources */,
+				3F8CEE2E2D0F103300CB5C7D /* Firebase.swift in Sources */,
+				3F8CEE302D0F104F00CB5C7D /* Event.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */,
 				D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */,
+				3F8CEE322D0F106D00CB5C7D /* Cloudinary.swift in Sources */,
 				D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */,
-				D51AF4352D09C6DC00002CD4 /* Firebase.swift in Sources */,
 				D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */,

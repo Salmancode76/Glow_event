@@ -16,9 +16,12 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
     var selectedCategory: String? // Store the selected category
 
 
-    var events: [Event] = [] // Array to hold Event objects
-    var searchEvents: [Event] = [] // Array to hold filtered events
+    var events: [Event] = [] // Array to hold all events from Firebase
+      var filteredEvents: [Event] = [] // Array to hold filtered events
+      
+      var searchEvents: [Event] = [] // Array to hold search results
     var searching = false // State to track if searching is active
+    
     @IBAction func openFilterPage(_ sender: UIButton) {
         // Instantiate the FilterTableViewController from storyboard
         if let filterVC = storyboard?.instantiateViewController(withIdentifier: "FilterPageOrg") as? FilterTableViewController {
@@ -61,6 +64,7 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
             // Firebase reference to get all events
             FirebaseDB.GetAllEvents { [weak self] events in
                 self?.events = events  // Store fetched events in the array
+                self?.filteredEvents = events  // Set filtered events to the same initially
                 self?.EventsOrgTable.reloadData()  // Reload the table view to display events
             }
         }
@@ -73,25 +77,27 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
     // MARK: - UITableViewDataSource Methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searching ? searchEvents.count : events.count
+        let count = searching ? searchEvents.count : filteredEvents.count
+            print("Number of rows: \(count)")
+            return count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get the event for the current row (filtered or not)
-        let event = searching ? searchEvents[indexPath.row] : events[indexPath.row]
-        
+        let event = searching ? searchEvents[indexPath.row] : filteredEvents[indexPath.row]
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! EventOrgTableViewCell
         
         // Customize cell appearance (black background and white text)
         cell.textLabel?.textColor = .white
         cell.detailTextLabel?.textColor = .white
         cell.backgroundColor = .black
-        
+
         let selectedView = UIView()
         selectedView.backgroundColor = .darkGray
         cell.selectedBackgroundView = selectedView
         cell.EventName.textColor = .white
-        
+
         // Placeholder image
         if let photoImage = UIImage(systemName: "photo.fill") {
             cell.setupCell(photo: photoImage, name: event.EventName, startDate: event.startDate, venu: event.venu_options)
@@ -100,7 +106,7 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
         // Download the image for the event
         let imagePath = event.EventPhotoURL
         let fullImageURL = imagePath
-        
+
         CloudinarySetup.DownloadEventyImage(from: fullImageURL) { downloadedImage in
             if let image = downloadedImage {
                 cell.EventImage.image = image
@@ -108,9 +114,10 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
                 cell.EventImage.image = UIImage(systemName: "photo.fill") // Placeholder
             }
         }
-        
+
         return cell
     }
+
 
     // MARK: - UISearchBarDelegate Methods
 
@@ -119,12 +126,15 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
             searching = false
         } else {
             searching = true
-            searchEvents = events.filter { event in
+            // Search within filtered events, not the entire list
+            searchEvents = filteredEvents.filter { event in
                 return event.EventName.lowercased().contains(searchText.lowercased())
             }
         }
         EventsOrgTable.reloadData() // Reload table view to display filtered results
     }
+
+
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false // Reset search state
@@ -141,7 +151,9 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
    extension SearchEventOrgViewController: FilterTableViewControllerDelegate {
        // Implement the delegate method to apply the filtered events
        func applyFilterWith(events: [Event]) {
-           self.events = events
-           self.EventsOrgTable.reloadData() // Reload the table with filtered events
+           print("Filtered events received in SearchEventOrgViewController: ", events)
+           self.filteredEvents = events
+           self.EventsOrgTable.reloadData() // Reload table with filtered events
        }
+
    }
