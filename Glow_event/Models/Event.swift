@@ -3,6 +3,7 @@ import Firebase
 import FirebaseDatabase
 
 struct Event {
+    var id: String
     var EventName: String
     var venu_options: String
     var price: Double
@@ -17,6 +18,7 @@ struct Event {
     
     // Custom initializer
     init(EventName: String, venu_options: String, price: Double, startDate: Date, endDate: Date, descrip: String, EventStatus: String, EventPhotoURL: String, EventCategory: String?, AgeGroup: String?, Capacity: Int?) {
+        self.id = ""
         self.EventName = EventName
         self.venu_options = venu_options
         self.price = price
@@ -53,5 +55,8 @@ struct Event {
         self.EventCategory = value["EventCategory"] as? String
         self.AgeGroup = value["AgeGroup"] as? String
         self.Capacity = value["Capcity"] as? Int
+        
+        self.id = snapshot.key  
+
     }
 }

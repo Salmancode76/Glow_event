@@ -13,7 +13,8 @@
 		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
 		D51AF4392D0A0B3D00002CD4 /* SearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */; };
 		D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */; };
-		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
+		D5640AA52D1352EE00E86967 /* EventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5640AA42D1352EE00E86967 /* EventDetailOrgViewController.swift */; };
+		D5640AAD2D13589800E86967 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5640AAC2D13589800E86967 /* EventOrgTableViewCell.swift */; };
 		D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -57,7 +58,8 @@
 		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventOrgViewController.swift; sourceTree = "<group>"; };
 		D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
-		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
+		D5640AA42D1352EE00E86967 /* EventDetailOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailOrgViewController.swift; sourceTree = "<group>"; };
+		D5640AAC2D13589800E86967 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
 		D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventTableViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -137,7 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				D51AF42F2D09C69300002CD4 /* Models */,
-				D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */,
 				D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */,
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
@@ -146,6 +147,8 @@
 				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */,
+				D5640AAC2D13589800E86967 /* EventOrgTableViewCell.swift */,
+				D5640AA42D1352EE00E86967 /* EventDetailOrgViewController.swift */,
 				D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */,
 				D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
@@ -261,10 +264,11 @@
 				3F8CEE2E2D0F103300CB5C7D /* Firebase.swift in Sources */,
 				3F8CEE302D0F104F00CB5C7D /* Event.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
-				D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */,
 				D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */,
 				3F8CEE322D0F106D00CB5C7D /* Cloudinary.swift in Sources */,
+				D5640AA52D1352EE00E86967 /* EventDetailOrgViewController.swift in Sources */,
 				D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */,
+				D5640AAD2D13589800E86967 /* EventOrgTableViewCell.swift in Sources */,
 				D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */,

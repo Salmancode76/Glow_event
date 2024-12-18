@@ -49,4 +49,3 @@ class EventOrgTableViewCell: UITableViewCell {
     
 
 }
-

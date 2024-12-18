@@ -21,6 +21,35 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        let event = searching ? searchEvents[indexPath.row] : events[indexPath.row]
+
+        if let vc = storyboard?.instantiateViewController(identifier: "EventDetailOrg") as? EventDetailOrgViewController {
+
+            
+            vc.eventName = event.EventName
+            
+            vc.eventDate = event.startDate
+            
+            vc.eventPhotoURL = event.EventPhotoURL
+            
+            vc.eventStatus = event.EventStatus
+            
+            vc.eventDes = event.descrip
+            
+            vc.eventSeats =  (event.Capacity)
+            
+            vc.eventPrice = event.price
+            
+            vc.eventLocation = event.venu_options
+                
+            vc.eventID = event.id
+            
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
