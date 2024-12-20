@@ -1,19 +1,14 @@
-//
-//  AppDelegate.swift
-//  Glow_event
-//
-//  Created by BP-36-201-09 on 25/11/2024.
-//
-
+import Firebase
 import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
