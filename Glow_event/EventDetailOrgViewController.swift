@@ -1,17 +1,9 @@
+import Foundation
 import UIKit
-import FirebaseDatabaseInternal
+class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-class EventDetailOrgViewController: UIViewController {
-
-    // Outlets for the UI components
-    @IBOutlet weak var EventName: UILabel!
-    @IBOutlet weak var EventStatus: UILabel!
-    @IBOutlet weak var EventDate: UILabel!
-    @IBOutlet weak var EventSeatslbl: UILabel!
-    @IBOutlet weak var EventPhoto: UIImageView!
-    @IBOutlet weak var EventDesclbl: UILabel!
-    @IBOutlet weak var Pricelbl: UILabel!
-    @IBOutlet weak var EventLocation: UILabel!
+    @IBOutlet weak var EventDetailTableview: UITableView!
+    // Table view outlet
 
     // Variables to hold event data (these will be passed from the previous view controller)
     var eventPhotoURL: String?
@@ -22,70 +14,42 @@ class EventDetailOrgViewController: UIViewController {
     var eventSeats: Int?
     var eventPrice: Double?
     var eventLocation: String?
-    
-    var eventID : String?
+    var eventID: String?
 
-   
-    @IBAction func DeleteEvent(_ sender: Any) {
-        guard let eventID = eventID else {
-            print("Event ID is missing!")
-            return
-        }
-        
-        // Reference to the specific event in Firebase using the eventID
-        let eventRef = FirebaseDB.ref.child("events").child(eventID)
-        
-        // Remove the event from Firebase
-        eventRef.removeValue { error, _ in
-            if let error = error {
-                // If there's an error, print it
-                print("Failed to delete event: \(error.localizedDescription)")
-            } else {
-                // Successfully deleted the event
-                print("Event deleted successfully!")
-                // Optionally, you could navigate back or show a confirmation message
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-    }
-
-    @IBOutlet weak var DeleteBtn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up the table view data source and delegate
+        EventDetailTableview.delegate = self
+        EventDetailTableview.dataSource = self
+    }
 
-        // Set up the UI components with event data passed from the previous view controller
-        EventLocation.text = eventLocation
-        EventName.text = eventName
-        EventStatus.text = eventStatus
-        EventDesclbl.text = eventDes
-        EventSeatslbl.text = "Seats Available: \(eventSeats ?? 0)"
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1  // As you are showing the event details in a single row
+    }
 
-        // Format and display price as currency
-        if let price = eventPrice {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .currency
-            Pricelbl.text = formatter.string(from: NSNumber(value: price))
-        }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailOrgTableViewCell", for: indexPath) as! EventDetailOrgTableViewCell
 
-        // Format the date into a string
-        if let eventDate = eventDate {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "EEE, MMM dd • h:mm a"
-            EventDate.text = dateFormatter.string(from: eventDate)
-        } else {
-            EventDate.text = "No Date Available"
-        }
+        // Set the cell background color to black
+             cell.backgroundColor = .black
+             
+             // Set the selected background color (when the cell is tapped)
+             let selectedView = UIView()
+             selectedView.backgroundColor = .darkGray // Set selection color
+             cell.selectedBackgroundView = selectedView
+        
+        // Configure the cell using the data passed to this view controller
+        cell.setupCell(name: eventName ?? "No Name",
+                       startDate: eventDate ?? Date(),
+                       venu: eventLocation ?? "No Location",
+                       status: eventStatus ?? "No Status",
+                       seats: eventSeats ?? 0,
+                       description: eventDes ?? "No Description",
+                       price: eventPrice ?? 0.0,
+                       location: eventLocation ?? "No Location",
+                       photoURL: eventPhotoURL ?? "")
 
-        // Load the event image from the URL
-        if let photoURL = eventPhotoURL {
-            CloudinarySetup.DownloadEventyImage(from: photoURL) { [weak self] downloadedImage in
-                if let image = downloadedImage {
-                    self?.EventPhoto.image = image
-                } else {
-                    // If the image download fails, show a placeholder image
-                    self?.EventPhoto.image = UIImage(systemName: "photo.fill")
-                }
-            }
-        }
+        return cell
     }
 }
