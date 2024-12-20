@@ -41,14 +41,23 @@ class LoginViewController: UIViewController {
     
     private func navigateToProfileScreen() {
         print("Attempting to navigate to UserProfileViewController")
-
+        
         if let profileVC = storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") {
             print("Successfully instantiated UserProfileViewController")
-
+            
             profileVC.modalPresentationStyle = .fullScreen
-
+            
             DispatchQueue.main.async { [weak self] in
-                self?.navigationController?.pushViewController(profileVC, animated: true)
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                      let window = windowScene.windows.first else {
+                    print("Failed to access app window")
+                    return
+                }
+                
+                // Set the profile screen as the root view controller
+                let navigationController = UINavigationController(rootViewController: profileVC)
+                window.rootViewController = navigationController
+                window.makeKeyAndVisible()
             }
         } else {
             print("Failed to instantiate UserProfileViewController. Check storyboard ID.")
