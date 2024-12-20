@@ -35,17 +35,17 @@ class LoginViewController: UIViewController {
             }
             
             print("Sign-in successful. User ID: \(authResult?.user.uid ?? "Unknown UID")")
-            self.navigateToProfileScreen()
+            self.navigateToSettingsScreen()
         }
     }
     
-    private func navigateToProfileScreen() {
-        print("Attempting to navigate to UserProfileViewController")
+    private func navigateToSettingsScreen() {
+        print("Attempting to navigate to UserSettingsViewController")
         
-        if let profileVC = storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") {
-            print("Successfully instantiated UserProfileViewController")
+        if let settingsVC = storyboard?.instantiateViewController(withIdentifier: "UserSettingsViewController") {
+            print("Successfully instantiated UserSettingsViewController")
             
-            profileVC.modalPresentationStyle = .fullScreen
+            settingsVC.modalPresentationStyle = .fullScreen
             
             DispatchQueue.main.async { [weak self] in
                 guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -54,13 +54,13 @@ class LoginViewController: UIViewController {
                     return
                 }
                 
-                // Set the profile screen as the root view controller
-                let navigationController = UINavigationController(rootViewController: profileVC)
+                // Set the settings screen as the root view controller
+                let navigationController = UINavigationController(rootViewController: settingsVC)
                 window.rootViewController = navigationController
                 window.makeKeyAndVisible()
             }
         } else {
-            print("Failed to instantiate UserProfileViewController. Check storyboard ID.")
+            print("Failed to instantiate UserSettingsViewController. Check storyboard ID.")
         }
     }
     

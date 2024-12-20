@@ -5,106 +5,139 @@ import FirebaseDatabase
 
 class UserSettingsViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // set delegate and datasource properties
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // deselect the cell after the user taps it
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        // check uf the tapped cell is the "Delete Account" cell
-        if indexPath.section == 2 && indexPath.row == 0 {
-            showDeleteAccountConfirmation()
-        }
-    }
     
-    func showDeleteAccountConfirmation() {
-        let alert = UIAlertController(title: "Delete Account", message: "Are you sure you want to delete your account? This action cannot be undone.", preferredStyle: .alert)
-        
-        // Add cancel action
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        
-        // Add delete action
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-            self.deleteUserAccount { success, errorMessage in
-                if success {
-                    self.showSuccessAlert()
-                } else if let errorMessage = errorMessage {
-                    self.showErrorAlert(message: errorMessage)
+    @IBOutlet weak var notificationsSwitch: UISwitch!
+    @IBOutlet weak var lightModeSwitch: UISwitch!
+    
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+            notificationsSwitch.isOn = false
+            lightModeSwitch.isOn = false
+        }
+
+    @IBAction func notificationsSwitchChanged(_ sender: UISwitch) {
+            if sender.isOn {
+                print("Notifications enabled")
+            } else {
+                print("Notifications disabled")
+            }
+        }
+
+    @IBAction func lightModeSwitchChanged(_ sender: UISwitch) {
+            if sender.isOn {
+                print("Light mode enabled")
+            } else {
+                print("Dark mode enabled")
+            }
+        }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            if indexPath.section == 2 {
+                switch indexPath.row {
+                case 1:
+                    showSignOutAlert()
+                    signOutUser()
+                case 2:
+                    showDeleteAccountAlert()
+                default:
+                    break
                 }
             }
-        }))
-        
-        // present the alert
-        self.present(alert, animated: true, completion: nil)
-    }
+        }
     
-    func deleteUserAccount(completion: @escaping (Bool, String?) -> Void) {
-        // get the current user
+    private func signOutUser() {
+            do {
+                try Auth.auth().signOut()
+                print("User signed out successfully")
+                // Navigate back to LoginViewController
+                navigateToLogin()
+            } catch let error {
+                print("Error signing out: \(error.localizedDescription)")
+            }
+        }
+    
+    private func deleteUserAccount() {
         guard let user = Auth.auth().currentUser else {
-            completion(false, "User not logged in.")
+            print("No user is logged in")
             return
         }
-        
-        // reference the user's data in firebase
+
         let uid = user.uid
+
         let databaseRef = Database.database().reference().child("users").child(uid)
-        
-        // remove the user's data from the database
         databaseRef.removeValue { error, _ in
             if let error = error {
-                completion(false, "Failed to delete user data: \(error.localizedDescription)")
+                print("Error removing user data: \(error.localizedDescription)")
+                self.showAlert(title: "Error", message: "Failed to remove user data. Please try again.")
                 return
-            }
-            
-            // delete the user's account
-            user.delete() { error in
-                if let error = error {
-                    completion(false, "Failed to delete user account: \(error.localizedDescription)")
-                } else {
-                    completion(true, nil)
+            } else {
+                print("User data successfully removed from the database.")
+
+                user.delete { error in
+                    if let error = error {
+                        print("Error deleting user account: \(error.localizedDescription)")
+                        self.showAlert(title: "Error", message: "Failed to delete account. Please try again.")
+                    } else {
+                        print("User account deleted successfully.")
+                        self.navigateToLogin()
+                    }
                 }
             }
         }
     }
     
-    func showSuccessAlert() {
-        let alert = UIAlertController(title: "Account Deleted", message: "Your account has been successfully deleted", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-            self.redirectToLoginScreen()
-        }))
-        self.present(alert, animated: true, completion: nil)
-    }
+    private func removeUserFromDatabase() {
+            guard let user = Auth.auth().currentUser else { return }
+            let uid = user.uid
+            let databaseRef = Database.database().reference().child("users").child(uid)
+            databaseRef.removeValue { error, _ in
+                if let error = error {
+                    print("Error removing user data: \(error.localizedDescription)")
+                } else {
+                    print("User data removed from database")
+                }
+            }
+        }
     
-    func showErrorAlert(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-    }
+    func deleteAccount() {
+            guard let user = Auth.auth().currentUser else { return }
+            user.delete { error in
+                if let error = error {
+                    print("Error deleting account: \(error.localizedDescription)")
+                } else {
+                    print("Account deleted successfully")
+                }
+            }
+        }
     
-    func redirectToLoginScreen() {
-        let loginVC = LoginViewController()
-        loginVC.modalPresentationStyle = .fullScreen
-        self.present(loginVC, animated: true, completion: nil)
-    }
+    private func showSignOutAlert() {
+            let alert = UIAlertController(title: "Log Out", message: "Are you sure you want to log out?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+                self.signOutUser()
+            }))
+            present(alert, animated: true, completion: nil)
+        }
     
-
+    private func showDeleteAccountAlert() {
+            let alert = UIAlertController(title: "Delete Account", message: "Are you sure you want to delete your account? This action cannot be undone.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { _ in
+                self.deleteUserAccount()
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+    
+    private func navigateToLogin() {
+            guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") else { return }
+            loginVC.modalPresentationStyle = .fullScreen
+            present(loginVC, animated: true, completion: nil)
+        }
+    
+    func showAlert(title: String, message: String) {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        }
 }
