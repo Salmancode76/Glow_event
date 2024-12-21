@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KuA-8b-1vb">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,10 +12,33 @@
             <objects>
                 <viewController autoresizesArchivedViewToFullSize="NO" title="Send Hiighlights" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Xvu-QQ-adc" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEV-nj-MCB">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-iC-EKg">
+                                <rect key="frame" x="20" y="181" width="984" height="35"/>
+                                <color key="backgroundColor" red="0.2241323452" green="0.2241323452" blue="0.2241323452" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erN-WK-SxY">
+                                <rect key="frame" x="41" y="188" width="750" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TZ6-ee-nh7"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="erN-WK-SxY" firstAttribute="leading" secondItem="TZ6-ee-nh7" secondAttribute="leading" constant="41" id="2TO-mm-XXb"/>
+                            <constraint firstItem="TZ6-ee-nh7" firstAttribute="trailing" secondItem="erN-WK-SxY" secondAttribute="trailing" constant="233" id="GvI-EX-caq"/>
+                            <constraint firstItem="bjm-iC-EKg" firstAttribute="leading" secondItem="TZ6-ee-nh7" secondAttribute="leading" constant="20" id="acW-rV-O6T"/>
+                            <constraint firstItem="erN-WK-SxY" firstAttribute="centerY" secondItem="bjm-iC-EKg" secondAttribute="centerY" id="q9h-JW-XZ2"/>
+                            <constraint firstItem="bjm-iC-EKg" firstAttribute="top" secondItem="TZ6-ee-nh7" secondAttribute="top" constant="107" id="rf5-Od-gyI"/>
+                            <constraint firstItem="erN-WK-SxY" firstAttribute="top" secondItem="TZ6-ee-nh7" secondAttribute="top" constant="114" id="u2v-q3-3Pp"/>
+                            <constraint firstItem="TZ6-ee-nh7" firstAttribute="trailing" secondItem="bjm-iC-EKg" secondAttribute="trailing" constant="20" id="xZE-zM-VyW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Highlights" id="iWP-Ih-HPe">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="EDF-FZ-hnH">
@@ -28,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gxB-v1-cCj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691" y="-511"/>
+            <point key="canvasLocation" x="690.83969465648852" y="-511.26760563380282"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="90u-RJ-AhS">
@@ -36,7 +59,7 @@
                 <navigationController autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="KuA-8b-1vb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="O52-UZ-jqD">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="24" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
