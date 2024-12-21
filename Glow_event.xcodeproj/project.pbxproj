@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB870C442D175CAB00B21B6D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = BB870C432D175CAB00B21B6D /* Models */; };
 		BBB191AD2D0851FF007E8845 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */; };
 		C34438642D01E600000A4D52 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34438632D01E600000A4D52 /* highlights.storyboard */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
@@ -33,7 +34,6 @@
 		D5A8C89A2CF5FC0E004299BC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8992CF5FC0E004299BC /* FirebaseStorage */; };
 		D5A8C89C2CF5FC0E004299BC /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C89B2CF5FC0E004299BC /* FirebaseStorageCombine-Community */; };
 		D5A8C89E2CF5FC0E004299BC /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C89D2CF5FC0E004299BC /* FirebaseVertexAI */; };
-		D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB85562CF45A9C001082C0 /* AppDelegate.swift */; };
 		D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */; };
 		D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB855A2CF45A9C001082C0 /* ViewController.swift */; };
 		D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB855C2CF45A9D001082C0 /* Main.storyboard */; };
@@ -42,10 +42,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB870C432D175CAB00B21B6D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../../../Desktop/Glow_event/Glow_event/Models; sourceTree = "<group>"; };
 		BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		C34438632D01E600000A4D52 /* highlights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5BB855A2CF45A9C001082C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5BB855D2CF45A9D001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
-				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
+				BB870C432D175CAB00B21B6D /* Models */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
@@ -208,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB870C442D175CAB00B21B6D /* Models in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
@@ -224,7 +225,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
-				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
