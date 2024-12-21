@@ -8,12 +8,18 @@ class UserSettingsViewController: UITableViewController {
     
     @IBOutlet weak var notificationsSwitch: UISwitch!
     @IBOutlet weak var lightModeSwitch: UISwitch!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     
         override func viewDidLoad() {
             super.viewDidLoad()
             
             notificationsSwitch.isOn = false
             lightModeSwitch.isOn = false
+            
+            if let textField = searchBar.searchTextField as? UITextField {
+                    textField.textColor = .white
+                }
         }
 
     @IBAction func notificationsSwitchChanged(_ sender: UISwitch) {

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		BD4A0C122D169273007745F1 /* UserChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C112D169273007745F1 /* UserChangePasswordViewController.swift */; };
+		BD4A0C142D16A971007745F1 /* Admin profile and settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD4A0C132D16A971007745F1 /* Admin profile and settings.storyboard */; };
+		BD4A0C162D16AE93007745F1 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */; };
+		BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */; };
+		BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */; };
 		BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */; };
 		BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DEB2D142AA900016A51 /* Cloudinary.swift */; };
 		BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DED2D142AC500016A51 /* Firebase.swift */; };
@@ -16,7 +20,7 @@
 		BDA48DF52D1435D600016A51 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = BDA48DF42D1435D600016A51 /* Cloudinary */; };
 		BDA48DF92D14395900016A51 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DF82D14395900016A51 /* User.swift */; };
 		BDA48DFB2D143DD400016A51 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFA2D143DD400016A51 /* UserSettingsViewController.swift */; };
-		BDA48DFD2D1445E200016A51 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFC2D1445E200016A51 /* LoginViewController.swift */; };
+		BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFC2D1445E200016A51 /* UserLoginViewController.swift */; };
 		BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */; };
 		BDA48E012D1454C800016A51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA48E002D1454C800016A51 /* GoogleService-Info.plist */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
@@ -53,6 +57,10 @@
 
 /* Begin PBXFileReference section */
 		BD4A0C112D169273007745F1 /* UserChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserChangePasswordViewController.swift; sourceTree = "<group>"; };
+		BD4A0C132D16A971007745F1 /* Admin profile and settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Admin profile and settings.storyboard"; sourceTree = "<group>"; };
+		BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingsTableViewController.swift; sourceTree = "<group>"; };
+		BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileViewController.swift; sourceTree = "<group>"; };
 		BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48DEB2D142AA900016A51 /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		BDA48DED2D142AC500016A51 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
@@ -60,7 +68,7 @@
 		BDA48DF12D142B2A00016A51 /* User profiles & preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "User profiles & preferences.storyboard"; sourceTree = "<group>"; };
 		BDA48DF82D14395900016A51 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BDA48DFA2D143DD400016A51 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
-		BDA48DFC2D1445E200016A51 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BDA48DFC2D1445E200016A51 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48E002D1454C800016A51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,11 +157,15 @@
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
 				BDA48DF12D142B2A00016A51 /* User profiles & preferences.storyboard */,
+				BD4A0C132D16A971007745F1 /* Admin profile and settings.storyboard */,
 				BDA48DFA2D143DD400016A51 /* UserSettingsViewController.swift */,
-				BDA48DFC2D1445E200016A51 /* LoginViewController.swift */,
+				BDA48DFC2D1445E200016A51 /* UserLoginViewController.swift */,
 				BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */,
 				BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */,
 				BD4A0C112D169273007745F1 /* UserChangePasswordViewController.swift */,
+				BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */,
+				BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */,
+				BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -249,6 +261,7 @@
 			files = (
 				BDA48DF22D142B2A00016A51 /* User profiles & preferences.storyboard in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
+				BD4A0C142D16A971007745F1 /* Admin profile and settings.storyboard in Resources */,
 				BDA48E012D1454C800016A51 /* GoogleService-Info.plist in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
@@ -263,17 +276,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */,
-				BDA48DFD2D1445E200016A51 /* LoginViewController.swift in Sources */,
+				BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */,
 				BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */,
 				BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */,
 				BDA48DF92D14395900016A51 /* User.swift in Sources */,
 				BDA48DFB2D143DD400016A51 /* UserSettingsViewController.swift in Sources */,
+				BD4A0C162D16AE93007745F1 /* AdminLoginViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				BD4A0C122D169273007745F1 /* UserChangePasswordViewController.swift in Sources */,
 				BDA48DF02D142AE800016A51 /* Event.swift in Sources */,
+				BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

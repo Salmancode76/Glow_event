@@ -13,7 +13,7 @@ class UserChangePasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        saveButton.tintColor = UIColor(red: 62/255, green: 35/255, blue: 120/255, alpha: 1.0)
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {

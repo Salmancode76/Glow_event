@@ -3,7 +3,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class LoginViewController: UIViewController {
+class UserLoginViewController: UIViewController {
     
     
     @IBOutlet weak var emailTextField: UITextField!

@@ -15,9 +15,7 @@ class UserEditProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Customize save button appearance
-        saveButton.layer.cornerRadius = 10
-        saveButton.clipsToBounds = true
+        saveButton.tintColor = UIColor(red: 62/255, green: 35/255, blue: 120/255, alpha: 1.0)
         
         // Fetch current user data
         fetchUserData()
