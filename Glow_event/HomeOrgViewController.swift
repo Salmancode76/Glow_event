@@ -45,6 +45,9 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
                 
             vc.eventID = event.id
             
+            vc.eventCategory = event.EventCategory
+            
+            vc.eventAgeGrp = event.AgeGroup ?? "Any"
             
             self.navigationController?.pushViewController(vc, animated: true)
         }

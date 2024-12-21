@@ -24,6 +24,7 @@ class EventDetailOrgTableViewCell: UITableViewCell {
 
     }
 
+ 
     // Set up the cell with a UIImage
     // Outlets for the UI components
     @IBOutlet weak var EventName: UILabel!
@@ -35,7 +36,7 @@ class EventDetailOrgTableViewCell: UITableViewCell {
     @IBOutlet weak var Pricelbl: UILabel!
     @IBOutlet weak var EventLocation: UILabel!
    
-    
+
     
     
     
@@ -75,6 +76,7 @@ class EventDetailOrgTableViewCell: UITableViewCell {
             EventPhoto.image = UIImage(systemName: "photo.fill") // Placeholder image
         }
     }
+    
 
     func formatDate(_ date: Date) -> String {
         let dateFormatter = DateFormatter()

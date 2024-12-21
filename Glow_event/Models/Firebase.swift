@@ -51,6 +51,16 @@ struct FirebaseDB {
             completion(fetchedEvents)
         })
     }
+    
+    static func deleteEvent(eventID: String, completion: @escaping (Bool, String?) -> Void) {
+        ref.child("events").child(eventID).removeValue { error, _ in
+            if let error = error {
+                completion(false, error.localizedDescription)
+            } else {
+                completion(true, nil)
+            }
+        }
+    }
 
         
 }
