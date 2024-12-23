@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB870C442D175CAB00B21B6D /* Models in Resources */ = {isa = PBXBuildFile; fileRef = BB870C432D175CAB00B21B6D /* Models */; };
 		BBB191AD2D0851FF007E8845 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */; };
 		C34438642D01E600000A4D52 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34438632D01E600000A4D52 /* highlights.storyboard */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
@@ -42,7 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB870C432D175CAB00B21B6D /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../../../Desktop/Glow_event/Glow_event/Models; sourceTree = "<group>"; };
 		BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		C34438632D01E600000A4D52 /* highlights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +106,6 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
-				BB870C432D175CAB00B21B6D /* Models */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
@@ -208,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB870C442D175CAB00B21B6D /* Models in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
