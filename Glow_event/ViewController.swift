@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         event_photo.layer.cornerRadius = 25
     }
    
+    @IBAction func startDate(_ sender: UIDatePicker) {
+        sender.setValue(UIColor.white, forKey: "textColor")
+    }
+
     
     
 
