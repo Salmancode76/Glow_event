@@ -25,6 +25,7 @@
 		BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */; };
 		BDA48E012D1454C800016A51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA48E002D1454C800016A51 /* GoogleService-Info.plist */; };
 		BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E952D1A842500D68913 /* AddUserViewController.swift */; };
+		BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -75,6 +76,7 @@
 		BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48E002D1454C800016A51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDDB8E952D1A842500D68913 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */,
 				BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */,
 				BDDB8E952D1A842500D68913 /* AddUserViewController.swift */,
+				BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				BD4A0C122D169273007745F1 /* UserChangePasswordViewController.swift in Sources */,
 				BDA48DF02D142AE800016A51 /* Event.swift in Sources */,
 				BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */,
+				BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */,
 			);
