@@ -12,6 +12,7 @@
 		BD4A0C162D16AE93007745F1 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */; };
 		BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */; };
 		BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */; };
+		BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */; };
 		BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */; };
 		BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DEB2D142AA900016A51 /* Cloudinary.swift */; };
 		BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DED2D142AC500016A51 /* Firebase.swift */; };
@@ -61,6 +62,7 @@
 		BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingsTableViewController.swift; sourceTree = "<group>"; };
 		BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileViewController.swift; sourceTree = "<group>"; };
+		BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
 		BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48DEB2D142AA900016A51 /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		BDA48DED2D142AC500016A51 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				BD4A0C152D16AE93007745F1 /* AdminLoginViewController.swift */,
 				BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */,
 				BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */,
+				BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */,
 				BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */,
 				BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */,
+				BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */,
 				BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */,

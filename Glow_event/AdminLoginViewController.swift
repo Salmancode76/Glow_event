@@ -19,30 +19,31 @@ class AdminLoginViewController: UIViewController {
     
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty,
-                      let password = passwordTextField.text, !password.isEmpty else {
-                    showErrorAlert(message: "Please enter both email and password.")
+                  let password = passwordTextField.text, !password.isEmpty else {
+                showErrorAlert(message: "Please enter both email and password.")
+                return
+            }
+            
+            print("Attempting to sign in with email: \(email)")
+            
+            // Use Firebase Authentication to validate the credentials
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let error = error {
+                    // Log and display error if sign-in fails
+                    print("Firebase sign-in error: \(error.localizedDescription)")
+                    self.showErrorAlert(message: error.localizedDescription)
                     return
                 }
                 
-                print("Attempting to sign in with email: \(email)")
-                
-                // Use Firebase Authentication to validate the credentials
-                Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                    if let error = error {
-                        print("Firebase sign-in error: \(error.localizedDescription)")
-                        self.showErrorAlert(message: error.localizedDescription)
-                        return
-                    }
-                    
-                    // Validate against hardcoded credentials for testing
-                    if email == "admin1@glowevents.bh" && password == "Admin@123" {
-                        print("Sign-in successful. User ID: \(authResult?.user.uid ?? "Unknown UID")")
-                        self.navigateToSettingsScreen()
-                    } else {
-                        print("Invalid credentials")
-                        self.showErrorAlert(message: "Invalid email or password.")
-                    }
+                // Successfully signed in
+                if let user = authResult?.user {
+                    print("Sign-in successful. User ID: \(user.uid), Email: \(user.email ?? "No Email")")
+                    self.navigateToSettingsScreen()
+                } else {
+                    print("Unexpected error: User is nil.")
+                    self.showErrorAlert(message: "An unexpected error occurred. Please try again.")
                 }
+            }
             }
             
     private func navigateToSettingsScreen() {
