@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BB9351432D1AF9B600A549B5 /* SendHighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9351422D1AF9B600A549B5 /* SendHighlightsViewController.swift */; };
-		BBA74D912D1D86220021DCAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBA74D902D1D86220021DCAC /* GoogleService-Info.plist */; };
 		BBB191AD2D0851FF007E8845 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */; };
 		BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */; };
 		C34438642D01E600000A4D52 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34438632D01E600000A4D52 /* highlights.storyboard */; };
-		C4CE3C8FE0C3F1C776765D89 /* Pods_Glow_event.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C847EF7C5CF7D82DA5DEF18B /* Pods_Glow_event.framework */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -45,15 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		735568E47D88AE7701F16610 /* Pods-Glow_event.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glow_event.debug.xcconfig"; path = "Target Support Files/Pods-Glow_event/Pods-Glow_event.debug.xcconfig"; sourceTree = "<group>"; };
-		9B0D3B14D7C1D3123A98AD96 /* Pods-Glow_event.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Glow_event.release.xcconfig"; path = "Target Support Files/Pods-Glow_event/Pods-Glow_event.release.xcconfig"; sourceTree = "<group>"; };
 		BB9351422D1AF9B600A549B5 /* SendHighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlightsViewController.swift; sourceTree = "<group>"; };
-		BBA74D902D1D86220021DCAC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BBA74D982D1DB0390021DCAC /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Glow_event.app; path = "/Users/printanica/Documents/Glow_event/build/Debug-iphoneos/Glow_event.app"; sourceTree = "<absolute>"; };
 		BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C34438632D01E600000A4D52 /* highlights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
-		C847EF7C5CF7D82DA5DEF18B /* Pods_Glow_event.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Glow_event.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5BB855A2CF45A9C001082C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5BB855D2CF45A9D001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,39 +85,17 @@
 				D5A8C89A2CF5FC0E004299BC /* FirebaseStorage in Frameworks */,
 				D5A8C87E2CF5FC0E004299BC /* FirebaseCore in Frameworks */,
 				D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				C4CE3C8FE0C3F1C776765D89 /* Pods_Glow_event.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		34D6AB0818CD6111572960B1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				735568E47D88AE7701F16610 /* Pods-Glow_event.debug.xcconfig */,
-				9B0D3B14D7C1D3123A98AD96 /* Pods-Glow_event.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		D5BB854A2CF45A9C001082C0 = {
 			isa = PBXGroup;
 			children = (
 				D5BB85552CF45A9C001082C0 /* Glow_event */,
-				D5BB85542CF45A9C001082C0 /* Products */,
-				34D6AB0818CD6111572960B1 /* Pods */,
-				DDF28989616E73ACFFFC6F06 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		D5BB85542CF45A9C001082C0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D5BB85532CF45A9C001082C0 /* Glow_event.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
@@ -131,7 +103,6 @@
 			children = (
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */,
-				BBA74D902D1D86220021DCAC /* GoogleService-Info.plist */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
@@ -144,14 +115,6 @@
 			path = Glow_event;
 			sourceTree = "<group>";
 		};
-		DDF28989616E73ACFFFC6F06 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C847EF7C5CF7D82DA5DEF18B /* Pods_Glow_event.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,11 +122,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5BB85672CF45A9E001082C0 /* Build configuration list for PBXNativeTarget "Glow_event" */;
 			buildPhases = (
-				B49BBF6EC8C3002B37AD61C1 /* [CP] Check Pods Manifest.lock */,
 				D5BB854F2CF45A9C001082C0 /* Sources */,
 				D5BB85502CF45A9C001082C0 /* Frameworks */,
 				D5BB85512CF45A9C001082C0 /* Resources */,
-				B95E0D0A8171AF071C2AB2E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -197,7 +158,7 @@
 				D5A8C89D2CF5FC0E004299BC /* FirebaseVertexAI */,
 			);
 			productName = Glow_event;
-			productReference = D5BB85532CF45A9C001082C0 /* Glow_event.app */;
+			productReference = BBA74D982D1DB0390021DCAC /* Glow_event.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -227,7 +188,7 @@
 			packageReferences = (
 				D5A8C86E2CF5FC0E004299BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
-			productRefGroup = D5BB85542CF45A9C001082C0 /* Products */;
+			productRefGroup = D5BB854A2CF45A9C001082C0;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -246,53 +207,10 @@
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
 				BBB191AD2D0851FF007E8845 /* Event Browsing and Interest.storyboard in Resources */,
 				C34438642D01E600000A4D52 /* highlights.storyboard in Resources */,
-				BBA74D912D1D86220021DCAC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		B49BBF6EC8C3002B37AD61C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Glow_event-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B95E0D0A8171AF071C2AB2E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Glow_event/Pods-Glow_event-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Glow_event/Pods-Glow_event-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Glow_event/Pods-Glow_event-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D5BB854F2CF45A9C001082C0 /* Sources */ = {
@@ -449,7 +367,6 @@
 		};
 		D5BB85682CF45A9E001082C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 735568E47D88AE7701F16610 /* Pods-Glow_event.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,7 +394,6 @@
 		};
 		D5BB85692CF45A9E001082C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B0D3B14D7C1D3123A98AD96 /* Pods-Glow_event.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
