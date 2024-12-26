@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>vfgg</string>
+	<string>ll.Glow-event</string>
 	<key>PROJECT_ID</key>
 	<string>glowevent-9be31</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,7 +25,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:210037303830:ios:466b5f4ca3f2fbed9e6337</string>
+	<string>1:210037303830:ios:d1e4b23946426cee9e6337</string>
 	<key>DATABASE_URL</key>
 	<string>https://glowevent-9be31-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>

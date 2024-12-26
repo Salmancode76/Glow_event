@@ -1,0 +1,6 @@
+framework module Pods_Glow_event {
+  umbrella header "Pods-Glow_event-umbrella.h"
+
+  export *
+  module * { export * }
+}
