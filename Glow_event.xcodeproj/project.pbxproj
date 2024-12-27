@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07100A3C2D1EC9D9002559FF /* Layla.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07100A3B2D1EC9D9002559FF /* Layla.storyboard */; };
+		073A304B2D18A2FF002347B1 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A304A2D18A2FF002347B1 /* SignUpViewController.swift */; };
+		073A304D2D18A3A5002347B1 /* EventOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A304C2D18A3A4002347B1 /* EventOrganizer.swift */; };
+		073A304F2D18A3D5002347B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A304E2D18A3D5002347B1 /* User.swift */; };
+		073A30512D18A411002347B1 /* User1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30502D18A411002347B1 /* User1.swift */; };
+		073A30532D18A441002347B1 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30522D18A441002347B1 /* enums.swift */; };
+		073A30552D18A4FD002347B1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30542D18A4FD002347B1 /* AppData.swift */; };
+		073A30592D18B026002347B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073A30582D18B026002347B1 /* GoogleService-Info.plist */; };
+		078388032D1DD911008B4752 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388022D1DD911008B4752 /* LogInViewController.swift */; };
+		078388052D1DEF21008B4752 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388042D1DEF21008B4752 /* AdminHomeViewController.swift */; };
+		078388072D1DEF50008B4752 /* EventOrganizerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388062D1DEF50008B4752 /* EventOrganizerHomeViewController.swift */; };
+		078388092D1DEF7B008B4752 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388082D1DEF7B008B4752 /* UserHomeViewController.swift */; };
+		07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */; };
+		07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */; };
+		07F7A9A82D1ED4FB00E15766 /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */; };
+		07F7A9AA2D1ED50D00E15766 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */; };
+		07F7A9AC2D1ED52000E15766 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */; };
+		07F7A9AE2D1ED53000E15766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AD2D1ED53000E15766 /* ContentView.swift */; };
+		07F7A9B02D1ED64300E15766 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AF2D1ED64300E15766 /* Event.swift */; };
+		07F7A9B22D1ED74C00E15766 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F7A9B12D1ED74C00E15766 /* Notification.storyboard */; };
+		07F7A9B42D1EE6BD00E15766 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -40,6 +61,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07100A3B2D1EC9D9002559FF /* Layla.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Layla.storyboard; sourceTree = "<group>"; };
+		073A304A2D18A2FF002347B1 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		073A304C2D18A3A4002347B1 /* EventOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrganizer.swift; sourceTree = "<group>"; };
+		073A304E2D18A3D5002347B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		073A30502D18A411002347B1 /* User1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User1.swift; sourceTree = "<group>"; };
+		073A30522D18A441002347B1 /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
+		073A30542D18A4FD002347B1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		073A30582D18B026002347B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		078388022D1DD911008B4752 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		078388042D1DEF21008B4752 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
+		078388062D1DEF50008B4752 /* EventOrganizerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrganizerHomeViewController.swift; sourceTree = "<group>"; };
+		078388082D1DEF7B008B4752 /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotification.swift; sourceTree = "<group>"; };
+		07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStore.swift; sourceTree = "<group>"; };
+		07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		07F7A9AD2D1ED53000E15766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07F7A9AF2D1ED64300E15766 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		07F7A9B12D1ED74C00E15766 /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
+		07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +152,28 @@
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
+				073A30582D18B026002347B1 /* GoogleService-Info.plist */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
+				073A304A2D18A2FF002347B1 /* SignUpViewController.swift */,
+				073A304C2D18A3A4002347B1 /* EventOrganizer.swift */,
+				073A304E2D18A3D5002347B1 /* User.swift */,
+				073A30502D18A411002347B1 /* User1.swift */,
+				073A30522D18A441002347B1 /* enums.swift */,
+				073A30542D18A4FD002347B1 /* AppData.swift */,
+				07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */,
+				078388022D1DD911008B4752 /* LogInViewController.swift */,
+				078388042D1DEF21008B4752 /* AdminHomeViewController.swift */,
+				078388062D1DEF50008B4752 /* EventOrganizerHomeViewController.swift */,
+				078388082D1DEF7B008B4752 /* UserHomeViewController.swift */,
+				07100A3B2D1EC9D9002559FF /* Layla.storyboard */,
+				07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */,
+				07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */,
+				07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */,
+				07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */,
+				07F7A9AD2D1ED53000E15766 /* ContentView.swift */,
+				07F7A9AF2D1ED64300E15766 /* Event.swift */,
+				07F7A9B12D1ED74C00E15766 /* Notification.storyboard */,
+				07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -203,8 +266,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
+				07100A3C2D1EC9D9002559FF /* Layla.storyboard in Resources */,
+				073A30592D18B026002347B1 /* GoogleService-Info.plist in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
+				07F7A9B22D1ED74C00E15766 /* Notification.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +281,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078388092D1DEF7B008B4752 /* UserHomeViewController.swift in Sources */,
+				07F7A9AA2D1ED50D00E15766 /* NotificationManager.swift in Sources */,
+				073A304D2D18A3A5002347B1 /* EventOrganizer.swift in Sources */,
+				07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */,
+				07F7A9B02D1ED64300E15766 /* Event.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
+				078388032D1DD911008B4752 /* LogInViewController.swift in Sources */,
+				073A30512D18A411002347B1 /* User1.swift in Sources */,
+				07F7A9A82D1ED4FB00E15766 /* NotificationStore.swift in Sources */,
+				07F7A9AE2D1ED53000E15766 /* ContentView.swift in Sources */,
+				073A304F2D18A3D5002347B1 /* User.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
+				07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */,
+				073A304B2D18A2FF002347B1 /* SignUpViewController.swift in Sources */,
+				078388072D1DEF50008B4752 /* EventOrganizerHomeViewController.swift in Sources */,
+				073A30532D18A441002347B1 /* enums.swift in Sources */,
+				078388052D1DEF21008B4752 /* AdminHomeViewController.swift in Sources */,
+				07F7A9B42D1EE6BD00E15766 /* NotificationViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				073A30552D18A4FD002347B1 /* AppData.swift in Sources */,
+				07F7A9AC2D1ED52000E15766 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,10 +453,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6LW7SFCRD4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -396,10 +481,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6LW7SFCRD4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
