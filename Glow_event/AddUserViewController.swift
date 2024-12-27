@@ -18,6 +18,8 @@ class AddUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         override func viewDidLoad() {
             super.viewDidLoad()
             
+            addButton.tintColor = UIColor(red: 62/255, green: 35/255, blue: 120/255, alpha: 1.0)
+            
             // set up the picker
             picker.delegate = self
             picker.dataSource = self

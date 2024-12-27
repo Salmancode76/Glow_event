@@ -65,4 +65,13 @@ class UserDetailViewController: UIViewController {
             
             present(alert, animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditUserSegue",
+           let destinationVC = segue.destination as? EditUserViewController {
+            
+            // pass the userID to the EditUserViewController
+            destinationVC.userID = user?["uid"] as? String
+        }
+    }
     }

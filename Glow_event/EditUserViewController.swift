@@ -10,6 +10,7 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
     
     var userID: String? // Identifying the user being edited
         
@@ -18,6 +19,9 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         override func viewDidLoad() {
             super.viewDidLoad()
+            
+            saveButton.tintColor = UIColor(red: 62/255, green: 35/255, blue: 120/255, alpha: 1.0)
+            
             fetchUserData() // Fetch and display user data
             
             // Set up the gender picker
@@ -95,61 +99,54 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        // Validate the input fields
         guard let username = usernameTextField.text, !username.isEmpty,
-                let email = emailTextField.text, !email.isEmpty,
-                let gender = genderTextField.text, !gender.isEmpty else {
-                showAlert(title: "Error", message: "Please fill in all the fields.")
+                  let email = emailTextField.text, !email.isEmpty,
+                  let gender = genderTextField.text, !gender.isEmpty else {
+                showAlert(title: "Error", message: "Please fill in all fields.")
                 return
-        }
-        
-        // Validate gender
-                let validGenders = ["Male", "Female"]
-                if !validGenders.contains(gender.capitalized) {
-                    showAlert(title: "Error", message: "Gender must be either 'Male' or 'Female'")
-                    return
-                }
-                
-                // Validate password if provided
-                if let password = passwordTextField.text, !password.isEmpty, password.count < 8 {
-                    showAlert(title: "Error", message: "Password must be at least 8 characters long.")
-                    return
-                }
-                
-                guard let userID = userID else {
-                    print("UserID is missing")
-                    return
-                }
-                
-                // Update user details in Firebase Realtime Database
-                let databaseRef = Database.database().reference().child("users").child(userID)
-                var updatedData: [String: Any] = [
-                    "username": username,
-                    "email": email,
-                    "gender": gender
-                ]
-                
-                // Update the password in Firebase Authentication if provided
-                if let password = passwordTextField.text, !password.isEmpty {
-                    Auth.auth().currentUser?.updatePassword(to: password) { error in
-                        if let error = error {
-                            print("Error updating password: \(error.localizedDescription)")
-                            self.showAlert(title: "Error", message: "Failed to update password. \(error.localizedDescription)")
-                        } else {
-                            print("Password updated successfully")
-                        }
-                    }
-                }
-                
-                databaseRef.updateChildValues(updatedData) { error, _ in
+            }
+            
+            let validGenders = ["Male", "Female"]
+            if !validGenders.contains(gender.capitalized) {
+                showAlert(title: "Error", message: "Gender must be 'Male' or 'Female'.")
+                return
+            }
+            
+            if let password = passwordTextField.text, !password.isEmpty, password.count < 8 {
+                showAlert(title: "Error", message: "Password must be at least 8 characters long.")
+                return
+            }
+            
+            guard let userID = userID else {
+                print("User ID is missing")
+                return
+            }
+            
+            let databaseRef = Database.database().reference().child("users").child(userID)
+            var updatedData: [String: Any] = [
+                "username": username,
+                "email": email,
+                "gender": gender
+            ]
+            
+            if let password = passwordTextField.text, !password.isEmpty {
+                Auth.auth().currentUser?.updatePassword(to: password) { error in
                     if let error = error {
-                        print("Error updating user data: \(error.localizedDescription)")
-                        self.showAlert(title: "Error", message: "Failed to update user data. \(error.localizedDescription)")
+                        self.showAlert(title: "Error", message: "Failed to update password: \(error.localizedDescription)")
                     } else {
-                        print("User data updated successfully")
-                        self.showAlert(title: "Success", message: "User details updated successfully")
+                        print("Password updated successfully")
                     }
                 }
+            }
+            
+            databaseRef.updateChildValues(updatedData) { error, _ in
+                if let error = error {
+                    self.showAlert(title: "Error", message: "Failed to update user data: \(error.localizedDescription)")
+                } else {
+                    self.showAlert(title: "Success", message: "User details updated successfully.")
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
             }
             
             // Show alert for validation or success/error messages
@@ -158,8 +155,7 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
             }
-    
-
+    }
     /*
     // MARK: - Navigation
 
@@ -170,4 +166,3 @@ class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     */
 
-}
