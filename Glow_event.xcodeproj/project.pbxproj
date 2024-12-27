@@ -11,7 +11,6 @@
 		3F8CEE302D0F104F00CB5C7D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CEE2F2D0F104F00CB5C7D /* Event.swift */; };
 		3F8CEE322D0F106D00CB5C7D /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CEE312D0F106D00CB5C7D /* Cloudinary.swift */; };
 		D0A40F512D173975001D71A2 /* EditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A40F502D173975001D71A2 /* EditEventTableViewController.swift */; };
-		D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50E69532D033AA100629AE1 /* ImageViewController.swift */; };
 		D51AF4392D0A0B3D00002CD4 /* SearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */; };
 		D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */; };
 		D5640AA52D1352EE00E86967 /* EventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5640AA42D1352EE00E86967 /* EventDetailOrgViewController.swift */; };
@@ -44,7 +43,6 @@
 		D5A8C89E2CF5FC0E004299BC /* FirebaseVertexAI in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C89D2CF5FC0E004299BC /* FirebaseVertexAI */; };
 		D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB85562CF45A9C001082C0 /* AppDelegate.swift */; };
 		D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */; };
-		D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5BB855A2CF45A9C001082C0 /* ViewController.swift */; };
 		D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB855C2CF45A9D001082C0 /* Main.storyboard */; };
 		D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5BB855F2CF45A9E001082C0 /* Assets.xcassets */; };
 		D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */; };
@@ -58,7 +56,6 @@
 		3F8CEE2F2D0F104F00CB5C7D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		3F8CEE312D0F106D00CB5C7D /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		D0A40F502D173975001D71A2 /* EditEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventTableViewController.swift; sourceTree = "<group>"; };
-		D50E69532D033AA100629AE1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		D51AF4382D0A0B3D00002CD4 /* SearchEventOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventOrgViewController.swift; sourceTree = "<group>"; };
 		D522D16E2D0DE9C30073C746 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		D5640AA42D1352EE00E86967 /* EventDetailOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailOrgViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +65,6 @@
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D5BB855A2CF45A9C001082C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D5BB855D2CF45A9D001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D5BB855F2CF45A9E001082C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5BB85622CF45A9E001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,8 +142,6 @@
 				D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */,
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
-				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
-				D50E69532D033AA100629AE1 /* ImageViewController.swift */,
 				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D0A40F502D173975001D71A2 /* EditEventTableViewController.swift */,
@@ -269,7 +263,6 @@
 			files = (
 				3F8CEE2E2D0F103300CB5C7D /* Firebase.swift in Sources */,
 				3F8CEE302D0F104F00CB5C7D /* Event.swift in Sources */,
-				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */,
 				3F8CEE322D0F106D00CB5C7D /* Cloudinary.swift in Sources */,
 				D5640AA52D1352EE00E86967 /* EventDetailOrgViewController.swift in Sources */,
@@ -279,7 +272,6 @@
 				D5640AAD2D13589800E86967 /* EventOrgTableViewCell.swift in Sources */,
 				D522D16F2D0DE9C30073C746 /* FilterTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
-				D50E69542D033AA100629AE1 /* ImageViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				D51AF4392D0A0B3D00002CD4 /* SearchEventOrgViewController.swift in Sources */,
 			);

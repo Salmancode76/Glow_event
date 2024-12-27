@@ -49,8 +49,15 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             vc.eventAgeGrp = event.AgeGroup ?? "Any"
             
+            vc.eventID = event.id
+            
+            vc.eventEndDate = event.endDate
+
             self.navigationController?.pushViewController(vc, animated: true)
+            
+            
         }
+        
     }
     
     
@@ -95,7 +102,7 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
                 // Set the downloaded image to the UIImageView
                 cell.EventImage.image = image
             } else {
-                print("Failed to download image")
+                self.showFailAlert(errorMessage: "Failed to download image")
                 // Set a placeholder image in case the download fails
                 cell.EventImage.image = UIImage(systemName: "photo.fill") // Placeholder
             }
@@ -107,7 +114,18 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
-    
+    private func showFailAlert(errorMessage: String) {
+        // Create an alert controller with a title and message indicating failure
+        let alertController = UIAlertController(title: "Failure", message: "Failed to update the event. Error: \(errorMessage)", preferredStyle: .alert)
+        
+        // Add an OK button to dismiss the alert
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        
+        
+        // Present the alert
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var EventsOrgTable: UITableView!

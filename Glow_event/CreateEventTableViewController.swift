@@ -85,16 +85,13 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
         endpicker.tintColor = UIColor.black
         
     }
-    // MARK: - Table view data source
     
     // MARK: - TableView Delegate Method to Customize Header Appearance
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
         
-        // Set the background color of the header to white
         header.contentView.backgroundColor = .black
         
-        // Set the text color of the header to black
         header.textLabel?.textColor = .white
         
         tableView.tableFooterView = UIView()
@@ -113,7 +110,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
@@ -122,10 +118,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
     
     // @IBOutlet weak var scrollView: UIScrollView!
-    
-    
-    @IBAction func venu_options(_ sender: Any) {
-    }
+
     
     
     // This function is triggered when the "Event Photo" button is tapped
@@ -157,7 +150,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
         
         
         
-        print(selectedEventImage)
     }
     
     
@@ -172,7 +164,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
     @IBAction func optionCategory(_ sender:UIAction)
     {
-        print(sender.title)
         self.venu_options.setTitle(sender.title, for: .normal)
     }
    
@@ -187,17 +178,14 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
         
         self.AgeGroupbtn.setTitle(sender.title, for: .normal)
 
-        print(sender.title)
     }
     @IBAction func optionSelection(_ sender:UIAction)
     {
-        print(sender.title)
         self.venu_options.setTitle(sender.title, for: .normal)
     }
      
     @IBAction func optionSelectionEventStatus(_ sender:UIAction)
     {
-        print(sender.title)
         self.event_status.setTitle(sender.title, for: .normal)
     }
      
@@ -205,13 +193,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     @IBAction func optionSelectionEventCategory(_ sender:UIAction)
     {
         
-        
-        
-        
-        print(sender.title)
         self.EventCategory.setTitle(sender.title, for: .normal)
-
-        
     }
  
 
@@ -220,35 +202,51 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
     
     // Create event action
     @IBAction func CreateEvent(_ sender: Any) {
-        guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
-            print("Event name is empty.")
+        
+        guard let SelectedCategory = self.EventCategory.title(for: .normal),
+              !SelectedCategory.isEmpty,
+              SelectedCategory != "Category" else {
+            showErrorAlert(message: "Event Category is not selected.")
             return
         }
-        let eventcap = Int(EventCaptxt.text ?? "") ?? -1
 
-        guard let selectedVenue = self.venu_options.title(for: .normal), !selectedVenue.isEmpty else {
-            print("Venue is not selected.")
+        
+        guard let eventName = EventNameLbl.text, !eventName.isEmpty else {
+            showErrorAlert(message: "Invalid Event Name Data")
             return
         }
-        guard let selectedAgeGroup = self.AgeGroupbtn.title(for: .normal), !selectedAgeGroup.isEmpty else {
-            print("Age group is not Selected.")
+        guard let  eventcap = EventCaptxt.text , !eventcap.isEmpty  else {
+            showErrorAlert(message:"Invalid Event Capcity Data")
+            return
+        }
+        guard let eventcap = Int(eventcap) else {
+            showErrorAlert(message:"Invalid Capcity format.")
+            return
+        }
+      
+        guard let selectedVenue = self.venu_options.title(for: .normal), !selectedVenue.isEmpty, selectedVenue != "Venus" else {
+            showErrorAlert(message: "Venue is not selected or is invalid.")
+            return
+        }
+        guard let selectedAgeGroup = self.AgeGroupbtn.title(for: .normal), !selectedAgeGroup.isEmpty , selectedAgeGroup != "Age Group" else {
+            showErrorAlert(message:"Age group is not Selected.")
             return
         }
         guard let enteredPriceText = priceLbl.text, !enteredPriceText.isEmpty else {
-            print("Price is empty.")
+            showErrorAlert(message:"Price is empty.")
             return
         }
         
         
-        // Attempt to convert the entered string to a Double
         guard let enteredPrice = Double(enteredPriceText) else {
-            print("Invalid price format.")
+            showErrorAlert(message:"Invalid price format.")
             return
         }
         guard let eventdesc = decriptionLbl.text, !eventdesc.isEmpty else {
-            print("Event description is empty.")
+            showErrorAlert(message:"Event description is empty.")
             return
         }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -259,17 +257,22 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
         
         
         
-        guard let selectedStatus = self.event_status.title(for: .normal), !selectedStatus.isEmpty else {
-            print("Venue is not selected.")
+        guard let selectedStatus = self.event_status.title(for: .normal), !selectedStatus.isEmpty, selectedStatus != "Event status"  else {
+            showErrorAlert(message:"Event Status is not selected.")
             return
         }
         
         
-        guard let SelectedCategory = self.EventCategory.title(for: .normal), !SelectedCategory.isEmpty else {
-            print("EventCategory is not selected.")
+     
+        // Check if the selected event image is available
+        guard let eventImage = selectedEventImage else {
+            showErrorAlert(message:"No event image selected.")
             return
         }
-        let eventImage = selectedEventImage ?? UIImage(named: "defaultImage")! // Replace "defaultImage" with your actual default image name if needed
+
+  
+
+        // eventImage = selectedEventImage ?? UIImage(named: "defaultImage")!
         
         
         // Upload the image and handle the completion
@@ -279,7 +282,6 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
             if let url = uploadedUrl {
                 // Assign the uploaded URL to Eventurl
                 self.Eventurl = url
-                print("Event URL set: \(self.Eventurl)") // Check if the URL is set correctly
                 
            
                 
@@ -291,7 +293,7 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
                     "endDate": endDateValue.timeIntervalSince1970,
                     "description": eventdesc,
                     "EventStatus": selectedStatus,
-                    "EventImg": self.Eventurl ,// This will now be set correctly
+                    "EventImg": self.Eventurl ,
                     "EventCategory": SelectedCategory,
                     "AgeGroup":selectedAgeGroup,
                     "Capcity": eventcap
@@ -303,15 +305,50 @@ class CreateEventTableViewController: UITableViewController, UIImagePickerContro
                 
                 FirebaseDB.saveEventData(eventData: eventData) { success, errorMessage in
                     if success {
-                        print("Event created successfully!")
-                        // Optionally, you can navigate away from this view or clear the form
+                        self.showSuccessAlert()
+
                     } else {
-                        print("Error saving event: \(errorMessage ?? "Unknown error")")
+                        self.showErrorAlert(message:"Error saving event")
                     }
                 }
             }
         }
         
     }
+    private func showSuccessAlert() {
+        let alertController = UIAlertController(title: "Success", message: "The event has been created successfully.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            if let navigationController = self.navigationController {
+                if let homeViewController = navigationController.viewControllers.first(where: { $0 is HomeOrgViewController }) {
+                    navigationController.popToViewController(homeViewController, animated: true)
+                }
+            }
+        }
+        
+        // Add the "OK" action to the alert
+        alertController.addAction(okAction)
+        
+        // Present the alert
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            
+        }
+        
+        alertController.addAction(okAction)
+        
+        // Present the error alert
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    
+    
+    
+    
 }
     

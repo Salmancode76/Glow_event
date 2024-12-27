@@ -8,7 +8,12 @@
 import UIKit
 import SwiftUI
 
-class EditEventTableViewController: UITableViewController {
+protocol EditEventDelegate: AnyObject {
+    func eventUpdated(updatedEvent: Event)
+}
+
+
+class EditEventTableViewController: UITableViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
 
     @IBOutlet weak var EditName: UITextField!
 
@@ -32,10 +37,161 @@ class EditEventTableViewController: UITableViewController {
     var eventAge : String = ""
     var eventDes : String = ""
     var eventStatus : String = ""
-    var eventStartDate : Date
+    var eventStartDate : Date = Date.now
+    var eventEndDate : Date = Date.now
+
+    var eventID : String = ""
+    var selectedImage: UIImage?
     
+    let cloudinary = CloudinarySetup.cloudinarySetup()
+
+
+    
+    @IBAction func optionSelectionEventCategory(_ sender:UIAction)
+    {
+        self.EditCategory.setTitle(sender.title, for: .normal)
+
+    }
+    
+    
+    @IBAction func optionSelection(_ sender:UIAction)
+    {
+        self.EditLocation.setTitle(sender.title, for: .normal)
+    }
+     
+    @IBAction func optionAgeGroup(_ sender:UIAction){
+        
+        self.EditAgeGrp.setTitle(sender.title, for: .normal)
+
+    }
+    
+    @IBAction func optionSelectionEventStatus(_ sender:UIAction)
+    {
+        self.EditStatus.setTitle(sender.title, for: .normal)
+    }
+    
+    
+    // Delegate method that is called after an image is selected or a photo is taken
+       func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+           if let selectedImage = info[.originalImage] as? UIImage {
+               self.selectedImage = selectedImage
+               
+               DispatchQueue.main.async {
+                   self.EditImage.image = selectedImage
+               }
+           }
+           picker.dismiss(animated: true, completion: nil)
+       }
+    
+    
+
+       @IBAction func eventPhotoButtonTapped(_ sender: UIButton) {
+           let imagePickerController = UIImagePickerController()
+           imagePickerController.delegate = self
+           imagePickerController.sourceType = .photoLibrary
+           imagePickerController.allowsEditing = true
+           
+           // Present the image picker controller
+           present(imagePickerController, animated: true, completion: nil)
+       }
+    
+    @IBAction func Update_Event(_ sender: Any) {
+        // Get the event start and end dates as timestamps
+        let startDateTimestamp = EventStartDate.date.timeIntervalSince1970
+        let endDateTimestamp = EventDate.date.timeIntervalSince1970
+
+        // Check if an image is selected or use a default image
+        let eventImage = selectedImage ?? UIImage(named: "defaultImage") ?? UIImage()
+
+        if selectedImage != nil {
+            uploadImage(eventImage) { [weak self] uploadedUrl in
+                guard let self = self else { return }
+                if let url = uploadedUrl {
+                    // Update the event with the new image URL
+                    self.eventUrl = url
+                    self.updateEventInDatabase(startDateTimestamp: startDateTimestamp, endDateTimestamp: endDateTimestamp)
+                } else {
+                    // Handle image upload failure
+                    showFailAlert(errorMessage: "Error uploading image.")
+                }
+            }
+        } else {
+            self.updateEventInDatabase(startDateTimestamp: startDateTimestamp, endDateTimestamp: endDateTimestamp)
+        }
+    }
+
+    // Upload the event image to Cloudinary and get the URL
+    private func uploadImage(_ image: UIImage, completion: @escaping (String?) -> Void) {
+        CloudinarySetup.uploadeEventImage(image: image) { uploadedUrl in
+            completion(uploadedUrl)
+        }
+    }
+
+    // Update the event data in Firebase
+    private func updateEventInDatabase(startDateTimestamp: TimeInterval, endDateTimestamp: TimeInterval) {
+        // Prepare the event data dictionary
+        let updatedData: [String: Any] = [
+            "EventName": EditName.text ?? "",
+            "startDate": startDateTimestamp,
+            "endDate": endDateTimestamp,
+            "price": Double(EditPrice.text ?? "") ?? 0.0,
+            "EventCategory": EditCategory.title(for: .normal) ?? "",
+            "venue_options": EditLocation.title(for: .normal) ?? "",
+            "AgeGroup": EditAgeGrp.title(for: .normal) ?? "",
+            "description": EventDes.text ?? "",
+            "EventStatus": EditStatus.title(for: .normal) ?? "",
+            "Capacity": Int(EditCap.text ?? "") ?? 0,
+            "EventImg": self.eventUrl // This is the updated image URL
+        ]
+        
+        FirebaseDB.updateEvent(eventID: self.eventID, updatedData: updatedData) { success, error in
+            if success {
+                self.showSuccessAlert()
+
+                
+            } else {
+                self.showFailAlert(errorMessage: "ERROR IN THE DATABASE CONTACT SUPPORT NOW!")
+            }
+        }
+    }
+
+    private func showSuccessAlert() {
+        let alertController = UIAlertController(title: "Success", message: "The event has been updated successfully.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            if let navigationController = self.navigationController {
+                if let homeViewController = navigationController.viewControllers.first(where: { $0 is HomeOrgViewController }) {
+                    navigationController.popToViewController(homeViewController, animated: true)
+                }
+            }
+        }
+        
+        alertController.addAction(okAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    private func showFailAlert(errorMessage: String) {
+        // Create an alert controller with a title and message indicating failure
+        let alertController = UIAlertController(title: "Failure", message: "Failed to update the event. Error: \(errorMessage)", preferredStyle: .alert)
+        
+        // Add an OK button to dismiss the alert
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        
+        
+        // Present the alert
+        self.present(alertController, animated: true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.separatorStyle = .singleLine
+        
+        tableView.separatorColor = UIColor.lightGray 
+        
         
         EditCategory.setTitle(eventCategory, for: .normal) 
         EditName.text = eventName
@@ -52,6 +208,9 @@ class EditEventTableViewController: UITableViewController {
         EditStatus.setTitle(eventStatus, for: .normal)
         EventStartDate.tintColor = UIColor.white
        
+        EventStartDate.date = eventStartDate
+        
+        EventDate.date = eventEndDate
             
         EventDate.tintColor = UIColor.white
         if #available(iOS 14.0, *) {
@@ -60,17 +219,19 @@ class EditEventTableViewController: UITableViewController {
         }
         
         
-        if let imageUrl = URL(string: eventUrl) {
+        if URL(string: eventUrl) != nil {
             CloudinarySetup.DownloadEventyImage(from: eventUrl) { image in
                 DispatchQueue.main.async {
                     self.EditImage.image = image
                 }
             }
         } else {
-            EditImage.image = UIImage(systemName: "photo.fill") // Placeholder image
+            EditImage.image = UIImage(systemName: "photo.fill")
         }
 
     }
+
+
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -83,6 +244,9 @@ class EditEventTableViewController: UITableViewController {
         header.textLabel?.textColor = .white
         
         tableView.tableFooterView = UIView()
+        
+        
+        
         
     }
     override func numberOfSections(in tableView: UITableView) -> Int {

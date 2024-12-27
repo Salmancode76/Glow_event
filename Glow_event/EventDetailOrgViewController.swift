@@ -3,11 +3,12 @@ import UIKit
 class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var EventDetailTableview: UITableView!
-    // Table view outlet
+   // var event: Event?
 
-    // Variables to hold event data (these will be passed from the previous view controller)
+  
     var eventPhotoURL: String?
     var eventDate: Date?
+    var eventEndDate: Date?
     var eventName: String?
     var eventDes: String?
     var eventStatus: String?
@@ -17,13 +18,15 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
     var eventID: String?
     var eventCategory : String?
     var eventAgeGrp : String = ""
+    
+
 
     
     @IBAction func EditEvnt(_ sender: Any) {
         if let vc = storyboard?.instantiateViewController(identifier: "EditEventOrg") as? EditEventTableViewController {
             
             // Pass data to the edit page
-            vc.eventName = self.eventName ?? "" // Ensure it's not nil
+            vc.eventName = self.eventName ?? ""
             
             vc.eventUrl = self.eventPhotoURL ?? ""
             
@@ -41,7 +44,14 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
             
             vc.eventStatus = self.eventStatus!
             
-            print("Event Name: \(self.eventName ?? "No Name")")
+            vc.eventID = self.eventID ?? ""
+            
+            vc.eventStartDate = self.eventDate ?? Date.now
+            
+            vc.eventEndDate = self.eventEndDate ?? Date.now
+            
+            
+            
             
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -49,29 +59,58 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var DeleteEvent: UIButton!
     
     
+    private func showFailAlert(errorMessage: String) {
+        // Create an alert controller with a title and message indicating failure
+        let alertController = UIAlertController(title: "Failure", message: "Failed to update the event. Error: \(errorMessage)", preferredStyle: .alert)
+        
+        // Add an OK button to dismiss the alert
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        
+        
+        // Present the alert
+        self.present(alertController, animated: true, completion: nil)
+    }
     @IBAction func DeleteEvent(_ sender: Any) {
         
-        FirebaseDB.deleteEvent(eventID: eventID ?? "") { success, errorMessage in
+        
+        
+        FirebaseDB.deleteEvent(eventID: eventID ?? "") { [self] success, errorMessage in
             if success {
-                print("Event deleted successfully")
                 
                 self.navigationController?.popViewController(animated: true)
             } else {
-                print("Error deleting event: \(errorMessage ?? "Unknown error")")
-                let alert = UIAlertController(title: "Error", message: "Could not delete the event. Please try again.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                showFailAlert(errorMessage:"Error deleting event")
+               
             }
         }
     }
         
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.async {
+            // Reload data after the view has appeared
+            self.EventDetailTableview.reloadData()
+        }
+    }
+    
+
+
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set up the table view data source and delegate
         EventDetailTableview.delegate = self
         EventDetailTableview.dataSource = self
+        
+
     }
+    
+ 
+
+
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -89,7 +128,6 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
              selectedView.backgroundColor = .darkGray // Set selection color
              cell.selectedBackgroundView = selectedView
         
-        // Configure the cell using the data passed to this view controller
         cell.setupCell(name: eventName ?? "No Name",
                        startDate: eventDate ?? Date(),
                        venu: eventLocation ?? "No Location",

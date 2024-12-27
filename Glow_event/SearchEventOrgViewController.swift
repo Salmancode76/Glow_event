@@ -19,8 +19,8 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
     var events: [Event] = [] // Array to hold all events from Firebase
       var filteredEvents: [Event] = [] // Array to hold filtered events
       
-      var searchEvents: [Event] = [] // Array to hold search results
-    var searching = false // State to track if searching is active
+      var searchEvents: [Event] = []
+    var searching = false
     
     @IBAction func openFilterPage(_ sender: UIButton) {
         // Instantiate the FilterTableViewController from storyboard
@@ -41,16 +41,14 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("searrc")
-        print("Events in SearchEventOrgViewController: ", events)
+
         
         
 
         
         if let navBar = self.navigationController?.navigationBar {
              navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-             navBar.tintColor = UIColor.white // For buttons on the navigation bar (e.g., back button)
+             navBar.tintColor = UIColor.white
          }
          
 
@@ -78,17 +76,14 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = searching ? searchEvents.count : filteredEvents.count
-            print("Number of rows: \(count)")
             return count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get the event for the current row (filtered or not)
         let event = searching ? searchEvents[indexPath.row] : filteredEvents[indexPath.row]
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "event", for: indexPath) as! EventOrgTableViewCell
         
-        // Customize cell appearance (black background and white text)
         cell.textLabel?.textColor = .white
         cell.detailTextLabel?.textColor = .white
         cell.backgroundColor = .black
@@ -116,6 +111,45 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
         }
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        let event = searching ? searchEvents[indexPath.row] : events[indexPath.row]
+
+        if let vc = storyboard?.instantiateViewController(identifier: "EventDetailOrg") as? EventDetailOrgViewController {
+
+            
+            vc.eventName = event.EventName
+            
+            vc.eventDate = event.startDate
+            
+            vc.eventPhotoURL = event.EventPhotoURL
+            
+            vc.eventStatus = event.EventStatus
+            
+            vc.eventDes = event.descrip
+            
+            vc.eventSeats =  (event.Capacity)
+            
+            vc.eventPrice = event.price
+            
+            vc.eventLocation = event.venu_options
+                
+            vc.eventID = event.id
+            
+            vc.eventCategory = event.EventCategory
+            
+            vc.eventAgeGrp = event.AgeGroup ?? "Any"
+            
+            vc.eventID = event.id
+            
+            vc.eventEndDate = event.endDate
+
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+        }
+        
     }
 
 
@@ -151,7 +185,6 @@ class SearchEventOrgViewController: UIViewController, UITableViewDelegate, UITab
    extension SearchEventOrgViewController: FilterTableViewControllerDelegate {
        // Implement the delegate method to apply the filtered events
        func applyFilterWith(events: [Event]) {
-           print("Filtered events received in SearchEventOrgViewController: ", events)
            self.filteredEvents = events
            self.EventsOrgTable.reloadData() // Reload table with filtered events
        }

@@ -46,57 +46,45 @@ class FilterTableViewController: UITableViewController {
         self.selectedEventCategory = sender.title
         self.EventCatgory.setTitle(selectedEventCategory, for: .normal)
         
-        print("Filtered events: ", self.selectedStatus)
     }
     @IBAction func OptionFilterStatus(_ sender: UIAction) {
         // Directly access sender.title since it's a non-optional String
         self.selectedStatus = sender.title
         self.EventStatusBtn.setTitle(selectedStatus, for: .normal)
         
-        print("Filtered events: ", self.selectedStatus)
     }
     
     @IBAction func OptionFilterDateFrom(_ sender: UIDatePicker) {
-        // Directly access sender.title since it's a non-optional String
         self.FromDate = sender.date
     }
     @IBAction func OptionFilterDateTo(_ sender: UIDatePicker) {
-        // Directly access sender.title since it's a non-optional String
         self.ToDate = sender.date
     }
 
 
     @IBAction func OptionFilterAge(_ sender: UIAction) {
-        // Directly access sender.title since it's a non-optional String
         self.selectedAge = sender.title
         self.EventAge.setTitle(selectedAge, for: .normal)
         
-        print("Filtered events: ", self.selectedAge )
     }
     @IBAction func OptionFilterLocation(_ sender: UIAction) {
-        // Directly access sender.title since it's a non-optional String
         self.selectedVenu = sender.title
         self.EventVen.setTitle(selectedVenu, for: .normal)
         
-        print("Filtered events: ", self.selectedVenu  )
     }
     
     
     @IBAction func ApplyFilter(_ sender: Any) {
-        // First, apply the category filter (if any)
         let filteredByCategory = selectedEventCategory != "Any" ?
             events.filter {
                 $0.EventCategory?.lowercased() == selectedEventCategory.lowercased()
             } : events
 
-        // Apply the date range filter based on switch state
         var filteredByDate: [Event] = filteredByCategory
 
         if !AnyDateSW.isOn {
-            // If the switch is OFF, use the date range for filtering
             guard let fromDate = self.FromDate, let toDate = self.ToDate else {
-                // Either FromDate or ToDate is nil, so we return early or handle it
-                print("FromDate or ToDate is nil")
+                showErrorAlert(message: "Erorr with date pickers")
                 return
             }
 
@@ -105,20 +93,16 @@ class FilterTableViewController: UITableViewController {
             }
         }
 
-        // Apply the age group filter
         let filteredByAge = filteredByDate.filter { event in
             return selectedAge == "Any" || event.AgeGroup?.lowercased() == selectedAge.lowercased()
         }
 
-        // Apply the location filter
         let filteredByLocation = filteredByAge.filter { event in
             return selectedVenu == "Any" || event.venu_options.lowercased() == selectedVenu.lowercased()
         }
 
-        // Apply the status filter
         let filteredByStatus: [Event]
         if selectedStatus == "Any" {
-            // If status is "Any", skip the status filter
             filteredByStatus = filteredByLocation
         } else {
             filteredByStatus = filteredByLocation.filter { event in
@@ -128,7 +112,6 @@ class FilterTableViewController: UITableViewController {
         
         let Sorted : [Event]
         
-        print(selectedSort)
      
          if selectedSort == "Highest"{
             Sorted = filteredByStatus.sorted { event1, event2 in
@@ -142,9 +125,7 @@ class FilterTableViewController: UITableViewController {
              Sorted = filteredByStatus
          }
 
-        // Print filtered events for debugging purposes
-
-        // Pass the filtered events to the delegate
+        
         delegate?.applyFilterWith(events: Sorted)
 
         // Pop back to the previous view controller
@@ -156,7 +137,13 @@ class FilterTableViewController: UITableViewController {
     @IBAction func ResetFilters(_ sender: Any) {
 
            AnyDateSW.setOn(true, animated: true)
-           
+        // Disable the date pickers and visually show that they are disabled
+            FromEventPKR.isEnabled = false
+            ToEventPKR.isEnabled = false
+            
+            // Set the alpha to make them look visually disabled
+            FromEventPKR.alpha = 0.5
+            ToEventPKR.alpha = 0.5
      
            FromEventPKR.date = Date()
            ToEventPKR.date = Date()
@@ -221,7 +208,6 @@ class FilterTableViewController: UITableViewController {
         }
         
        
-        print(events);
 
     }
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
@@ -237,10 +223,14 @@ class FilterTableViewController: UITableViewController {
         
         // Set the separator color to gray
         tableView.separatorColor = UIColor.white
-       //tableView.separatorStyle = .none
 
   
    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0  
+    }
+    
     
     
     @IBAction func AnyDateSwitchChanged(_ sender: UISwitch) {
@@ -252,21 +242,35 @@ class FilterTableViewController: UITableViewController {
       private func toggleDatePickersState() {
           // Disable date pickers if switch is OFF, enable if switch is ON
           
-          print("pressed")
           let isSwitchOff = !AnyDateSW.isOn
           FromEventPKR.isEnabled = isSwitchOff
           ToEventPKR.isEnabled = isSwitchOff
           
-          // Optionally, change the background color or appearance to indicate disabled state
+          
+ 
           FromEventPKR.alpha = isSwitchOff ? 1.0 : 0.5
           ToEventPKR.alpha = isSwitchOff ? 1.0 : 0.5
           
           // Reset the dates if the switch is off
           if !isSwitchOff {
+         
               FromEventPKR.date = Date()
               ToEventPKR.date = Date()
               FromDate = nil
               ToDate = nil
           }
       }
+    
+    private func showErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            
+        }
+        
+        alertController.addAction(okAction)
+        
+        // Present the error alert
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

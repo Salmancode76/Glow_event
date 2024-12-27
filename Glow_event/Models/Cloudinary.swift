@@ -9,9 +9,9 @@ struct CloudinarySetup {
     
     static var cloudinary : CLDCloudinary!
 
-    static let cloudName: String = "doctomog7" // Make this static
+    static let cloudName: String = "doctomog7"
 
-    static let uploadPreset: String = "glow_event" //Upload preset
+    static let uploadPreset: String = "glow_event"
     
     static func cloudinarySetup() -> CLDCloudinary {
         
@@ -83,8 +83,8 @@ struct CloudinarySetup {
         }
         task.resume() // Start the download task
     }
+
     
-    
-    
+
     
 }

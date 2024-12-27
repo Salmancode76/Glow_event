@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           // Initialize Firebase
           FirebaseApp.configure()
         
-        print("Firebase is connected!")
 
         
           
