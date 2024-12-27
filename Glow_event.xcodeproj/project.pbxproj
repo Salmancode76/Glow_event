@@ -13,6 +13,9 @@
 		BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */; };
 		BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */; };
 		BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */; };
+		BD8CA7442D1E763100C5965C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */; };
+		BD8CA7462D1E76BE00C5965C /* ViewUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */; };
+		BD8CA7482D1EE86300C5965C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */; };
 		BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */; };
 		BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DEB2D142AA900016A51 /* Cloudinary.swift */; };
 		BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DED2D142AC500016A51 /* Firebase.swift */; };
@@ -26,6 +29,7 @@
 		BDA48E012D1454C800016A51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA48E002D1454C800016A51 /* GoogleService-Info.plist */; };
 		BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E952D1A842500D68913 /* AddUserViewController.swift */; };
 		BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */; };
+		BDDB8E9A2D1ADF0E00D68913 /* AddUserTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -65,6 +69,9 @@
 		BD4A0C192D16B2C0007745F1 /* AdminSettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingsTableViewController.swift; sourceTree = "<group>"; };
 		BD4A0C1B2D16F372007745F1 /* AdminProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileViewController.swift; sourceTree = "<group>"; };
 		BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
+		BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUsersViewController.swift; sourceTree = "<group>"; };
+		BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		BD91805F2D15C6120051323A /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48DEB2D142AA900016A51 /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		BDA48DED2D142AC500016A51 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		BDA48E002D1454C800016A51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDDB8E952D1A842500D68913 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserTestViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +183,10 @@
 				BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */,
 				BDDB8E952D1A842500D68913 /* AddUserViewController.swift */,
 				BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */,
+				BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */,
+				BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */,
+				BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */,
+				BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -288,17 +300,21 @@
 				BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */,
 				BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */,
 				BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */,
+				BD8CA7442D1E763100C5965C /* UserTableViewCell.swift in Sources */,
 				BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */,
 				BDA48DEE2D142AC500016A51 /* Firebase.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */,
 				BDA48DF92D14395900016A51 /* User.swift in Sources */,
+				BD8CA7482D1EE86300C5965C /* UserDetailViewController.swift in Sources */,
+				BDDB8E9A2D1ADF0E00D68913 /* AddUserTestViewController.swift in Sources */,
 				BDA48DFB2D143DD400016A51 /* UserSettingsViewController.swift in Sources */,
 				BD4A0C162D16AE93007745F1 /* AdminLoginViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				BD4A0C122D169273007745F1 /* UserChangePasswordViewController.swift in Sources */,
 				BDA48DF02D142AE800016A51 /* Event.swift in Sources */,
 				BD4A0C1A2D16B2C0007745F1 /* AdminSettingsTableViewController.swift in Sources */,
+				BD8CA7462D1E76BE00C5965C /* ViewUsersViewController.swift in Sources */,
 				BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				BD4A0C1C2D16F372007745F1 /* AdminProfileViewController.swift in Sources */,

@@ -3,7 +3,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
-class EditUserViewController: UIViewController {
+class EditUserViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // text fields and button outlets
     @IBOutlet weak var usernameTextField: UITextField!
@@ -11,110 +11,153 @@ class EditUserViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     
-    var userID: String? // identifying the user being edited
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchUserData()
-
-        // Do any additional setup after loading the view.
-    }
-    
-    // fetching the user details from firebase to populate the fields
-    private func fetchUserData() {
-        guard let userID = userID else {
-            print("User ID is missing")
-            return
+    var userID: String? // Identifying the user being edited
+        
+        let genders = ["Male", "Female"] // Gender options for the picker
+        let picker = UIPickerView() // Picker instance
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            fetchUserData() // Fetch and display user data
+            
+            // Set up the gender picker
+            picker.delegate = self
+            picker.dataSource = self
+            
+            // Assign the picker to the gender text field
+            genderTextField.inputView = picker
+            
+            // Add a toolbar with a Done button for the picker
+            let toolbar = UIToolbar()
+            toolbar.sizeToFit()
+            
+            let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(dismissPicker))
+            toolbar.setItems([doneButton], animated: false)
+            toolbar.isUserInteractionEnabled = true
+            genderTextField.inputAccessoryView = toolbar
+            
+            // disable the keyboard for the gender text field
+            genderTextField.isUserInteractionEnabled = true
+            genderTextField.tintColor = .clear // remove the cursor
         }
         
-        let databaseRef = Database.database().reference().child("users").child(userID)
+        @objc func dismissPicker() {
+            view.endEditing(true) // Dismiss the picker
+        }
         
-        databaseRef.observeSingleEvent(of: .value) { snapshot in
-            guard let value = snapshot.value as? [String: Any] else {
-                print("No data found for this user")
+        // MARK: - UIPickerViewDataSource
+        func numberOfComponents(in pickerView: UIPickerView) -> Int {
+            return 1 // Only one column for genders
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+            return genders.count // Number of genders
+        }
+        
+        // MARK: - UIPickerViewDelegate
+        func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+            return genders[row] // Display the gender options
+        }
+        
+        func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+            genderTextField.text = genders[row] // Set the selected gender to the text field
+        }
+        
+        // Fetching the user details from Firebase to populate the fields
+        private func fetchUserData() {
+            guard let userID = userID else {
+                print("User ID is missing")
                 return
             }
             
-            // populate the text fields with the fetched data
-            let username = value["username"] as? String ?? ""
-            let email = value["email"] as? String ?? ""
-            let gender = value["gender"] as? String ?? ""
+            let databaseRef = Database.database().reference().child("users").child(userID)
             
-            DispatchQueue.main.async {
-                self.usernameTextField.text = username
-                self.emailTextField.text = email
-                self.genderTextField.text = gender
-                self.passwordTextField.text = "" // password is not fetched for security reasons
+            databaseRef.observeSingleEvent(of: .value) { snapshot in
+                guard let value = snapshot.value as? [String: Any] else {
+                    print("No data found for this user")
+                    return
+                }
+                
+                // Populate the text fields with the fetched data
+                let username = value["username"] as? String ?? ""
+                let email = value["email"] as? String ?? ""
+                let gender = value["gender"] as? String ?? ""
+                
+                DispatchQueue.main.async {
+                    self.usernameTextField.text = username
+                    self.emailTextField.text = email
+                    self.genderTextField.text = gender
+                    self.passwordTextField.text = "" // Password is not fetched for security reasons
+                }
+            } withCancel: { error in
+                print("Error fetching user data: \(error.localizedDescription)")
             }
-        } withCancel: { error in
-            print("Error fetching user data: \(error.localizedDescription)")
         }
-    }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        // validate the input fields
+        // Validate the input fields
         guard let username = usernameTextField.text, !username.isEmpty,
-              let email = emailTextField.text, !email.isEmpty,
-              let gender = genderTextField.text, !gender.isEmpty else {
-            showAlert(title: "Error", message: "Please fill in all the fields.")
-            return
+                let email = emailTextField.text, !email.isEmpty,
+                let gender = genderTextField.text, !gender.isEmpty else {
+                showAlert(title: "Error", message: "Please fill in all the fields.")
+                return
         }
         
-        // validate gender
-        let validGenders = ["Male", "Female"]
-        if !validGenders.contains(gender.capitalized) {
-            showAlert(title: "Error", message: "Gender must be either 'Male' or 'Female'")
-            return
-        }
-        
-        // validate password if provided
-        if let password = passwordTextField.text, !password.isEmpty, password.count < 8 {
-            showAlert(title: "Error", message: "Password must be at least 8 characters long.")
-            return
-        }
-        
-        guard let userID = userID else {
-            print("UserID is missing")
-            return
-        }
-        
-        // update user details in firebase realtime database
-        let databaseRef = Database.database().reference().child("users").child(userID)
-        var updatedData: [String: Any] = [
-            "username": username,
-            "email": email,
-            "gender": gender
-        ]
-        
-        // update the password in firebase authentication if provided
-        if let password = passwordTextField.text, !password.isEmpty {
-            Auth.auth().currentUser?.updatePassword(to: password) { error in
-                if let error = error {
-                    print("Error updating password: \(error.localizedDescription)")
-                    self.showAlert(title: "Error", message: "Failed to update password. \(error.localizedDescription)")
-                } else {
-                    print("Password updated successfully")
+        // Validate gender
+                let validGenders = ["Male", "Female"]
+                if !validGenders.contains(gender.capitalized) {
+                    showAlert(title: "Error", message: "Gender must be either 'Male' or 'Female'")
+                    return
+                }
+                
+                // Validate password if provided
+                if let password = passwordTextField.text, !password.isEmpty, password.count < 8 {
+                    showAlert(title: "Error", message: "Password must be at least 8 characters long.")
+                    return
+                }
+                
+                guard let userID = userID else {
+                    print("UserID is missing")
+                    return
+                }
+                
+                // Update user details in Firebase Realtime Database
+                let databaseRef = Database.database().reference().child("users").child(userID)
+                var updatedData: [String: Any] = [
+                    "username": username,
+                    "email": email,
+                    "gender": gender
+                ]
+                
+                // Update the password in Firebase Authentication if provided
+                if let password = passwordTextField.text, !password.isEmpty {
+                    Auth.auth().currentUser?.updatePassword(to: password) { error in
+                        if let error = error {
+                            print("Error updating password: \(error.localizedDescription)")
+                            self.showAlert(title: "Error", message: "Failed to update password. \(error.localizedDescription)")
+                        } else {
+                            print("Password updated successfully")
+                        }
+                    }
+                }
+                
+                databaseRef.updateChildValues(updatedData) { error, _ in
+                    if let error = error {
+                        print("Error updating user data: \(error.localizedDescription)")
+                        self.showAlert(title: "Error", message: "Failed to update user data. \(error.localizedDescription)")
+                    } else {
+                        print("User data updated successfully")
+                        self.showAlert(title: "Success", message: "User details updated successfully")
+                    }
                 }
             }
-        }
-        
-        databaseRef.updateChildValues(updatedData) { error, _ in
-            if let error = error {
-                print("Error updating user data: \(error.localizedDescription)")
-                self.showAlert(title: "Error", message: "Failed to update user data. \(error.localizedDescription)")
-            } else {
-                print("User data updated successfully")
-                self.showAlert(title: "Success", message: "User details updated successfully")
+            
+            // Show alert for validation or success/error messages
+            private func showAlert(title: String, message: String) {
+                let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
             }
-        }
-    }
-    
-    // show alert for validation or success/error messages
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
-    }
     
 
     /*
