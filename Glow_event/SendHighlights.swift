@@ -1,34 +1,18 @@
 //
-//  SendHighlightsViewController.swift
+//  SendHighlights.swift
 //  Glow_event
 //
-//  Created by PRINTANICA on 24/12/2024.
+//  Created by PRINTANICA on 28/12/2024.
 //
 
 import UIKit
-import Firebase
-
 
 class SendHighlights: UIViewController {
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        testFirebaseConnection()
-        
-        
 
         // Do any additional setup after loading the view.
-    }
-    
-    func testFirebaseConnection(){
-        
-        Analytics.logEvent("test_event", parameters: [
-                   "test_param": "test_value"
-               ])
-               print("Firebase test event logged")
-           }
-        
     }
     
 
@@ -42,4 +26,4 @@ class SendHighlights: UIViewController {
     }
     */
 
-
+}

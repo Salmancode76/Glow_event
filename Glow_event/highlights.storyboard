@@ -10,7 +10,7 @@
         <!--Send Hiighlights-->
         <scene sceneID="fKg-Sg-7B7">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" title="Send Hiighlights" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Xvu-QQ-adc" customClass="SendHighlights" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" title="Send Hiighlights" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Xvu-QQ-adc" customClass="SendHighlights" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEV-nj-MCB">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

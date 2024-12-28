@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB9351432D1AF9B600A549B5 /* SendHighlights in Sources */ = {isa = PBXBuildFile; fileRef = BB9351422D1AF9B600A549B5 /* SendHighlights */; };
+		BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */; };
 		BB9EECAB2D1DCFBB00F2A19C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */; };
 		BB9EECAD2D1DD5E800F2A19C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAC2D1DD5E800F2A19C /* FirebaseAnalytics */; };
 		BB9EECAF2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAE2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -51,7 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BB9351422D1AF9B600A549B5 /* SendHighlights */ = {isa = PBXFileReference; lastKnownFileType = text; path = SendHighlights; sourceTree = "<group>"; };
+		BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
 		BB9EECA92D1DCDB400F2A19C /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
@@ -122,13 +122,13 @@
 				BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */,
 				BBFE270D2D1E459400FAB871 /* Cloudinary.swift */,
 				BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */,
+				BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				C34438632D01E600000A4D52 /* highlights.storyboard */,
-				BB9351422D1AF9B600A549B5 /* SendHighlights */,
 				BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */,
 			);
 			path = Glow_event;
@@ -246,9 +246,9 @@
 			files = (
 				BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */,
 				BBFE270E2D1E459400FAB871 /* Cloudinary.swift in Sources */,
-				BB9351432D1AF9B600A549B5 /* SendHighlights in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
