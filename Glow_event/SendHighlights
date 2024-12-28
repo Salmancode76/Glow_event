@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 
-class SendHighlightsViewController: UIViewController {
+class SendHighlights: UIViewController {
 
     
     override func viewDidLoad() {
