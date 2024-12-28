@@ -10,7 +10,7 @@
         <!--Send Hiighlights-->
         <scene sceneID="fKg-Sg-7B7">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" title="Send Hiighlights" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Xvu-QQ-adc" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" title="Send Hiighlights" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="Xvu-QQ-adc" customClass="SendHighlightsViewController" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GEV-nj-MCB">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9VU-Kf-8uV">
                                 <rect key="frame" x="20" y="479" width="390" height="235"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILy-PU-TE4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILy-PU-TE4" customClass="SendHighlightsViewController.swift">
                                 <rect key="frame" x="50" y="781" width="330" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Send">

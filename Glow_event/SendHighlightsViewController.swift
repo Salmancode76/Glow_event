@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 
 class SendHighlightsViewController: UIViewController {
@@ -13,10 +14,21 @@ class SendHighlightsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        testFirebaseConnection()
         
         
 
         // Do any additional setup after loading the view.
+    }
+    
+    func testFirebaseConnection(){
+        
+        Analytics.logEvent("test_event", parameters: [
+                   "test_param": "test_value"
+               ])
+               print("Firebase test event logged")
+           }
+        
     }
     
 
@@ -30,4 +42,4 @@ class SendHighlightsViewController: UIViewController {
     }
     */
 
-}
+
