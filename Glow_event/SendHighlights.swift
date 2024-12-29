@@ -35,8 +35,11 @@ class SendHighlights: UIViewController, UIImagePickerControllerDelegate, UIPicke
         pickerView = UIPickerView()
                pickerView.delegate = self
                pickerView.dataSource = self
+       
                OrganizerName.inputView = pickerView
         OrganizerName.inputAccessoryView = createPickerToolbar() 
+        
+        
         
         fetchOrganizers { [weak self] names in
                    self?.organizerNames = names
@@ -54,7 +57,7 @@ class SendHighlights: UIViewController, UIImagePickerControllerDelegate, UIPicke
                for child in snapshot.children {
                    if let childSnapshot = child as? DataSnapshot,
                       let organizerData = childSnapshot.value as? [String: Any],
-                      let name = organizerData["name:"] as? String {
+                      let name = organizerData["name"] as? String {
                        organizerNames.append(name)
                    }
                }
