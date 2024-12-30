@@ -9,12 +9,15 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
     var eventPhotoURL: String?
     var eventDate: Date?
     var eventEndDate: Date?
+    
     var eventName: String?
     var eventDes: String?
     var eventStatus: String?
+    
     var eventSeats: Int?
     var eventPrice: Double?
     var eventLocation: String?
+    
     var eventID: String?
     var eventCategory : String?
     var eventAgeGrp : String = ""
@@ -40,7 +43,7 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
             
             vc.eventAge = self.eventAgeGrp
             
-            vc.eventDes = self.eventDes!
+            vc.eventDes = self.eventDes ?? ""
             
             vc.eventStatus = self.eventStatus!
             
@@ -107,10 +110,6 @@ class EventDetailOrgViewController: UIViewController, UITableViewDelegate, UITab
         
 
     }
-    
- 
-
-
     
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

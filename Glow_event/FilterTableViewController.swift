@@ -13,7 +13,8 @@ protocol FilterTableViewControllerDelegate: AnyObject {
 
 class FilterTableViewController: UITableViewController {
     @IBOutlet weak var AnyDateSW: UISwitch!
-    
+    // The selected filter values that will be passed back to the SearchEventOrgViewController
+
     var selectedEventCategory: String = "Any"
     var selectedAge:String = "Any"
     var selectedVenu : String = "Any"
@@ -34,6 +35,9 @@ class FilterTableViewController: UITableViewController {
     
     weak var delegate: FilterTableViewControllerDelegate? // Delegate reference
     
+    
+    // Outlets for UI components (Buttons and Date Pickers)
+
     @IBAction func OptionSortPrice(_ sender: UIAction) {
         self.selectedSort = sender.title
         
@@ -73,7 +77,11 @@ class FilterTableViewController: UITableViewController {
         
     }
     
-    
+    @IBAction func AnyDateSwitchChanged(_ sender: UISwitch) {
+          // Toggle the date pickers' enabled state based on the switch
+          toggleDatePickersState()
+      }
+    //Filter all arrays
     @IBAction func ApplyFilter(_ sender: Any) {
         let filteredByCategory = selectedEventCategory != "Any" ?
             events.filter {
@@ -91,6 +99,9 @@ class FilterTableViewController: UITableViewController {
             filteredByDate = filteredByCategory.filter { event in
                 return event.startDate >= fromDate && event.endDate <= toDate
             }
+        }else{
+            filteredByDate = filteredByCategory
+
         }
 
         let filteredByAge = filteredByDate.filter { event in
@@ -115,11 +126,11 @@ class FilterTableViewController: UITableViewController {
      
          if selectedSort == "Highest"{
             Sorted = filteredByStatus.sorted { event1, event2 in
-                   return event2.price > event1.price
+                   return event2.price < event1.price
                }
          }else if selectedSort == "Lowest"{
              Sorted = filteredByStatus.sorted { event1, event2 in
-                    return event2.price < event1.price
+                    return event2.price > event1.price
                 }
          }else{
              Sorted = filteredByStatus
@@ -135,6 +146,7 @@ class FilterTableViewController: UITableViewController {
 
 
     @IBAction func ResetFilters(_ sender: Any) {
+        // Reset all filter values to "Any"
 
            AnyDateSW.setOn(true, animated: true)
         // Disable the date pickers and visually show that they are disabled
@@ -175,7 +187,6 @@ class FilterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        
 
         
         FromEventPKR.backgroundColor = UIColor.black
@@ -228,15 +239,12 @@ class FilterTableViewController: UITableViewController {
    }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0  
+        return 0  //hiding the footer
     }
     
     
     
-    @IBAction func AnyDateSwitchChanged(_ sender: UISwitch) {
-          // Toggle the date pickers' enabled state based on the switch
-          toggleDatePickersState()
-      }
+   
       
       // MARK: - Helper Methods
       private func toggleDatePickersState() {

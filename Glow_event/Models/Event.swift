@@ -11,11 +11,12 @@ struct Event {
     var endDate: Date
     var descrip: String
     var EventStatus: String
-    var EventPhotoURL: String  // Store image URL as a String (not UIImage)
+    var EventPhotoURL: String  //
     var EventCategory: String?
-    var AgeGroup: String? // New field for age group
-    var Capacity: Int?    // New field for event capacity
+    var AgeGroup: String?
+    var Capacity: Int?
     
+
     // Custom initializer
     init(EventName: String, venu_options: String, price: Double, startDate: Date, endDate: Date, descrip: String, EventStatus: String, EventPhotoURL: String, EventCategory: String?, AgeGroup: String?, Capacity: Int?) {
         self.id = ""
@@ -54,9 +55,10 @@ struct Event {
         
         self.EventCategory = value["EventCategory"] as? String
         self.AgeGroup = value["AgeGroup"] as? String
-        self.Capacity = value["Capcity"] as? Int
+        self.Capacity = value["Capacity"] as? Int
         
         self.id = snapshot.key  
 
     }
+    
 }

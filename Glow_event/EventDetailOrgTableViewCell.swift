@@ -15,12 +15,6 @@ class EventDetailOrgTableViewCell: UITableViewCell {
         self.backgroundColor = .black
         
         EventName.textColor = .white
-           EventStatus.textColor = .white
-           EventDate.textColor = .white
-           EventSeatslbl.textColor = .white
-           EventDesclbl.textColor = .white
-           Pricelbl.textColor = .white
-           EventLocation.textColor = .white
 
     }
 
@@ -43,7 +37,7 @@ class EventDetailOrgTableViewCell: UITableViewCell {
     func setupCell(name: String, startDate: Date, venu: String, status: String, seats: Int, description: String, price: Double, location: String, photoURL: String) {
         // Set the labels with the event data
         EventName.text = name
-        
+
         // Format the start date into a string and set it to EventDate
         EventDate.text = formatDate(startDate)
         
@@ -55,7 +49,7 @@ class EventDetailOrgTableViewCell: UITableViewCell {
         
         // Set the number of seats
         EventSeatslbl.text = "Seats: \(seats)"
-        
+                
         // Set the description
         EventDesclbl.text = description
         
@@ -75,6 +69,8 @@ class EventDetailOrgTableViewCell: UITableViewCell {
         } else {
             EventPhoto.image = UIImage(systemName: "photo.fill") // Placeholder image
         }
+        
+        
     }
     
 

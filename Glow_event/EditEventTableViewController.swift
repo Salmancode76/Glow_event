@@ -96,9 +96,69 @@ class EditEventTableViewController: UITableViewController, UIImagePickerControll
        }
     
     @IBAction func Update_Event(_ sender: Any) {
-        // Get the event start and end dates as timestamps
-        let startDateTimestamp = EventStartDate.date.timeIntervalSince1970
-        let endDateTimestamp = EventDate.date.timeIntervalSince1970
+        // Validate Event Name
+            guard let eventName = EditName.text, !eventName.isEmpty else {
+                showErrorAlert(errorMessage: "Event Name is required.")
+                return
+            }
+
+            // Validate Event Price (must be a positive number)
+            guard let eventPriceText = EditPrice.text, let eventPrice = Double(eventPriceText), eventPrice > 0 else {
+                showErrorAlert(errorMessage: "Please enter a valid Event Price.")
+                return
+            }
+
+            // Validate Event Capacity (must be a positive integer)
+            guard let eventCapText = EditCap.text, let eventCap = Int(eventCapText), eventCap > 0 else {
+                showErrorAlert(errorMessage: "Please enter a valid Event Capacity.")
+                return
+            }
+
+            // Validate Event Description
+            guard let eventDescription = EventDes.text, !eventDescription.isEmpty else {
+                showErrorAlert(errorMessage: "Event Description is required.")
+                return
+            }
+
+        guard let eventCapText = EditCap.text, let eventCap = Int(eventCapText), eventCap > 0 else {
+            showErrorAlert(errorMessage: "Please enter a valid Event Capacity.")
+            return
+        }
+
+            // Validate Event Category (must not be empty or default value)
+            guard let selectedCategory = EditCategory.title(for: .normal), selectedCategory != "Category" else {
+                showErrorAlert(errorMessage: "Event Category is required.")
+                return
+            }
+
+            // Validate Event Location (must not be empty or default value)
+            guard let selectedLocation = EditLocation.title(for: .normal), selectedLocation != "Location" else {
+                showErrorAlert(errorMessage: "Event Location is required.")
+                return
+            }
+
+            // Validate Age Group (must not be empty or default value)
+            guard let selectedAgeGroup = EditAgeGrp.title(for: .normal), selectedAgeGroup != "Age Group" else {
+                showErrorAlert(errorMessage: "Age Group is required.")
+                return
+            }
+
+            // Validate Event Status (must not be empty or default value)
+            guard let selectedStatus = EditStatus.title(for: .normal), selectedStatus != "Status" else {
+                showErrorAlert(errorMessage: "Event Status is required.")
+                return
+            }
+
+            // Validate Start and End Dates
+            let startDateTimestamp = EventStartDate.date.timeIntervalSince1970
+            let endDateTimestamp = EventDate.date.timeIntervalSince1970
+
+            // Ensure Start Date is before End Date
+            guard startDateTimestamp <= endDateTimestamp else {
+                showErrorAlert(errorMessage: "Start Date cannot be after End Date.")
+                return
+            }
+
 
         // Check if an image is selected or use a default image
         let eventImage = selectedImage ?? UIImage(named: "defaultImage") ?? UIImage()
@@ -112,7 +172,7 @@ class EditEventTableViewController: UITableViewController, UIImagePickerControll
                     self.updateEventInDatabase(startDateTimestamp: startDateTimestamp, endDateTimestamp: endDateTimestamp)
                 } else {
                     // Handle image upload failure
-                    showFailAlert(errorMessage: "Error uploading image.")
+                    showErrorAlert(errorMessage: "Error uploading image.")
                 }
             }
         } else {
@@ -140,7 +200,7 @@ class EditEventTableViewController: UITableViewController, UIImagePickerControll
             "AgeGroup": EditAgeGrp.title(for: .normal) ?? "",
             "description": EventDes.text ?? "",
             "EventStatus": EditStatus.title(for: .normal) ?? "",
-            "Capacity": Int(EditCap.text ?? "") ?? 0,
+            "Capacity": Int(EditCap.text ?? "") as Any,
             "EventImg": self.eventUrl // This is the updated image URL
         ]
         
@@ -150,7 +210,7 @@ class EditEventTableViewController: UITableViewController, UIImagePickerControll
 
                 
             } else {
-                self.showFailAlert(errorMessage: "ERROR IN THE DATABASE CONTACT SUPPORT NOW!")
+                self.showErrorAlert(errorMessage: "ERROR IN THE DATABASE CONTACT SUPPORT NOW!")
             }
         }
     }
@@ -172,7 +232,7 @@ class EditEventTableViewController: UITableViewController, UIImagePickerControll
     }
     
     
-    private func showFailAlert(errorMessage: String) {
+    private func showErrorAlert(errorMessage: String) {
         // Create an alert controller with a title and message indicating failure
         let alertController = UIAlertController(title: "Failure", message: "Failed to update the event. Error: \(errorMessage)", preferredStyle: .alert)
         

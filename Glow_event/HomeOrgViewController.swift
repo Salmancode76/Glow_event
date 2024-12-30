@@ -3,6 +3,8 @@ import Firebase
 import FirebaseDatabase
 
 class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
+    var events: [Event] = [] // Array to hold Event objects
+
     
     @IBOutlet weak var HomeNav: UINavigationItem!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,7 +39,7 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             vc.eventDes = event.descrip
             
-            vc.eventSeats =  (event.Capacity)
+            vc.eventSeats =  event.Capacity
             
             vc.eventPrice = event.price
             
@@ -131,7 +133,6 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var EventsOrgTable: UITableView!
     
     @IBOutlet weak var EvnentsOrgTable: UITableView!
-    var events: [Event] = [] // Array to hold Event objects
     
     
     
@@ -152,6 +153,12 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
        
+    
+        FirebaseDB.GetAllEvents { [weak self] events in
+            self?.events = events  // Store fetched events in the array
+            self?.EventsOrgTable.reloadData()  // Reload the table view to display the events
+        }
+        
         if let navBar = self.navigationController?.navigationBar {
              navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
              navBar.tintColor = UIColor.white // For buttons on the navigation bar (e.g., back button)
@@ -168,11 +175,7 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Firebase reference to the events node
         
         
-        FirebaseDB.GetAllEvents { [weak self] events in
-            self?.events = events  // Store fetched events in the array
-            self?.EventsOrgTable.reloadData()  // Reload the table view to display the events
-        }
-        // Observe the "events" node in Firebase
+
      
  
         
