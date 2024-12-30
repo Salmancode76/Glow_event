@@ -7,11 +7,13 @@
 
 import UIKit
 
-class UICollectionViewCell: OrganizerCollectionViewCell {
+class OrganizerCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }
