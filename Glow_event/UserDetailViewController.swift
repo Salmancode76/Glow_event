@@ -5,6 +5,7 @@ import UIKit
 
 class UserDetailViewController: UIViewController {
 
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
@@ -65,6 +66,7 @@ class UserDetailViewController: UIViewController {
             
             present(alert, animated: true, completion: nil)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "EditUserSegue",

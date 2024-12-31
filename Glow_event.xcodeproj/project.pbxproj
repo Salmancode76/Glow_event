@@ -27,6 +27,7 @@
 		BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFC2D1445E200016A51 /* UserLoginViewController.swift */; };
 		BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */; };
 		BDA48E012D1454C800016A51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDA48E002D1454C800016A51 /* GoogleService-Info.plist */; };
+		BDDA6DD42D23CAED00F49D1F /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA6DD32D23CAED00F49D1F /* Admin.swift */; };
 		BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E952D1A842500D68913 /* AddUserViewController.swift */; };
 		BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */; };
 		BDDB8E9A2D1ADF0E00D68913 /* AddUserTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */; };
@@ -82,6 +83,7 @@
 		BDA48DFC2D1445E200016A51 /* UserLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
 		BDA48DFE2D144BF300016A51 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		BDA48E002D1454C800016A51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BDDA6DD32D23CAED00F49D1F /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		BDDB8E952D1A842500D68913 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 		BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserTestViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				BDA48DEF2D142AE800016A51 /* Event.swift */,
 				BDA48DED2D142AC500016A51 /* Firebase.swift */,
 				BDA48DF82D14395900016A51 /* User.swift */,
+				BDDA6DD32D23CAED00F49D1F /* Admin.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */,
 				BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */,
 				BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */,
+				BDDA6DD42D23CAED00F49D1F /* Admin.swift in Sources */,
 				BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */,
 				BD8CA7442D1E763100C5965C /* UserTableViewCell.swift in Sources */,
 				BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */,

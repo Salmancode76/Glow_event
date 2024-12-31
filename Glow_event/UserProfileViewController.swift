@@ -21,6 +21,9 @@ class UserProfileViewController: UIViewController {
         
         // Fetch and display user data
         fetchUserData()
+        
+        // setup profile image view
+        setupProfileImageView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,6 +122,14 @@ class UserProfileViewController: UIViewController {
         self.profileImageView.tintColor = .gray
         self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2
         self.profileImageView.clipsToBounds = true
+    }
+    
+    private func setupProfileImageView() {
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true
+        profileImageView.contentMode = .scaleAspectFill
+        profileImageView.layer.borderWidth = 2.0
+        profileImageView.layer.borderColor = UIColor.white.cgColor // Optional border for better visuals
     }
 }
     /*

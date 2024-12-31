@@ -22,23 +22,23 @@ class AdminProfileViewController: UIViewController {
             }
             
             let uid = user.uid
-            let databaseRef = Database.database().reference().child("users").child(uid)
+            let databaseRef = Database.database().reference().child("admins").child(uid)
             
             databaseRef.observeSingleEvent(of: .value) { snapshot in
                 guard let value = snapshot.value as? [String: Any] else {
-                    print("No data found for this admin")
-                    return
-                }
-                
-                // Extract admin data
-                let id = value["id"] as? String ?? "No Id"
-                let email = value["email"] as? String ?? "No Email"
-                let profileImageUrl = value["profileImageUrl"] as? String ?? ""
-                
-                DispatchQueue.main.async {
-                    self.idLabel.text = id
-                    self.emailLabel.text = email
-                }
+                                print("No data found for this admin")
+                                return
+                            }
+                            
+                            // Extract admin data
+                            let id = value["id"] as? Int ?? 0
+                            let email = value["email"] as? String ?? "No Email"
+                            let profileImageUrl = value["profileImageUrl"] as? String ?? ""
+                            
+                            DispatchQueue.main.async {
+                                self.idLabel.text = "\(id)"
+                                self.emailLabel.text = email
+                            }
                 
                 // Load the profile image
                 if !profileImageUrl.isEmpty {
