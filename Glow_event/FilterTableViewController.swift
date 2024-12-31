@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// Declare the protocol to be used for passing data back to SearchEventOrgViewController
+// The protocol to be used for passing data back to SearchEventOrgViewController
 protocol FilterTableViewControllerDelegate: AnyObject {
     func applyFilterWith(events: [Event])
 }
@@ -85,11 +85,13 @@ class FilterTableViewController: UITableViewController {
     @IBAction func ApplyFilter(_ sender: Any) {
         let filteredByCategory = selectedEventCategory != "Any" ?
             events.filter {
+                //$0 refers to each individual event
                 $0.EventCategory?.lowercased() == selectedEventCategory.lowercased()
             } : events
 
         var filteredByDate: [Event] = filteredByCategory
 
+    
         if !AnyDateSW.isOn {
             guard let fromDate = self.FromDate, let toDate = self.ToDate else {
                 showErrorAlert(message: "Erorr with date pickers")
@@ -255,7 +257,7 @@ class FilterTableViewController: UITableViewController {
           ToEventPKR.isEnabled = isSwitchOff
           
           
- 
+        // alpha will be 0.5 (semi-transparent)
           FromEventPKR.alpha = isSwitchOff ? 1.0 : 0.5
           ToEventPKR.alpha = isSwitchOff ? 1.0 : 0.5
           

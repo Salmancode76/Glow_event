@@ -5,6 +5,7 @@ import FirebaseDatabase
 class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
     var events: [Event] = [] // Array to hold Event objects
 
+ 
     
     @IBOutlet weak var HomeNav: UINavigationItem!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,8 +77,6 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.textColor = .white // Set text color to white
         cell.detailTextLabel?.textColor = .white // Set detail text color to white
         cell.backgroundColor = .black // Set cell background color to black
-        
-        
         
         let selectedView = UIView()
         selectedView.backgroundColor = .darkGray // You can set any color for selection
