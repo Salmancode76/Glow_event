@@ -16,10 +16,6 @@ class UserSettingsViewController: UITableViewController {
             
             notificationsSwitch.isOn = false
             lightModeSwitch.isOn = false
-            
-            if let textField = searchBar.searchTextField as? UITextField {
-                    textField.textColor = .white
-                }
         }
 
     @IBAction func notificationsSwitchChanged(_ sender: UISwitch) {
