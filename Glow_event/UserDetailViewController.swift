@@ -45,26 +45,58 @@ class UserDetailViewController: UIViewController {
     
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
         guard let uid = user?["uid"] as? String else {
-                print("Error: User UID not found")
+            print("Error: User UID not found")
+            return
+        }
+        
+        let alert = UIAlertController(title: "Delete User", message: "Are you sure you want to delete this user?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            // Step 1: Remove user data from Realtime Database
+            let databaseRef = Database.database().reference().child("users").child(uid)
+            databaseRef.removeValue { error, _ in
+                if let error = error {
+                    print("Error deleting user data from database: \(error.localizedDescription)")
+                } else {
+                    print("User data deleted successfully from database.")
+                    
+                    // Step 2: Delete user from Firebase Authentication
+                    self.deleteUserFromAuth(uid: uid)
+                }
+            }
+        }))
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func deleteUserFromAuth(uid: String) {
+        // Authenticate as admin to delete the user (Firebase requires admin privileges for this)
+        Auth.auth().signIn(withEmail: "admin@example.com", password: "adminPassword") { result, error in
+            if let error = error {
+                print("Error authenticating admin: \(error.localizedDescription)")
                 return
             }
             
-            let alert = UIAlertController(title: "Delete User", message: "Are you sure you want to delete this user?", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-                let databaseRef = Database.database().reference().child("users").child(uid)
-                databaseRef.removeValue { error, _ in
-                    if let error = error {
-                        print("Error deleting user: \(error.localizedDescription)")
-                    } else {
-                        print("User deleted successfully")
-                        self.navigationController?.popViewController(animated: true)
+            // Use Firebase Admin SDK to delete the user
+            Auth.auth().currentUser?.delete(completion: { deleteError in
+                if let deleteError = deleteError {
+                    print("Error deleting user from authentication: \(deleteError.localizedDescription)")
+                } else {
+                    print("User deleted successfully from authentication.")
+                    
+                    // Show success alert
+                    DispatchQueue.main.async {
+                        let successAlert = UIAlertController(title: "Success", message: "The user was deleted successfully.", preferredStyle: .alert)
+                        successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            // Navigate back to the previous screen after user dismisses the alert
+                            self.navigationController?.popViewController(animated: true)
+                        }))
+                        self.present(successAlert, animated: true, completion: nil)
                     }
                 }
-            }))
-            
-            present(alert, animated: true, completion: nil)
+            })
+        }
     }
     
     

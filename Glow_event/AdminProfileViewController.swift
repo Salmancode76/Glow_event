@@ -8,6 +8,7 @@ class AdminProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -15,43 +16,47 @@ class AdminProfileViewController: UIViewController {
         }
         
         // Method to retrieve the current user's data from Firebase and populate the labels and image
-        func fetchAdminData() {
-            guard let user = Auth.auth().currentUser else {
-                print("No admin is logged in")
+    func fetchAdminData() {
+        guard let user = Auth.auth().currentUser else {
+            print("No admin is logged in")
+            return
+        }
+        
+        let uid = user.uid
+        let databaseRef = Database.database().reference().child("admins").child(uid)
+        
+        databaseRef.observeSingleEvent(of: .value) { snapshot in
+            guard let value = snapshot.value as? [String: Any] else {
+                print("No data found for this admin")
                 return
             }
             
-            let uid = user.uid
-            let databaseRef = Database.database().reference().child("admins").child(uid)
+            print("Fetched admin data: \(value)") // Debug: Log the fetched data
             
-            databaseRef.observeSingleEvent(of: .value) { snapshot in
-                guard let value = snapshot.value as? [String: Any] else {
-                                print("No data found for this admin")
-                                return
-                            }
-                            
-                            // Extract admin data
-                            let id = value["id"] as? Int ?? 0
-                            let email = value["email"] as? String ?? "No Email"
-                            let profileImageUrl = value["profileImageUrl"] as? String ?? ""
-                            
-                            DispatchQueue.main.async {
-                                self.idLabel.text = "\(id)"
-                                self.emailLabel.text = email
-                            }
-                
-                // Load the profile image
-                if !profileImageUrl.isEmpty {
-                    self.loadProfileImage(from: profileImageUrl)
-                } else {
-                    DispatchQueue.main.async {
-                        self.setPlaceholderImage()
-                    }
-                }
-            } withCancel: { error in
-                print("Error fetching admin data: \(error.localizedDescription)")
+            // Extract admin data
+            let id = value["id"] as? Int ?? 0
+            let name = value["name"] as? String ?? "No Name"
+            let email = value["email"] as? String ?? "No Email"
+            let profileImageUrl = value["profileImageUrl"] as? String ?? ""
+
+            DispatchQueue.main.async {
+                self.idLabel.text = "\(id)"
+                self.emailLabel.text = email
+                self.nameLabel.text = name
             }
+            
+            // Load the profile image
+            if !profileImageUrl.isEmpty {
+                self.loadProfileImage(from: profileImageUrl)
+            } else {
+                DispatchQueue.main.async {
+                    self.setPlaceholderImage()
+                }
+            }
+        } withCancel: { error in
+            print("Error fetching admin data: \(error.localizedDescription)")
         }
+    }
         
         // Load the profile image from a URL
         func loadProfileImage(from url: String) {

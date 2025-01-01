@@ -112,27 +112,27 @@ class AddUserViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     
                     // Save user details in the Realtime Database
                     let userData: [String: Any] = [
-                        "username": username,
-                        "email": email,
-                        "gender": gender.capitalized,
-                        "uid": user.uid,
-                        "phone": "",
-                        "profileImageUrl": ""
-                    ]
-                    
-                    let databaseRef = Database.database().reference().child("users").child(user.uid)
-                    databaseRef.setValue(userData) { error, _ in
-                        if let error = error {
-                            print("Error saving user data to database: \(error.localizedDescription)")
-                            self.showAlert(title: "Error", message: "Failed to save user data. \(error.localizedDescription)")
-                        } else {
-                            print("User data saved successfully to database.")
-                            self.showAlert(title: "Success", message: "User added successfully.")
-                            self.clearFields()
+                                "username": username,
+                                "email": email,
+                                "gender": gender.capitalized,
+                                "phone": "",
+                                "profileImageUrl": "",
+                                "name": "" // Adding name field
+                            ]
+                            
+                            let databaseRef = Database.database().reference().child("users").child(user.uid)
+                            databaseRef.setValue(userData) { error, _ in
+                                if let error = error {
+                                    print("Error saving user data to database: \(error.localizedDescription)")
+                                    self.showAlert(title: "Error", message: "Failed to save user data. \(error.localizedDescription)")
+                                } else {
+                                    print("User data saved successfully to database.")
+                                    self.showAlert(title: "Success", message: "User added successfully.")
+                                    self.clearFields()
+                                }
+                            }
                         }
                     }
-                }
-    }
     
     private func clearFields() {
         usernameTextField.text = ""

@@ -9,6 +9,7 @@ import UIKit
 
 class EventOrgTableViewCell: UITableViewCell {
     
+    
     @IBOutlet weak var EventName: UILabel!
     @IBOutlet weak var EventStartDate: UILabel!
     @IBOutlet weak var Eventvenu: UILabel!

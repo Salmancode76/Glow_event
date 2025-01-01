@@ -38,9 +38,18 @@ class ViewUsersViewController: UIViewController {
                 return
             }
             
+            // Map the users into the local array
             self.users = userDict.map { (key, value) -> [String: Any] in
                 var userData = value
-                userData["uid"] = key // Add the uid to the user's data
+                userData["uid"] = key // Include the UID in the user's data
+                
+                // Default to "Unknown User" if the name field is missing or empty
+                if let name = userData["name"] as? String, !name.isEmpty {
+                    userData["name"] = name
+                } else {
+                    userData["name"] = "Unknown User"
+                }
+                
                 return userData
             }
             
