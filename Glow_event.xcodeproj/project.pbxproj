@@ -13,13 +13,37 @@
 		0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */; };
 		0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADB2D25AFCD006E4C06 /* Cloudinary1.swift */; };
 		0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADD2D25AFCD006E4C06 /* OrganizerrPromptViewController.swift */; };
+		6CF9DB972D25F30000C27F91 /* thuraya.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF9DB962D25F30000C27F91 /* thuraya.storyboard */; };
+		6CF9DB9B2D25F39300C27F91 /* AddOrganizerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DB9A2D25F39300C27F91 /* AddOrganizerVC.swift */; };
+		6CF9DB9F2D25F39D00C27F91 /* CategoriesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DB9E2D25F39D00C27F91 /* CategoriesListVC.swift */; };
+		6CF9DBA12D25F3A100C27F91 /* CreateCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBA02D25F3A100C27F91 /* CreateCategoryVC.swift */; };
+		6CF9DBA32D25F3A500C27F91 /* DropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBA22D25F3A500C27F91 /* DropdownTextField.swift */; };
+		6CF9DBA52D25F3A800C27F91 /* EditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBA42D25F3A800C27F91 /* EditCategoryVC.swift */; };
+		6CF9DBA72D25F3AC00C27F91 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBA62D25F3AC00C27F91 /* Extension.swift */; };
+		6CF9DBA92D25F3AF00C27F91 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBA82D25F3AF00C27F91 /* FilterVC.swift */; };
+		6CF9DBAB2D25F3B900C27F91 /* HomeTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBAA2D25F3B900C27F91 /* HomeTabVC.swift */; };
+		6CF9DBAD2D25F3BD00C27F91 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBAC2D25F3BD00C27F91 /* LoginVC.swift */; };
+		6CF9DBAF2D25F3C100C27F91 /* OrganizerProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBAE2D25F3C100C27F91 /* OrganizerProfileVC.swift */; };
+		6CF9DBB12D25F40700C27F91 /* OrganizersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBB02D25F40700C27F91 /* OrganizersListVC.swift */; };
+		6CF9DBB32D25F40D00C27F91 /* ReportDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBB22D25F40D00C27F91 /* ReportDetailVC.swift */; };
+		6CF9DBB52D25F41600C27F91 /* ReportsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBB42D25F41600C27F91 /* ReportsListVC.swift */; };
+		6CF9DBB72D25F41900C27F91 /* SavedEventsTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBB62D25F41900C27F91 /* SavedEventsTabVC.swift */; };
+		6CF9DBBB2D25F42000C27F91 /* SearchTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBBA2D25F42000C27F91 /* SearchTabVC.swift */; };
+		6CF9DBBD2D25F42400C27F91 /* SettingsTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBBC2D25F42400C27F91 /* SettingsTabVC.swift */; };
+		6CF9DBBF2D25F42800C27F91 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBBE2D25F42800C27F91 /* TabBarVC.swift */; };
+		6CF9DBC22D25F44C00C27F91 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBC12D25F44C00C27F91 /* CategoryCell.swift */; };
+		6CF9DBC42D25F44F00C27F91 /* OrganizerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBC32D25F44F00C27F91 /* OrganizerCell.swift */; };
+		6CF9DBC62D25F45100C27F91 /* ReportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBC52D25F45100C27F91 /* ReportCell.swift */; };
+		6CF9DBC82D25F45300C27F91 /* SavedEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBC72D25F45300C27F91 /* SavedEventCell.swift */; };
+		6CF9DBCA2D25F46300C27F91 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBC92D25F46300C27F91 /* Category.swift */; };
+		6CF9DBCC2D25F46600C27F91 /* Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBCB2D25F46600C27F91 /* Organizer.swift */; };
+		6CF9DBD02D25F80B00C27F91 /* CreateEventTableViewController 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBCF2D25F80B00C27F91 /* CreateEventTableViewController 2.swift */; };
+		6CF9DBD22D25F82400C27F91 /* EventOrgTableViewCell 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9DBD12D25F82400C27F91 /* EventOrgTableViewCell 2.swift */; };
 		BBD5EDB32D25C60400EAB60C /* HomeOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */; };
 		BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAE2D25C5FF00EAB60C /* SearchEventOrgViewController.swift */; };
-		BBD5EDB52D25C60400EAB60C /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */; };
 		BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */; };
 		BBD5EDB72D25C60400EAB60C /* EventDetailOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */; };
 		BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */; };
-		BBD5EDBA2D25C62F00EAB60C /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */; };
 		BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */; };
 		BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */; };
 		BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBD2D25C6A600EAB60C /* Event.swift */; };
@@ -68,13 +92,37 @@
 		0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0F88AADF2D25AFCD006E4C06 /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
 		0F88AAE02D25AFCD006E4C06 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
+		6CF9DB962D25F30000C27F91 /* thuraya.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = thuraya.storyboard; sourceTree = "<group>"; };
+		6CF9DB9A2D25F39300C27F91 /* AddOrganizerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrganizerVC.swift; sourceTree = "<group>"; };
+		6CF9DB9E2D25F39D00C27F91 /* CategoriesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListVC.swift; sourceTree = "<group>"; };
+		6CF9DBA02D25F3A100C27F91 /* CreateCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryVC.swift; sourceTree = "<group>"; };
+		6CF9DBA22D25F3A500C27F91 /* DropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTextField.swift; sourceTree = "<group>"; };
+		6CF9DBA42D25F3A800C27F91 /* EditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCategoryVC.swift; sourceTree = "<group>"; };
+		6CF9DBA62D25F3AC00C27F91 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		6CF9DBA82D25F3AF00C27F91 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		6CF9DBAA2D25F3B900C27F91 /* HomeTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabVC.swift; sourceTree = "<group>"; };
+		6CF9DBAC2D25F3BD00C27F91 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		6CF9DBAE2D25F3C100C27F91 /* OrganizerProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerProfileVC.swift; sourceTree = "<group>"; };
+		6CF9DBB02D25F40700C27F91 /* OrganizersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizersListVC.swift; sourceTree = "<group>"; };
+		6CF9DBB22D25F40D00C27F91 /* ReportDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDetailVC.swift; sourceTree = "<group>"; };
+		6CF9DBB42D25F41600C27F91 /* ReportsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsListVC.swift; sourceTree = "<group>"; };
+		6CF9DBB62D25F41900C27F91 /* SavedEventsTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEventsTabVC.swift; sourceTree = "<group>"; };
+		6CF9DBBA2D25F42000C27F91 /* SearchTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTabVC.swift; sourceTree = "<group>"; };
+		6CF9DBBC2D25F42400C27F91 /* SettingsTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTabVC.swift; sourceTree = "<group>"; };
+		6CF9DBBE2D25F42800C27F91 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		6CF9DBC12D25F44C00C27F91 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		6CF9DBC32D25F44F00C27F91 /* OrganizerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerCell.swift; sourceTree = "<group>"; };
+		6CF9DBC52D25F45100C27F91 /* ReportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCell.swift; sourceTree = "<group>"; };
+		6CF9DBC72D25F45300C27F91 /* SavedEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedEventCell.swift; sourceTree = "<group>"; };
+		6CF9DBC92D25F46300C27F91 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		6CF9DBCB2D25F46600C27F91 /* Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
+		6CF9DBCF2D25F80B00C27F91 /* CreateEventTableViewController 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateEventTableViewController 2.swift"; sourceTree = "<group>"; };
+		6CF9DBD12D25F82400C27F91 /* EventOrgTableViewCell 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EventOrgTableViewCell 2.swift"; sourceTree = "<group>"; };
 		BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOrgViewController.swift; sourceTree = "<group>"; };
 		BBD5EDAE2D25C5FF00EAB60C /* SearchEventOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEventOrgViewController.swift; sourceTree = "<group>"; };
-		BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventOrgTableViewCell.swift; path = ../../../Desktop/Glow_event/Glow_event/EventOrgTableViewCell.swift; sourceTree = "<group>"; };
 		BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailOrgViewController.swift; sourceTree = "<group>"; };
 		BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailOrgTableViewCell.swift; sourceTree = "<group>"; };
 		BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
-		BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateEventTableViewController.swift; path = ../../../Desktop/Glow_event/Glow_event/CreateEventTableViewController.swift; sourceTree = "<group>"; };
 		BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BBD5EDBD2D25C6A600EAB60C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -128,6 +176,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6CF9DB572D25F1F400C27F91 /* thuraya_features */ = {
+			isa = PBXGroup;
+			children = (
+				6CF9DBC02D25F43100C27F91 /* Cells */,
+				6CF9DB962D25F30000C27F91 /* thuraya.storyboard */,
+				6CF9DB992D25F38200C27F91 /* Controllers */,
+			);
+			path = thuraya_features;
+			sourceTree = "<group>";
+		};
+		6CF9DB992D25F38200C27F91 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6CF9DB9A2D25F39300C27F91 /* AddOrganizerVC.swift */,
+				6CF9DB9E2D25F39D00C27F91 /* CategoriesListVC.swift */,
+				6CF9DBA02D25F3A100C27F91 /* CreateCategoryVC.swift */,
+				6CF9DBA22D25F3A500C27F91 /* DropdownTextField.swift */,
+				6CF9DBA42D25F3A800C27F91 /* EditCategoryVC.swift */,
+				6CF9DBA62D25F3AC00C27F91 /* Extension.swift */,
+				6CF9DBA82D25F3AF00C27F91 /* FilterVC.swift */,
+				6CF9DBAA2D25F3B900C27F91 /* HomeTabVC.swift */,
+				6CF9DBAC2D25F3BD00C27F91 /* LoginVC.swift */,
+				6CF9DBAE2D25F3C100C27F91 /* OrganizerProfileVC.swift */,
+				6CF9DBB02D25F40700C27F91 /* OrganizersListVC.swift */,
+				6CF9DBB22D25F40D00C27F91 /* ReportDetailVC.swift */,
+				6CF9DBB42D25F41600C27F91 /* ReportsListVC.swift */,
+				6CF9DBB62D25F41900C27F91 /* SavedEventsTabVC.swift */,
+				6CF9DBBA2D25F42000C27F91 /* SearchTabVC.swift */,
+				6CF9DBBC2D25F42400C27F91 /* SettingsTabVC.swift */,
+				6CF9DBBE2D25F42800C27F91 /* TabBarVC.swift */,
+				6CF9DBC92D25F46300C27F91 /* Category.swift */,
+				6CF9DBCB2D25F46600C27F91 /* Organizer.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6CF9DBC02D25F43100C27F91 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				6CF9DBC12D25F44C00C27F91 /* CategoryCell.swift */,
+				6CF9DBC32D25F44F00C27F91 /* OrganizerCell.swift */,
+				6CF9DBC52D25F45100C27F91 /* ReportCell.swift */,
+				6CF9DBC72D25F45300C27F91 /* SavedEventCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BBD5EDA92D25B55C00EAB60C /* ssharmin_features */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,8 +241,8 @@
 			children = (
 				BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */,
 				BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */,
-				BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */,
-				BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */,
+				6CF9DBCF2D25F80B00C27F91 /* CreateEventTableViewController 2.swift */,
+				6CF9DBD12D25F82400C27F91 /* EventOrgTableViewCell 2.swift */,
 				BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */,
 				BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */,
 				BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */,
@@ -198,6 +293,7 @@
 				D51AF41C2D09A7A400002CD4 /* Models */,
 				BBD5EDAA2D25C48300EAB60C /* Salman_featurrres */,
 				BBD5EDA92D25B55C00EAB60C /* ssharmin_features */,
+				6CF9DB572D25F1F400C27F91 /* thuraya_features */,
 				D51AF41A2D09A5BF00002CD4 /* Views */,
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
@@ -307,6 +403,7 @@
 				D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */,
 				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
+				6CF9DB972D25F30000C27F91 /* thuraya.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,24 +415,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBD5EDB32D25C60400EAB60C /* HomeOrgViewController.swift in Sources */,
-				BBD5EDB52D25C60400EAB60C /* EventOrgTableViewCell.swift in Sources */,
-				BBD5EDBA2D25C62F00EAB60C /* CreateEventTableViewController.swift in Sources */,
+				6CF9DBD02D25F80B00C27F91 /* CreateEventTableViewController 2.swift in Sources */,
+				6CF9DBC22D25F44C00C27F91 /* CategoryCell.swift in Sources */,
+				6CF9DBA52D25F3A800C27F91 /* EditCategoryVC.swift in Sources */,
+				6CF9DBBF2D25F42800C27F91 /* TabBarVC.swift in Sources */,
+				6CF9DBCC2D25F46600C27F91 /* Organizer.swift in Sources */,
+				6CF9DBBB2D25F42000C27F91 /* SearchTabVC.swift in Sources */,
+				6CF9DBB72D25F41900C27F91 /* SavedEventsTabVC.swift in Sources */,
+				6CF9DBC82D25F45300C27F91 /* SavedEventCell.swift in Sources */,
+				6CF9DBA92D25F3AF00C27F91 /* FilterVC.swift in Sources */,
+				6CF9DBB32D25F40D00C27F91 /* ReportDetailVC.swift in Sources */,
 				BBD5EDB72D25C60400EAB60C /* EventDetailOrgTableViewCell.swift in Sources */,
 				BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */,
+				6CF9DBBD2D25F42400C27F91 /* SettingsTabVC.swift in Sources */,
+				6CF9DBA12D25F3A100C27F91 /* CreateCategoryVC.swift in Sources */,
 				BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */,
+				6CF9DB9F2D25F39D00C27F91 /* CategoriesListVC.swift in Sources */,
+				6CF9DBA72D25F3AC00C27F91 /* Extension.swift in Sources */,
+				6CF9DBA32D25F3A500C27F91 /* DropdownTextField.swift in Sources */,
+				6CF9DBAF2D25F3C100C27F91 /* OrganizerProfileVC.swift in Sources */,
 				BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */,
 				0F88AAE12D25AFCD006E4C06 /* PhotosClassViewController.swift in Sources */,
 				0F88AAE22D25AFCD006E4C06 /* HiglightList.swift in Sources */,
 				0F88AAE32D25AFCD006E4C06 /* SendHighlights.swift in Sources */,
+				6CF9DBB52D25F41600C27F91 /* ReportsListVC.swift in Sources */,
+				6CF9DBAD2D25F3BD00C27F91 /* LoginVC.swift in Sources */,
 				BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */,
 				0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */,
 				0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */,
+				6CF9DBAB2D25F3B900C27F91 /* HomeTabVC.swift in Sources */,
 				0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */,
+				6CF9DB9B2D25F39300C27F91 /* AddOrganizerVC.swift in Sources */,
 				BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */,
+				6CF9DBC42D25F44F00C27F91 /* OrganizerCell.swift in Sources */,
 				BBD5EDC22D25C83500EAB60C /* EditEventTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
+				6CF9DBD22D25F82400C27F91 /* EventOrgTableViewCell 2.swift in Sources */,
 				BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */,
+				6CF9DBB12D25F40700C27F91 /* OrganizersListVC.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				6CF9DBC62D25F45100C27F91 /* ReportCell.swift in Sources */,
+				6CF9DBCA2D25F46300C27F91 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
