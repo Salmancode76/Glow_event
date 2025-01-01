@@ -3,7 +3,11 @@ import Firebase
 import FirebaseDatabase
 
 class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate {
+    var events: [Event] = [] // Array to hold Event objects
+
+ 
     
+    @IBOutlet weak var HomeNav: UINavigationItem!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searching ? searchEvents.count : events.count
     }
@@ -20,6 +24,45 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)  {
+        let event = searching ? searchEvents[indexPath.row] : events[indexPath.row]
+
+        if let vc = storyboard?.instantiateViewController(identifier: "EventDetailOrg") as? EventDetailOrgViewController {
+
+            
+            vc.eventName = event.EventName
+            
+            vc.eventDate = event.startDate
+            
+            vc.eventPhotoURL = event.EventPhotoURL
+            
+            vc.eventStatus = event.EventStatus
+            
+            vc.eventDes = event.descrip
+            
+            vc.eventSeats =  event.Capacity
+            
+            vc.eventPrice = event.price
+            
+            vc.eventLocation = event.venu_options
+                
+            vc.eventID = event.id
+            
+            vc.eventCategory = event.EventCategory
+            
+            vc.eventAgeGrp = event.AgeGroup ?? "Any"
+            
+            vc.eventID = event.id
+            
+            vc.eventEndDate = event.endDate
+
+            self.navigationController?.pushViewController(vc, animated: true)
+            
+            
+        }
+        
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -34,8 +77,6 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.textLabel?.textColor = .white // Set text color to white
         cell.detailTextLabel?.textColor = .white // Set detail text color to white
         cell.backgroundColor = .black // Set cell background color to black
-        
-        
         
         let selectedView = UIView()
         selectedView.backgroundColor = .darkGray // You can set any color for selection
@@ -62,7 +103,7 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
                 // Set the downloaded image to the UIImageView
                 cell.EventImage.image = image
             } else {
-                print("Failed to download image")
+                self.showFailAlert(errorMessage: "Failed to download image")
                 // Set a placeholder image in case the download fails
                 cell.EventImage.image = UIImage(systemName: "photo.fill") // Placeholder
             }
@@ -74,13 +115,23 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         return cell
     }
-    
+    private func showFailAlert(errorMessage: String) {
+        // Create an alert controller with a title and message indicating failure
+        let alertController = UIAlertController(title: "Failure", message: "Failed to update the event. Error: \(errorMessage)", preferredStyle: .alert)
+        
+        // Add an OK button to dismiss the alert
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alertController.addAction(okAction)
+        
+        
+        // Present the alert
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var EventsOrgTable: UITableView!
     
     @IBOutlet weak var EvnentsOrgTable: UITableView!
-    var events: [Event] = [] // Array to hold Event objects
     
     
     
@@ -100,6 +151,18 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+    
+        FirebaseDB.GetAllEvents { [weak self] events in
+            self?.events = events  // Store fetched events in the array
+            self?.EventsOrgTable.reloadData()  // Reload the table view to display the events
+        }
+        
+        if let navBar = self.navigationController?.navigationBar {
+             navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+             navBar.tintColor = UIColor.white // For buttons on the navigation bar (e.g., back button)
+         }
+         
         
         // Set data source and delegate for the table view
         EventsOrgTable.dataSource = self
@@ -111,11 +174,7 @@ class HomeOrgViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Firebase reference to the events node
         
         
-        FirebaseDB.GetAllEvents { [weak self] events in
-            self?.events = events  // Store fetched events in the array
-            self?.EventsOrgTable.reloadData()  // Reload the table view to display the events
-        }
-        // Observe the "events" node in Firebase
+
      
  
         

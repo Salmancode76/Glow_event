@@ -51,6 +51,32 @@ struct FirebaseDB {
             completion(fetchedEvents)
         })
     }
+    
+    static func deleteEvent(eventID: String, completion: @escaping (Bool, String?) -> Void) {
+        ref.child("events").child(eventID).removeValue { error, _ in
+            if let error = error {
+                completion(false, error.localizedDescription)
+            } else {
+                completion(true, nil)
+            }
+        }
+    }
+    
+    static func updateEvent(eventID: String, updatedData: [String: Any], completion: @escaping (Bool, String?) -> Void) {
+        // Update specific fields of the event in the database
+        ref.child("events").child(eventID).updateChildValues(updatedData) { error, _ in
+            if let error = error {
+                // Print the error and return false
+                print("Error updating event: \(error.localizedDescription)")
+                completion(false, error.localizedDescription)
+            } else {
+                // Event updated successfully
+                print("Event updated successfully!")
+                completion(true, nil)
+            }
+        }
+    }
+
 
         
 }

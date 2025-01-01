@@ -13,14 +13,20 @@
 		0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */; };
 		0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADB2D25AFCD006E4C06 /* Cloudinary1.swift */; };
 		0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADD2D25AFCD006E4C06 /* OrganizerrPromptViewController.swift */; };
-		3FC9350C2D05D79A002B4592 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9350B2D05D79A002B4592 /* Cloudinary.swift */; };
+		BBD5EDB32D25C60400EAB60C /* HomeOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */; };
+		BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAE2D25C5FF00EAB60C /* SearchEventOrgViewController.swift */; };
+		BBD5EDB52D25C60400EAB60C /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */; };
+		BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */; };
+		BBD5EDB72D25C60400EAB60C /* EventDetailOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */; };
+		BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */; };
+		BBD5EDBA2D25C62F00EAB60C /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */; };
+		BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */; };
+		BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */; };
+		BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBD2D25C6A600EAB60C /* Event.swift */; };
+		BBD5EDC22D25C83500EAB60C /* EditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */; };
 		D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */; };
 		D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */; };
-		D51AF41E2D09A7DC00002CD4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D51AF41D2D09A7DC00002CD4 /* Firebase.swift */; };
 		D53D71D82D098E7000B88D24 /* Event_Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D71D72D098E7000B88D24 /* Event_Management.storyboard */; };
-		D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54A3E1A2CFDA88000DE3870 /* Event.swift */; };
-		D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */; };
-		D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -52,7 +58,6 @@
 		D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */; };
 		D5EE64F82D003E0400AE45A4 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = D5EE64F72D003E0400AE45A4 /* Cloudinary */; };
 		D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */; };
-		D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,14 +68,20 @@
 		0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		0F88AADF2D25AFCD006E4C06 /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
 		0F88AAE02D25AFCD006E4C06 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
-		3FC9350B2D05D79A002B4592 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
+		BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeOrgViewController.swift; sourceTree = "<group>"; };
+		BBD5EDAE2D25C5FF00EAB60C /* SearchEventOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEventOrgViewController.swift; sourceTree = "<group>"; };
+		BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventOrgTableViewCell.swift; path = ../../../Desktop/Glow_event/Glow_event/EventOrgTableViewCell.swift; sourceTree = "<group>"; };
+		BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailOrgViewController.swift; sourceTree = "<group>"; };
+		BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailOrgTableViewCell.swift; sourceTree = "<group>"; };
+		BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateEventTableViewController.swift; path = ../../../Desktop/Glow_event/Glow_event/CreateEventTableViewController.swift; sourceTree = "<group>"; };
+		BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
+		BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		BBD5EDBD2D25C6A600EAB60C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventTableViewController.swift; sourceTree = "<group>"; };
 		D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
 		D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
-		D51AF41D2D09A7DC00002CD4 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		D53D71D72D098E7000B88D24 /* Event_Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event_Management.storyboard; sourceTree = "<group>"; };
-		D54A3E1A2CFDA88000DE3870 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOrgTableViewCell.swift; sourceTree = "<group>"; };
-		D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventTableViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +90,6 @@
 		D5BB85622CF45A9E001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5BB85642CF45A9E001082C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeOrgViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,21 @@
 			name = ssharmin_features;
 			sourceTree = "<group>";
 		};
+		BBD5EDAA2D25C48300EAB60C /* Salman_featurrres */ = {
+			isa = PBXGroup;
+			children = (
+				BBD5EDB12D25C60300EAB60C /* EventDetailOrgTableViewCell.swift */,
+				BBD5EDB02D25C60000EAB60C /* EventDetailOrgViewController.swift */,
+				BBD5EDB92D25C62E00EAB60C /* CreateEventTableViewController.swift */,
+				BBD5EDAF2D25C5FF00EAB60C /* EventOrgTableViewCell.swift */,
+				BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */,
+				BBD5EDB22D25C60400EAB60C /* FilterTableViewController.swift */,
+				BBD5EDAD2D25C5FE00EAB60C /* HomeOrgViewController.swift */,
+				BBD5EDAE2D25C5FF00EAB60C /* SearchEventOrgViewController.swift */,
+			);
+			name = Salman_featurrres;
+			sourceTree = "<group>";
+		};
 		D51AF41A2D09A5BF00002CD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,9 +169,9 @@
 		D51AF41C2D09A7A400002CD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3FC9350B2D05D79A002B4592 /* Cloudinary.swift */,
-				D54A3E1A2CFDA88000DE3870 /* Event.swift */,
-				D51AF41D2D09A7DC00002CD4 /* Firebase.swift */,
+				BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */,
+				BBD5EDBD2D25C6A600EAB60C /* Event.swift */,
+				BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,17 +195,15 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
-				BBD5EDA92D25B55C00EAB60C /* ssharmin_features */,
 				D51AF41C2D09A7A400002CD4 /* Models */,
+				BBD5EDAA2D25C48300EAB60C /* Salman_featurrres */,
+				BBD5EDA92D25B55C00EAB60C /* ssharmin_features */,
 				D51AF41A2D09A5BF00002CD4 /* Views */,
-				D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */,
-				D59B297E2D048A0B00A2A7AE /* CreateEventTableViewController.swift */,
 				D5BB85562CF45A9C001082C0 /* AppDelegate.swift */,
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
 				D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				0F88AACB2D25A969006E4C06 /* highlights.storyboard */,
-				D5FE15832D036D9200CE41C5 /* HomeOrgViewController.swift */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
@@ -294,19 +317,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D51AF41E2D09A7DC00002CD4 /* Firebase.swift in Sources */,
-				D54A3E1B2CFDA88000DE3870 /* Event.swift in Sources */,
-				3FC9350C2D05D79A002B4592 /* Cloudinary.swift in Sources */,
-				D5580A582D04B6570011C285 /* EventOrgTableViewCell.swift in Sources */,
-				D5FE15842D036D9200CE41C5 /* HomeOrgViewController.swift in Sources */,
+				BBD5EDB32D25C60400EAB60C /* HomeOrgViewController.swift in Sources */,
+				BBD5EDB52D25C60400EAB60C /* EventOrgTableViewCell.swift in Sources */,
+				BBD5EDBA2D25C62F00EAB60C /* CreateEventTableViewController.swift in Sources */,
+				BBD5EDB72D25C60400EAB60C /* EventDetailOrgTableViewCell.swift in Sources */,
+				BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */,
+				BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */,
+				BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */,
 				0F88AAE12D25AFCD006E4C06 /* PhotosClassViewController.swift in Sources */,
 				0F88AAE22D25AFCD006E4C06 /* HiglightList.swift in Sources */,
 				0F88AAE32D25AFCD006E4C06 /* SendHighlights.swift in Sources */,
+				BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */,
 				0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */,
 				0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */,
 				0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */,
-				D59B297F2D048A0B00A2A7AE /* CreateEventTableViewController.swift in Sources */,
+				BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */,
+				BBD5EDC22D25C83500EAB60C /* EditEventTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
+				BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
