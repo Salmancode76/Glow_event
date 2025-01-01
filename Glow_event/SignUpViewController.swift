@@ -52,6 +52,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
         
     }
     
+    /*override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Set the flag when the signup screen appears
+        (UIApplication.shared.delegate as? AppDelegate)?.isInRegistrationFlow = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Reset the flag when leaving the signup screen
+        (UIApplication.shared.delegate as? AppDelegate)?.isInRegistrationFlow = false
+    }*/
+    
     //UIPickerViewDataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int { return 1 };
     
@@ -226,21 +238,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate, UIPickerViewD
             navigationController?.pushViewController(destinationVC, animated: true)
         }
     }
-    
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toHomeVC" {
-            if let destinationVC = segue.destination as? HomeViewController {
-                destinationVC.userType = userTypeToNavigate
-            }
-        }
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "toHomeVC" {
-            return isRegistrationSuccessful
-        }
-        return true // Allow other segues
-    }*/
   
 }
 

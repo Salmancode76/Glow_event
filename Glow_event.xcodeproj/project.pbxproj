@@ -15,16 +15,23 @@
 		073A30532D18A441002347B1 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30522D18A441002347B1 /* enums.swift */; };
 		073A30552D18A4FD002347B1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30542D18A4FD002347B1 /* AppData.swift */; };
 		073A30592D18B026002347B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073A30582D18B026002347B1 /* GoogleService-Info.plist */; };
+		07802ECC2D1F5AFD00916BA0 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07802ECB2D1F5AFD00916BA0 /* EventManager.swift */; };
 		078388032D1DD911008B4752 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388022D1DD911008B4752 /* LogInViewController.swift */; };
 		078388052D1DEF21008B4752 /* AdminHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388042D1DEF21008B4752 /* AdminHomeViewController.swift */; };
 		078388072D1DEF50008B4752 /* EventOrganizerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388062D1DEF50008B4752 /* EventOrganizerHomeViewController.swift */; };
 		078388092D1DEF7B008B4752 /* UserHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388082D1DEF7B008B4752 /* UserHomeViewController.swift */; };
+		0788B1A72D1FC76E00B69650 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */; };
+		0788B1A92D1FC86200B69650 /* createEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1A82D1FC86200B69650 /* createEventVC.swift */; };
+		0788B1AB2D1FCF4600B69650 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */; };
 		07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */; };
+		07DE196C2D23D90000FEFA98 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 07DE196B2D23D90000FEFA98 /* Cloudinary */; };
+		07DE19702D23DD5B00FEFA98 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */; };
+		07DE19722D24458D00FEFA98 /* GlobalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19712D24458D00FEFA98 /* GlobalUser.swift */; };
+		07DE19742D24B00D00FEFA98 /* Reminder Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */; };
+		07DE19762D2543BA00FEFA98 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19752D2543BA00FEFA98 /* NotificationCell.swift */; };
+		07DE19782D25651200FEFA98 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19772D25651200FEFA98 /* EventTableViewCell.swift */; };
 		07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */; };
-		07F7A9A82D1ED4FB00E15766 /* NotificationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */; };
 		07F7A9AA2D1ED50D00E15766 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */; };
-		07F7A9AC2D1ED52000E15766 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */; };
-		07F7A9AE2D1ED53000E15766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AD2D1ED53000E15766 /* ContentView.swift */; };
 		07F7A9B02D1ED64300E15766 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9AF2D1ED64300E15766 /* Event.swift */; };
 		07F7A9B22D1ED74C00E15766 /* Notification.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07F7A9B12D1ED74C00E15766 /* Notification.storyboard */; };
 		07F7A9B42D1EE6BD00E15766 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */; };
@@ -69,16 +76,22 @@
 		073A30522D18A441002347B1 /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
 		073A30542D18A4FD002347B1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		073A30582D18B026002347B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		07802ECB2D1F5AFD00916BA0 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		078388022D1DD911008B4752 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		078388042D1DEF21008B4752 /* AdminHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminHomeViewController.swift; sourceTree = "<group>"; };
 		078388062D1DEF50008B4752 /* EventOrganizerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrganizerHomeViewController.swift; sourceTree = "<group>"; };
 		078388082D1DEF7B008B4752 /* UserHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHomeViewController.swift; sourceTree = "<group>"; };
+		0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		0788B1A82D1FC86200B69650 /* createEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createEventVC.swift; sourceTree = "<group>"; };
+		0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
+		07DE19712D24458D00FEFA98 /* GlobalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUser.swift; sourceTree = "<group>"; };
+		07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder Manager.swift"; sourceTree = "<group>"; };
+		07DE19752D2543BA00FEFA98 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
+		07DE19772D25651200FEFA98 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotification.swift; sourceTree = "<group>"; };
-		07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationStore.swift; sourceTree = "<group>"; };
 		07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
-		07F7A9AD2D1ED53000E15766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		07F7A9AF2D1ED64300E15766 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		07F7A9B12D1ED74C00E15766 /* Notification.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notification.storyboard; sourceTree = "<group>"; };
 		07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +132,7 @@
 				D5A8C8802CF5FC0E004299BC /* FirebaseCrashlytics in Frameworks */,
 				D5A8C8922CF5FC0E004299BC /* FirebaseMLModelDownloader in Frameworks */,
 				D5A8C89A2CF5FC0E004299BC /* FirebaseStorage in Frameworks */,
+				07DE196C2D23D90000FEFA98 /* Cloudinary in Frameworks */,
 				D5A8C87E2CF5FC0E004299BC /* FirebaseCore in Frameworks */,
 				D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 			);
@@ -167,13 +181,19 @@
 				078388082D1DEF7B008B4752 /* UserHomeViewController.swift */,
 				07100A3B2D1EC9D9002559FF /* Layla.storyboard */,
 				07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */,
-				07F7A9A72D1ED4FB00E15766 /* NotificationStore.swift */,
 				07F7A9A92D1ED50D00E15766 /* NotificationManager.swift */,
-				07F7A9AB2D1ED52000E15766 /* NotificationsView.swift */,
-				07F7A9AD2D1ED53000E15766 /* ContentView.swift */,
 				07F7A9AF2D1ED64300E15766 /* Event.swift */,
 				07F7A9B12D1ED74C00E15766 /* Notification.storyboard */,
 				07F7A9B32D1EE6BD00E15766 /* NotificationViewController.swift */,
+				07802ECB2D1F5AFD00916BA0 /* EventManager.swift */,
+				0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */,
+				0788B1A82D1FC86200B69650 /* createEventVC.swift */,
+				0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */,
+				07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */,
+				07DE19712D24458D00FEFA98 /* GlobalUser.swift */,
+				07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */,
+				07DE19752D2543BA00FEFA98 /* NotificationCell.swift */,
+				07DE19772D25651200FEFA98 /* EventTableViewCell.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -219,6 +239,7 @@
 				D5A8C8992CF5FC0E004299BC /* FirebaseStorage */,
 				D5A8C89B2CF5FC0E004299BC /* FirebaseStorageCombine-Community */,
 				D5A8C89D2CF5FC0E004299BC /* FirebaseVertexAI */,
+				07DE196B2D23D90000FEFA98 /* Cloudinary */,
 			);
 			productName = Glow_event;
 			productReference = D5BB85532CF45A9C001082C0 /* Glow_event.app */;
@@ -250,6 +271,7 @@
 			mainGroup = D5BB854A2CF45A9C001082C0;
 			packageReferences = (
 				D5A8C86E2CF5FC0E004299BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				07DE196A2D23D90000FEFA98 /* XCRemoteSwiftPackageReference "cloudinary_ios" */,
 			);
 			productRefGroup = D5BB85542CF45A9C001082C0 /* Products */;
 			projectDirPath = "";
@@ -283,25 +305,31 @@
 			files = (
 				078388092D1DEF7B008B4752 /* UserHomeViewController.swift in Sources */,
 				07F7A9AA2D1ED50D00E15766 /* NotificationManager.swift in Sources */,
+				07802ECC2D1F5AFD00916BA0 /* EventManager.swift in Sources */,
+				07DE19782D25651200FEFA98 /* EventTableViewCell.swift in Sources */,
+				07DE19722D24458D00FEFA98 /* GlobalUser.swift in Sources */,
 				073A304D2D18A3A5002347B1 /* EventOrganizer.swift in Sources */,
 				07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */,
+				07DE19702D23DD5B00FEFA98 /* Cloudinary.swift in Sources */,
 				07F7A9B02D1ED64300E15766 /* Event.swift in Sources */,
+				0788B1A72D1FC76E00B69650 /* CreateEventViewController.swift in Sources */,
+				07DE19762D2543BA00FEFA98 /* NotificationCell.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				078388032D1DD911008B4752 /* LogInViewController.swift in Sources */,
 				073A30512D18A411002347B1 /* User1.swift in Sources */,
-				07F7A9A82D1ED4FB00E15766 /* NotificationStore.swift in Sources */,
-				07F7A9AE2D1ED53000E15766 /* ContentView.swift in Sources */,
 				073A304F2D18A3D5002347B1 /* User.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */,
+				0788B1A92D1FC86200B69650 /* createEventVC.swift in Sources */,
+				07DE19742D24B00D00FEFA98 /* Reminder Manager.swift in Sources */,
 				073A304B2D18A2FF002347B1 /* SignUpViewController.swift in Sources */,
 				078388072D1DEF50008B4752 /* EventOrganizerHomeViewController.swift in Sources */,
 				073A30532D18A441002347B1 /* enums.swift in Sources */,
+				0788B1AB2D1FCF4600B69650 /* RegistrationViewController.swift in Sources */,
 				078388052D1DEF21008B4752 /* AdminHomeViewController.swift in Sources */,
 				07F7A9B42D1EE6BD00E15766 /* NotificationViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				073A30552D18A4FD002347B1 /* AppData.swift in Sources */,
-				07F7A9AC2D1ED52000E15766 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +481,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6LW7SFCRD4;
+				DEVELOPMENT_TEAM = YCA7CWR687;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -461,12 +489,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ll.Glow-event";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Layla.ll.Glow-event";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -481,7 +510,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6LW7SFCRD4;
+				DEVELOPMENT_TEAM = YCA7CWR687;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -489,12 +518,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ll.Glow-event";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Layla.II.Glow-event";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -526,6 +556,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		07DE196A2D23D90000FEFA98 /* XCRemoteSwiftPackageReference "cloudinary_ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cloudinary/cloudinary_ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 		D5A8C86E2CF5FC0E004299BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -537,6 +575,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		07DE196B2D23D90000FEFA98 /* Cloudinary */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 07DE196A2D23D90000FEFA98 /* XCRemoteSwiftPackageReference "cloudinary_ios" */;
+			productName = Cloudinary;
+		};
 		D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D5A8C86E2CF5FC0E004299BC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

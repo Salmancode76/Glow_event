@@ -7,9 +7,15 @@
 
 import Foundation
 
-struct AppNotification: Identifiable, Codable {
-    var id = UUID()
+struct AppNotification {
     var title: String
     var body: String
     var timestamp: Date
+    
+    
+    init(title: String, body: String, timestamp: Date) {
+        self.title = title
+        self.body = body
+        self.timestamp = timestamp
+    }
 }

@@ -75,6 +75,9 @@ class LogInViewController: UIViewController {
                 return
             }
             
+            // Set the user ID in GlobalUser
+            GlobalUser.shared.currentUser = User(uid: user.uid, username: email, password: password, userType: self.userTypeToNavigate ?? .user1)
+            
             self.fetchUserData(for: user.uid)
                 }
             }
@@ -98,6 +101,9 @@ class LogInViewController: UIViewController {
                     default:
                         self.userTypeToNavigate = .user1
                     }
+                    
+                    // Set the current user type in GlobalUser
+                    GlobalUser.shared.currentUserType = self.userTypeToNavigate
                     
                     // Navigate to the home screen
                     self.navigateToHomeScreen()

@@ -11,7 +11,7 @@ import FirebaseStorage
 import FirebaseAuth
 
 class AppData {
-    static var admin: [User] = [User(username: "admin11@gmail.com", password: "adminglowevent", userType: .admin)]
+    static var admin: [User] = [User(uid: "", username: "admin11@gmail.com", password: "adminglowevent", userType: .admin)]
     static var eventOrganizers: [EventOrganizer] = []
     static var appUsers: [User] = []
     
@@ -30,7 +30,7 @@ class AppData {
     
     static func getUser(uid: UUID) -> User? {
         let allUsers: [User] = admin + eventOrganizers + appUsers
-        return allUsers.first(where: { $0.uid == uid })
+        return allUsers.first(where: { $0.uid == uid.uuidString })
     }
     
     static func addUser(user: User) {
