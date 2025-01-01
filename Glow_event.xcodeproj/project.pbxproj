@@ -12,6 +12,7 @@
 		BB47DF3D2D24F6F5007D82AB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */; };
 		BB47DF3F2D24FA71007D82AB /* PhotosClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */; };
 		BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */; };
+		BB95F5062D2571FC00333F32 /* OrganizerrPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */; };
 		BB9EECAB2D1DCFBB00F2A19C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */; };
 		BB9EECAD2D1DD5E800F2A19C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAC2D1DD5E800F2A19C /* FirebaseAnalytics */; };
 		BB9EECAF2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAE2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -60,6 +61,7 @@
 		BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
 		BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
+		BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerrPromptViewController.swift; sourceTree = "<group>"; };
 		BB9EECA92D1DCDB400F2A19C /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				C34438632D01E600000A4D52 /* highlights.storyboard */,
 				BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */,
+				BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */,
 				BB47DF3A2D24D9C3007D82AB /* HiglightList.swift */,
 				BBB191AC2D0851FF007E8845 /* Event Browsing and Interest.storyboard */,
 			);
@@ -265,6 +268,7 @@
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */,
 				BB47DF3B2D24D9C3007D82AB /* HiglightList.swift in Sources */,
+				BB95F5062D2571FC00333F32 /* OrganizerrPromptViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
