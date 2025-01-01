@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3i7-1M-FR2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3i7-1M-FR2">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Event_Management-->
-        <scene sceneID="XEa-Gd-hL9">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Event_Management" id="Cxp-vz-s8P" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4dQ-QW-NDW"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ja5-14-Bk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="601.39534883720933" y="28.969957081545065"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ecy-0N-Wcu">
             <objects>
@@ -27,12 +17,22 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Cxp-vz-s8P" kind="relationship" relationship="rootViewController" id="IZv-3S-7yg"/>
+                        <segue destination="SiW-aj-ZB1" kind="relationship" relationship="rootViewController" id="ovB-Af-JC9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhS-Cp-waJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-297.2093023255814" y="28.969957081545065"/>
+        </scene>
+        <!--zainab-->
+        <scene sceneID="fc1-X5-blD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="zainab" id="SiW-aj-ZB1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="V2v-Nc-hh0"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXW-mS-rKy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="-56"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

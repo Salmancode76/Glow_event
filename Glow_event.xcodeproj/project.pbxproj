@@ -48,6 +48,30 @@
 		BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */; };
 		BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDBD2D25C6A600EAB60C /* Event.swift */; };
 		BBD5EDC22D25C83500EAB60C /* EditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */; };
+		BDDFE9FC2D26071B003689FF /* zainab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDDFE9FB2D26071B003689FF /* zainab.storyboard */; };
+		BDDFE9FF2D2607E7003689FF /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFE9FE2D2607E7003689FF /* UserSettingsViewController.swift */; };
+		BDDFEA012D2607ED003689FF /* UserLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA002D2607ED003689FF /* UserLoginViewController.swift */; };
+		BDDFEA032D2607F4003689FF /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA022D2607F4003689FF /* UserProfileViewController.swift */; };
+		BDDFEA052D2607FA003689FF /* UserEditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA042D2607FA003689FF /* UserEditProfileViewController.swift */; };
+		BDDFEA072D2607FF003689FF /* UserChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA062D2607FF003689FF /* UserChangePasswordViewController.swift */; };
+		BDDFEA092D260806003689FF /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA082D260806003689FF /* AdminLoginViewController.swift */; };
+		BDDFEA0B2D26080B003689FF /* AdminSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA0A2D26080B003689FF /* AdminSettingsTableViewController.swift */; };
+		BDDFEA0D2D260812003689FF /* AdminProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA0C2D260812003689FF /* AdminProfileViewController.swift */; };
+		BDDFEA0F2D260817003689FF /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA0E2D260817003689FF /* AdminChangePasswordViewController.swift */; };
+		BDDFEA112D26081D003689FF /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA102D26081D003689FF /* AddUserViewController.swift */; };
+		BDDFEA132D260823003689FF /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA122D260823003689FF /* EditUserViewController.swift */; };
+		BDDFEA152D260828003689FF /* AddUserTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA142D260828003689FF /* AddUserTestViewController.swift */; };
+		BDDFEA172D26082E003689FF /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA162D26082E003689FF /* UserTableViewCell.swift */; };
+		BDDFEA192D260834003689FF /* ViewUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA182D260833003689FF /* ViewUsersViewController.swift */; };
+		BDDFEA1B2D260839003689FF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */; };
+		BDDFEA1D2D26083F003689FF /* AdminEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */; };
+		BDDFEA1F2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */; };
+		BDDFEA232D260858003689FF /* AdminHomeOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */; };
+		BDDFEA252D260861003689FF /* AdminEventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */; };
+		BDDFEA272D260868003689FF /* AdminFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */; };
+		BDDFEA292D26086E003689FF /* AdminSearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */; };
+		BDDFEA2D2D26088B003689FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA2C2D26088B003689FF /* User.swift */; };
+		BDDFEA2F2D260890003689FF /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA2E2D260890003689FF /* Admin.swift */; };
 		D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */; };
 		D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */; };
 		D53D71D82D098E7000B88D24 /* Event_Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D53D71D72D098E7000B88D24 /* Event_Management.storyboard */; };
@@ -127,6 +151,30 @@
 		BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BBD5EDBD2D25C6A600EAB60C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BBD5EDC12D25C83400EAB60C /* EditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEventTableViewController.swift; sourceTree = "<group>"; };
+		BDDFE9FB2D26071B003689FF /* zainab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = zainab.storyboard; sourceTree = "<group>"; };
+		BDDFE9FE2D2607E7003689FF /* UserSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		BDDFEA002D2607ED003689FF /* UserLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserLoginViewController.swift; sourceTree = "<group>"; };
+		BDDFEA022D2607F4003689FF /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		BDDFEA042D2607FA003689FF /* UserEditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEditProfileViewController.swift; sourceTree = "<group>"; };
+		BDDFEA062D2607FF003689FF /* UserChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserChangePasswordViewController.swift; sourceTree = "<group>"; };
+		BDDFEA082D260806003689FF /* AdminLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
+		BDDFEA0A2D26080B003689FF /* AdminSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminSettingsTableViewController.swift; sourceTree = "<group>"; };
+		BDDFEA0C2D260812003689FF /* AdminProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminProfileViewController.swift; sourceTree = "<group>"; };
+		BDDFEA0E2D260817003689FF /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
+		BDDFEA102D26081D003689FF /* AddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
+		BDDFEA122D260823003689FF /* EditUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		BDDFEA142D260828003689FF /* AddUserTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddUserTestViewController.swift; sourceTree = "<group>"; };
+		BDDFEA162D26082E003689FF /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		BDDFEA182D260833003689FF /* ViewUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewUsersViewController.swift; sourceTree = "<group>"; };
+		BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEditEventTableViewController.swift; sourceTree = "<group>"; };
+		BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventDetailOrgTableViewCell.swift; sourceTree = "<group>"; };
+		BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminHomeOrgViewController.swift; path = "../../Mine full/Glow_event/Glow_event/AdminHomeOrgViewController.swift"; sourceTree = "<group>"; };
+		BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventDetailOrgViewController.swift; sourceTree = "<group>"; };
+		BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminFilterTableViewController.swift; sourceTree = "<group>"; };
+		BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminSearchEventOrgViewController.swift; sourceTree = "<group>"; };
+		BDDFEA2C2D26088B003689FF /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BDDFEA2E2D260890003689FF /* Admin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		D0EB8A012D0986ED00D78EC9 /* highlights.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
 		D0EB8A052D09882900D78EC9 /* Event Browsing and Interest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Event Browsing and Interest.storyboard"; sourceTree = "<group>"; };
 		D53D71D72D098E7000B88D24 /* Event_Management.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event_Management.storyboard; sourceTree = "<group>"; };
@@ -251,6 +299,34 @@
 			name = Salman_featurrres;
 			sourceTree = "<group>";
 		};
+		BDDFE9FD2D2607B2003689FF /* zainab_features */ = {
+			isa = PBXGroup;
+			children = (
+				BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */,
+				BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */,
+				BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */,
+				BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */,
+				BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */,
+				BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */,
+				BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */,
+				BDDFEA182D260833003689FF /* ViewUsersViewController.swift */,
+				BDDFEA162D26082E003689FF /* UserTableViewCell.swift */,
+				BDDFEA142D260828003689FF /* AddUserTestViewController.swift */,
+				BDDFEA122D260823003689FF /* EditUserViewController.swift */,
+				BDDFEA102D26081D003689FF /* AddUserViewController.swift */,
+				BDDFEA0E2D260817003689FF /* AdminChangePasswordViewController.swift */,
+				BDDFEA0C2D260812003689FF /* AdminProfileViewController.swift */,
+				BDDFEA0A2D26080B003689FF /* AdminSettingsTableViewController.swift */,
+				BDDFEA082D260806003689FF /* AdminLoginViewController.swift */,
+				BDDFEA062D2607FF003689FF /* UserChangePasswordViewController.swift */,
+				BDDFEA042D2607FA003689FF /* UserEditProfileViewController.swift */,
+				BDDFEA022D2607F4003689FF /* UserProfileViewController.swift */,
+				BDDFEA002D2607ED003689FF /* UserLoginViewController.swift */,
+				BDDFE9FE2D2607E7003689FF /* UserSettingsViewController.swift */,
+			);
+			name = zainab_features;
+			sourceTree = "<group>";
+		};
 		D51AF41A2D09A5BF00002CD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +340,8 @@
 		D51AF41C2D09A7A400002CD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BDDFEA2E2D260890003689FF /* Admin.swift */,
+				BDDFEA2C2D26088B003689FF /* User.swift */,
 				BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */,
 				BBD5EDBD2D25C6A600EAB60C /* Event.swift */,
 				BBD5EDBC2D25C6A600EAB60C /* Firebase.swift */,
@@ -290,6 +368,7 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
+				BDDFE9FD2D2607B2003689FF /* zainab_features */,
 				D51AF41C2D09A7A400002CD4 /* Models */,
 				BBD5EDAA2D25C48300EAB60C /* Salman_featurrres */,
 				BBD5EDA92D25B55C00EAB60C /* ssharmin_features */,
@@ -303,6 +382,7 @@
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
+				BDDFE9FB2D26071B003689FF /* zainab.storyboard */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -402,6 +482,7 @@
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */,
 				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
+				BDDFE9FC2D26071B003689FF /* zainab.storyboard in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
 				6CF9DB972D25F30000C27F91 /* thuraya.storyboard in Resources */,
 			);
@@ -419,43 +500,66 @@
 				6CF9DBC22D25F44C00C27F91 /* CategoryCell.swift in Sources */,
 				6CF9DBA52D25F3A800C27F91 /* EditCategoryVC.swift in Sources */,
 				6CF9DBBF2D25F42800C27F91 /* TabBarVC.swift in Sources */,
+				BDDFEA0B2D26080B003689FF /* AdminSettingsTableViewController.swift in Sources */,
 				6CF9DBCC2D25F46600C27F91 /* Organizer.swift in Sources */,
 				6CF9DBBB2D25F42000C27F91 /* SearchTabVC.swift in Sources */,
 				6CF9DBB72D25F41900C27F91 /* SavedEventsTabVC.swift in Sources */,
 				6CF9DBC82D25F45300C27F91 /* SavedEventCell.swift in Sources */,
+				BDDFEA0F2D260817003689FF /* AdminChangePasswordViewController.swift in Sources */,
 				6CF9DBA92D25F3AF00C27F91 /* FilterVC.swift in Sources */,
 				6CF9DBB32D25F40D00C27F91 /* ReportDetailVC.swift in Sources */,
 				BBD5EDB72D25C60400EAB60C /* EventDetailOrgTableViewCell.swift in Sources */,
 				BBD5EDBF2D25C6A700EAB60C /* Firebase.swift in Sources */,
+				BDDFEA0D2D260812003689FF /* AdminProfileViewController.swift in Sources */,
 				6CF9DBBD2D25F42400C27F91 /* SettingsTabVC.swift in Sources */,
 				6CF9DBA12D25F3A100C27F91 /* CreateCategoryVC.swift in Sources */,
 				BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */,
+				BDDFEA1F2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift in Sources */,
+				BDDFEA132D260823003689FF /* EditUserViewController.swift in Sources */,
+				BDDFEA232D260858003689FF /* AdminHomeOrgViewController.swift in Sources */,
+				BDDFEA032D2607F4003689FF /* UserProfileViewController.swift in Sources */,
 				6CF9DB9F2D25F39D00C27F91 /* CategoriesListVC.swift in Sources */,
+				BDDFEA072D2607FF003689FF /* UserChangePasswordViewController.swift in Sources */,
 				6CF9DBA72D25F3AC00C27F91 /* Extension.swift in Sources */,
+				BDDFEA1D2D26083F003689FF /* AdminEditEventTableViewController.swift in Sources */,
+				BDDFEA172D26082E003689FF /* UserTableViewCell.swift in Sources */,
 				6CF9DBA32D25F3A500C27F91 /* DropdownTextField.swift in Sources */,
 				6CF9DBAF2D25F3C100C27F91 /* OrganizerProfileVC.swift in Sources */,
 				BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */,
+				BDDFEA2D2D26088B003689FF /* User.swift in Sources */,
 				0F88AAE12D25AFCD006E4C06 /* PhotosClassViewController.swift in Sources */,
 				0F88AAE22D25AFCD006E4C06 /* HiglightList.swift in Sources */,
+				BDDFEA012D2607ED003689FF /* UserLoginViewController.swift in Sources */,
 				0F88AAE32D25AFCD006E4C06 /* SendHighlights.swift in Sources */,
 				6CF9DBB52D25F41600C27F91 /* ReportsListVC.swift in Sources */,
 				6CF9DBAD2D25F3BD00C27F91 /* LoginVC.swift in Sources */,
 				BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */,
+				BDDFEA1B2D260839003689FF /* UserDetailViewController.swift in Sources */,
+				BDDFEA112D26081D003689FF /* AddUserViewController.swift in Sources */,
+				BDDFEA152D260828003689FF /* AddUserTestViewController.swift in Sources */,
 				0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */,
+				BDDFEA292D26086E003689FF /* AdminSearchEventOrgViewController.swift in Sources */,
 				0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */,
 				6CF9DBAB2D25F3B900C27F91 /* HomeTabVC.swift in Sources */,
 				0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */,
 				6CF9DB9B2D25F39300C27F91 /* AddOrganizerVC.swift in Sources */,
 				BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */,
+				BDDFEA252D260861003689FF /* AdminEventDetailOrgViewController.swift in Sources */,
 				6CF9DBC42D25F44F00C27F91 /* OrganizerCell.swift in Sources */,
 				BBD5EDC22D25C83500EAB60C /* EditEventTableViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				6CF9DBD22D25F82400C27F91 /* EventOrgTableViewCell 2.swift in Sources */,
 				BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */,
+				BDDFEA2F2D260890003689FF /* Admin.swift in Sources */,
+				BDDFE9FF2D2607E7003689FF /* UserSettingsViewController.swift in Sources */,
+				BDDFEA092D260806003689FF /* AdminLoginViewController.swift in Sources */,
+				BDDFEA272D260868003689FF /* AdminFilterTableViewController.swift in Sources */,
 				6CF9DBB12D25F40700C27F91 /* OrganizersListVC.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				BDDFEA192D260834003689FF /* ViewUsersViewController.swift in Sources */,
 				6CF9DBC62D25F45100C27F91 /* ReportCell.swift in Sources */,
 				6CF9DBCA2D25F46300C27F91 /* Category.swift in Sources */,
+				BDDFEA052D2607FA003689FF /* UserEditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
