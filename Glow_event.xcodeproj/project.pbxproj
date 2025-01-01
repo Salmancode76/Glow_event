@@ -118,6 +118,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBD5EDA92D25B55C00EAB60C /* ssharmin_features */ = {
+			isa = PBXGroup;
+			children = (
+				0F88AAE02D25AFCD006E4C06 /* SendHighlights.swift */,
+				0F88AADF2D25AFCD006E4C06 /* PhotosClassViewController.swift */,
+				0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */,
+				0F88AADD2D25AFCD006E4C06 /* OrganizerrPromptViewController.swift */,
+				0F88AADC2D25AFCD006E4C06 /* HiglightList.swift */,
+				0F88AADB2D25AFCD006E4C06 /* Cloudinary1.swift */,
+			);
+			name = ssharmin_features;
+			sourceTree = "<group>";
+		};
 		D51AF41A2D09A5BF00002CD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +144,6 @@
 		D51AF41C2D09A7A400002CD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0F88AADB2D25AFCD006E4C06 /* Cloudinary1.swift */,
-				0F88AADC2D25AFCD006E4C06 /* HiglightList.swift */,
-				0F88AADD2D25AFCD006E4C06 /* OrganizerrPromptViewController.swift */,
-				0F88AADE2D25AFCD006E4C06 /* PhotoCell.swift */,
-				0F88AADF2D25AFCD006E4C06 /* PhotosClassViewController.swift */,
-				0F88AAE02D25AFCD006E4C06 /* SendHighlights.swift */,
 				3FC9350B2D05D79A002B4592 /* Cloudinary.swift */,
 				D54A3E1A2CFDA88000DE3870 /* Event.swift */,
 				D51AF41D2D09A7DC00002CD4 /* Firebase.swift */,
@@ -163,6 +170,7 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
+				BBD5EDA92D25B55C00EAB60C /* ssharmin_features */,
 				D51AF41C2D09A7A400002CD4 /* Models */,
 				D51AF41A2D09A5BF00002CD4 /* Views */,
 				D5580A572D04B6570011C285 /* EventOrgTableViewCell.swift */,
