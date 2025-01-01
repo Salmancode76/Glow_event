@@ -8,20 +8,42 @@
 import UIKit
 
 class EventOrgTableViewCell: UITableViewCell {
-    
-    
     @IBOutlet weak var EventName: UILabel!
+    
     @IBOutlet weak var EventStartDate: UILabel!
     @IBOutlet weak var Eventvenu: UILabel!
     @IBOutlet weak var EventImage: UIImageView!
     
+    @IBOutlet weak var BookMarkICON: UIImageView!
+    
+    private var isBookmarked: Bool = false
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        EventImage.contentMode = .scaleAspectFill // Adjust based on your needs
+        
+        
+        self.BookMarkICON.isUserInteractionEnabled = true // Ensure interaction
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapBookmark))
+        self.BookMarkICON.addGestureRecognizer(tapGestureRecognizer)
+        
+        EventImage.contentMode = .scaleAspectFill
 
-
-        // Initialization code
+        updateBookmarkIcon()        // Initialization code
     }
+    @objc func didTapBookmark() {
+        // Toggle the bookmark state
+        isBookmarked.toggle()
+        
+        print("Bookmark state: \(isBookmarked ? "Filled" : "Empty")")
+        
+        updateBookmarkIcon()
+    }
+
+    private func updateBookmarkIcon() {
+        let bookmarkImageName = isBookmarked ? "bookmark.fill" : "bookmark"
+        self.BookMarkICON.image = UIImage(systemName: bookmarkImageName)
+    }
+
     
     // Set up the cell with a UIImage
     func setupCell(photo: UIImage, name: String, startDate: Date,venu : String) {
