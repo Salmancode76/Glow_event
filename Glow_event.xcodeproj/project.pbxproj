@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F88AACC2D25A969006E4C06 /* highlights.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F88AACB2D25A969006E4C06 /* highlights.storyboard */; };
 		0F88AAE12D25AFCD006E4C06 /* PhotosClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADF2D25AFCD006E4C06 /* PhotosClassViewController.swift */; };
 		0F88AAE22D25AFCD006E4C06 /* HiglightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AADC2D25AFCD006E4C06 /* HiglightList.swift */; };
 		0F88AAE32D25AFCD006E4C06 /* SendHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F88AAE02D25AFCD006E4C06 /* SendHighlights.swift */; };
@@ -277,7 +276,6 @@
 				D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */,
 				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
-				0F88AACC2D25A969006E4C06 /* highlights.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
