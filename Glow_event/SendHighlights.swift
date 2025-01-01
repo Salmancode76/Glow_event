@@ -125,11 +125,85 @@ class SendHighlights: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     
-    @IBAction func SendButtonTapped(_ sender: Any) {
+   
+    @IBAction func send(_ sender: UIButton) {
         
+        guard let organizerName = OrganizerName.text, !organizerName.isEmpty else {
+              showAlert(title: "Error", message: "Please select an organizer.")
+              return
+          }
+
+          guard let image = ImageSelected.image else {
+              showAlert(title: "Error", message: "Please select an image.")
+              return
+          }
+
+          guard let imageData = image.jpegData(compressionQuality: 0.8) else {
+              showAlert(title: "Error", message: "Failed to process the image.")
+              return
+          }
+
+          // Start uploading the image to Cloudinary
+          let uploader = cloudinary.createUploader()
+        uploader.upload(data: imageData, uploadPreset: "glow_event", completionHandler:  { [weak self] result, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print("Cloudinary upload error: \(error.localizedDescription)")
+                self.showAlert(title: "Upload Failed", message: "Could not upload the image to Cloudinary.")
+                return
+            }
+            
+            if let result = result, let imageUrl = result.url {
+                print("Image uploaded to Cloudinary: \(imageUrl)")
+                self.storeImageDetailsInFirebase(imageUrl: imageUrl, organizerName: organizerName)
+            } else {
+                self.showAlert(title: "Error", message: "Unexpected error during image upload.")
+            }
+        })
+      }
+
+      private func storeImageDetailsInFirebase(imageUrl: String, organizerName: String) {
+          let ref = Database.database().reference().child("organizers")
+
+          // Find the organizer node by name
+          ref.queryOrdered(byChild: "name").queryEqual(toValue: organizerName).observeSingleEvent(of: .value) { snapshot in
+              guard snapshot.exists(), let organizerSnapshot = snapshot.children.allObjects.first as? DataSnapshot else {
+                  self.showAlert(title: "Error", message: "Organizer not found in the database.")
+                  return
+              }
+
+              let organizerKey = organizerSnapshot.key // Organizer node key
+              let highlightsRef = ref.child(organizerKey).child("highlights")
+
+              // Create a unique key for the highlight entry
+              let highlightKey = highlightsRef.childByAutoId().key
+
+              let highlightDetails: [String: Any] = [
+                  "imageUrl": imageUrl,
+                  "timestamp": ServerValue.timestamp()
+              ]
+
+              // Save the highlight data under the organizer's node
+              highlightsRef.child(highlightKey!).setValue(highlightDetails) { error, _ in
+                  if let error = error {
+                      print("Firebase write error: \(error.localizedDescription)")
+                      self.showAlert(title: "Error", message: "Could not save data to Firebase.")
+                  } else {
+                      self.showAlert(title: "Success", message: "Highlight successfully sent.")
+                  }
+              }
+          } withCancel: { error in
+              print("Firebase query error: \(error.localizedDescription)")
+              self.showAlert(title: "Error", message: "Could not fetch organizer details.")
+          }
+      }
+
+      private func showAlert(title: String, message: String) {
+          let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+          alert.addAction(UIAlertAction(title: "OK", style: .default))
+          present(alert, animated: true)
     }
-    
-  
     /*
      @IBAction func SendingEo(_ sender: Any) {
      }

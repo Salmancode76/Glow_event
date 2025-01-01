@@ -27,6 +27,17 @@
                                     <segue destination="WfN-xb-xZA" kind="show" id="Cyu-Ul-Kol"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOI-UZ-qpq">
+                                <rect key="frame" x="139" y="215" width="130" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="view Higlights">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="cY9-b5-cjN" kind="show" id="bVL-Af-jZN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Sv-xt-TNP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,6 +46,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQY-zk-nkO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1422" y="-1442"/>
+        </scene>
+        <!--OrganizerViewHighlight-->
+        <scene sceneID="Prl-Hg-NdV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="OrganizerViewHighlight" id="cY9-b5-cjN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="syo-G0-HjR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aOd-mI-LI0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2015" y="-1645"/>
         </scene>
         <!--highlights-->
         <scene sceneID="nYG-xY-iJl">
