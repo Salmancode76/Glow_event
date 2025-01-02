@@ -23,10 +23,8 @@
 		0788B1A72D1FC76E00B69650 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */; };
 		0788B1A92D1FC86200B69650 /* createEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1A82D1FC86200B69650 /* createEventVC.swift */; };
 		0788B1AB2D1FCF4600B69650 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */; };
-		07A83EAD2D265BDD0020EDD4 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A83EAC2D265BDD0020EDD4 /* LocalNotification.swift */; };
 		07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */; };
 		07DE196C2D23D90000FEFA98 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 07DE196B2D23D90000FEFA98 /* Cloudinary */; };
-		07DE19702D23DD5B00FEFA98 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */; };
 		07DE19722D24458D00FEFA98 /* GlobalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19712D24458D00FEFA98 /* GlobalUser.swift */; };
 		07DE19742D24B00D00FEFA98 /* Reminder Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */; };
 		07DE19762D2543BA00FEFA98 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19752D2543BA00FEFA98 /* NotificationCell.swift */; };
@@ -84,9 +82,7 @@
 		0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		0788B1A82D1FC86200B69650 /* createEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createEventVC.swift; sourceTree = "<group>"; };
 		0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		07A83EAC2D265BDD0020EDD4 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		07DE19712D24458D00FEFA98 /* GlobalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUser.swift; sourceTree = "<group>"; };
 		07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder Manager.swift"; sourceTree = "<group>"; };
 		07DE19752D2543BA00FEFA98 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
@@ -188,12 +184,10 @@
 				0788B1A62D1FC76E00B69650 /* CreateEventViewController.swift */,
 				0788B1A82D1FC86200B69650 /* createEventVC.swift */,
 				0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */,
-				07DE196F2D23DD5B00FEFA98 /* Cloudinary.swift */,
 				07DE19712D24458D00FEFA98 /* GlobalUser.swift */,
 				07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */,
 				07DE19752D2543BA00FEFA98 /* NotificationCell.swift */,
 				07DE19772D25651200FEFA98 /* EventTableViewCell.swift */,
-				07A83EAC2D265BDD0020EDD4 /* LocalNotification.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -306,11 +300,9 @@
 				07F7A9AA2D1ED50D00E15766 /* NotificationManager.swift in Sources */,
 				07802ECC2D1F5AFD00916BA0 /* EventManager.swift in Sources */,
 				07DE19782D25651200FEFA98 /* EventTableViewCell.swift in Sources */,
-				07A83EAD2D265BDD0020EDD4 /* LocalNotification.swift in Sources */,
 				07DE19722D24458D00FEFA98 /* GlobalUser.swift in Sources */,
 				073A304D2D18A3A5002347B1 /* EventOrganizer.swift in Sources */,
 				07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */,
-				07DE19702D23DD5B00FEFA98 /* Cloudinary.swift in Sources */,
 				07F7A9B02D1ED64300E15766 /* Event.swift in Sources */,
 				0788B1A72D1FC76E00B69650 /* CreateEventViewController.swift in Sources */,
 				07DE19762D2543BA00FEFA98 /* NotificationCell.swift in Sources */,

@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
-        let config = CLDConfiguration(cloudName: "your_cloud_name", apiKey: "your_api_key", apiSecret: "your_api_secret")
+        let config = CLDConfiguration(cloudName: "doctomog7", secure: true)
         cloudinary = CLDCloudinary(configuration: config)
         
         
