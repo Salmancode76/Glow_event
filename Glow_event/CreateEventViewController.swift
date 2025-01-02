@@ -69,7 +69,7 @@ class CreateEventViewController: UIViewController {
             if success {
                 // Schedule a notification for the user if they are logged in and the event matches their preferences
                 if let userId = GlobalUser.shared.currentUser?.uid {
-                    NotificationManager.shared.scheduleLocalNotification(title: "Event", body: "Check out the event: \(title)", date: startTime, userId: userId)
+                    NotificationManager.shared.scheduleLocalNotification(title: "Glow Event", body: "Check out the event: \(title)", date: startTime, userId: userId)
                 }
                 
                 self.navigationController?.popViewController(animated: true)

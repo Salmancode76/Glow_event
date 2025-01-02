@@ -106,7 +106,7 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
             cell.logoImageView.image = nil
             
             // Set the logo image
-            if let logoURL = URL(string: "https://asset.cloudinary.com/doctomog7/9ec21fe2104eded7911300666e4c878b") {
+            if let logoURL = URL(string: "https://res.cloudinary.com/doctomog7/image/upload/v1735740154/PHOTO-2025-01-01-15-43-11_esiyqm.jpg") {
                     URLSession.shared.dataTask(with: logoURL) { data, response, error in
                         if let error = error {
                             print("Error fetching image: \(error.localizedDescription)")

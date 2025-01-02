@@ -8,8 +8,15 @@ import Foundation
 import UserNotifications
 import UIKit
 
-class NotificationManager {
+class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
     static let shared = NotificationManager()
+    let notificationCenter = UNUserNotificationCenter.current()
+    
+    override init()
+    {
+        super.init()
+        notificationCenter.delegate = self
+    }
     
     func requestAuthorization() {
         let center = UNUserNotificationCenter.current()
@@ -22,6 +29,11 @@ class NotificationManager {
         }
     }
     
+    //Delegate function
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+        return [.sound, .banner]
+    }
+    
     func scheduleLocalNotification(title: String, body: String, date: Date, userId: String) {
         let content = UNMutableNotificationContent()
         content.title = title
@@ -30,8 +42,9 @@ class NotificationManager {
         
         print("Scheduling notification: \(title) at \(date) for user: \(userId)")
         
+        
         // Add the logo URL as an attachment
-        if let logoURL = URL(string: "https://asset.cloudinary.com/doctomog7/9ec21fe2104eded7911300666e4c878b") {
+        if let logoURL = URL(string: "https://res.cloudinary.com/doctomog7/image/upload/v1735740154/PHOTO-2025-01-01-15-43-11_esiyqm.jpg") {
             let attachment = try? UNNotificationAttachment(identifier: "logo", url: logoURL, options: nil)
             if let attachment = attachment {
                 content.attachments = [attachment]

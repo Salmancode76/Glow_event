@@ -19,7 +19,6 @@ class LogInViewController: UIViewController {
     // Variable to store user type
     var userTypeToNavigate: UserType?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Additional setup if needed
