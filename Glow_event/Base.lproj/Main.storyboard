@@ -21,7 +21,7 @@
         <!--View Controller-->
         <scene sceneID="hhn-Wy-Dhn">
             <objects>
-                <viewController id="bta-29-l3u" customClass="ViewController" customModule="Glow_events" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bta-29-l3u" customClass="ViewController" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sLS-Ap-mMM">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zPm-VG-0H2" kind="show" id="tvd-wL-DMe"/>
+                                    <segue destination="zPm-VG-0H2" kind="show" id="afN-Gq-s8m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gp6-Og-rkY">
@@ -67,7 +67,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Ikl-Ar-6cw" kind="show" id="1yS-gY-3E4"/>
+                                    <segue destination="Ikl-Ar-6cw" kind="show" id="97i-hF-5x1"/>
                                 </connections>
                             </button>
                         </subviews>
