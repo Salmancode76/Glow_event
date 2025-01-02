@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        event_photo.layer.cornerRadius = 25
+       // event_photo.layer.cornerRadius = 25
     }
    
     

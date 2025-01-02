@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBAE39F42D260D3B001FFFB0 /* UpcomingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAE39F32D260D3A001FFFB0 /* UpcomingStoryboard.storyboard */; };
+		BBAE39F62D260D4B001FFFB0 /* EventDetailStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAE39F52D260D4A001FFFB0 /* EventDetailStoryboard.storyboard */; };
+		BBAE39F82D260DAA001FFFB0 /* LikedEventsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBAE39F72D260DAA001FFFB0 /* LikedEventsStoryboard.storyboard */; };
+		BBAE39FB2D260DAB001FFFB0 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE39F92D260DAB001FFFB0 /* EventDetailViewController.swift */; };
 		D08DC8462D0046F600726C29 /* Ahmed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08DC8452D0046F600726C29 /* Ahmed.storyboard */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BBAE39F32D260D3A001FFFB0 /* UpcomingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UpcomingStoryboard.storyboard; sourceTree = "<group>"; };
+		BBAE39F52D260D4A001FFFB0 /* EventDetailStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventDetailStoryboard.storyboard; sourceTree = "<group>"; };
+		BBAE39F72D260DAA001FFFB0 /* LikedEventsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LikedEventsStoryboard.storyboard; sourceTree = "<group>"; };
+		BBAE39F92D260DAB001FFFB0 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		D08DC8452D0046F600726C29 /* Ahmed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ahmed.storyboard; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +119,11 @@
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
+				BBAE39F32D260D3A001FFFB0 /* UpcomingStoryboard.storyboard */,
+				BBAE39F52D260D4A001FFFB0 /* EventDetailStoryboard.storyboard */,
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
+				BBAE39F72D260DAA001FFFB0 /* LikedEventsStoryboard.storyboard */,
+				BBAE39F92D260DAB001FFFB0 /* EventDetailViewController.swift */,
 				D5BB85642CF45A9E001082C0 /* Info.plist */,
 				D08DC8452D0046F600726C29 /* Ahmed.storyboard */,
 			);
@@ -205,10 +217,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBAE39F62D260D4B001FFFB0 /* EventDetailStoryboard.storyboard in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
 				D08DC8462D0046F600726C29 /* Ahmed.storyboard in Resources */,
 				D5BB855E2CF45A9D001082C0 /* Main.storyboard in Resources */,
+				BBAE39F42D260D3B001FFFB0 /* UpcomingStoryboard.storyboard in Resources */,
+				BBAE39F82D260DAA001FFFB0 /* LikedEventsStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +236,7 @@
 			files = (
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
+				BBAE39FB2D260DAB001FFFB0 /* EventDetailViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
