@@ -27,31 +27,13 @@ class PhotosClassViewController: UIViewController, UICollectionViewDelegate, UIC
         CollectionViiew.dataSource = self
                 CollectionViiew.delegate = self
         
-        if let name = organizerName {
-                   loadHighlights(for: name)
-               }
+        
        
            }
     
-    private func loadHighlights(for name: String) {
-           // Reference to your Firebase database
-        let ref = Database.database().reference().child("highlights").child(name)
-        
-        ref.observeSingleEvent(of: .value) { snapshot in
-                    // Check if the snapshot contains data
-                    guard let data = snapshot.value as? [String: Any],
-                          let highlightsData = data["highlights"] as? [String] else {
-                        print("No highlights found for \(name)")
-                        return
-                    }
+   
 
-                    self.highlights = highlightsData // Update highlights array
-                    self.collectionView.reloadData() // Reload collection view
-                } withCancel: { error in
-                    print("Error fetching highlights: \(error.localizedDescription)")
-                }
-
-               }
+               
                    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
