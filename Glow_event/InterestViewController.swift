@@ -12,7 +12,7 @@ class InterestViewController: UIViewController,  UITableViewDelegate, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     var categories: [String] = [] // This will be populated with your categories from Firebase
-       var selectedCategories: Set<String> = []
+       var selectedCategories: [String] = []
     
     
     override func viewDidLoad() {
@@ -25,6 +25,8 @@ class InterestViewController: UIViewController,  UITableViewDelegate, UITableVie
 
         // Do any additional setup after loading the view.
     }
+    
+    
     func fetchCategories() {
            let ref = Database.database().reference().child("events")
            ref.observeSingleEvent(of: .value) { snapshot in
@@ -43,14 +45,31 @@ class InterestViewController: UIViewController,  UITableViewDelegate, UITableVie
            }
        }
     
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return categories.count // Return the number of categories
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        cell.textLabel?.text = categories[indexPath.row] // Set the text to the category name
+        return cell
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCategory = categories[indexPath.row]
-        if selectedCategories.contains(selectedCategory) {
-            selectedCategories.remove(selectedCategory)
-        } else {
-            selectedCategories.insert(selectedCategory)
-        }
-        tableView.reloadRows(at: [indexPath], with: .automatic) // Refresh the row to show/hide the circle
+
+            if selectedCategories.contains(selectedCategory) {
+                // Remove the category if it's already selected
+                selectedCategories.removeAll { $0 == selectedCategory }
+            } else {
+                // Add the category if it's not already selected
+                selectedCategories.append(selectedCategory)
+            }
+
+            // Reload the specific row to update the UI
+            tableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
     
@@ -58,12 +77,14 @@ class InterestViewController: UIViewController,  UITableViewDelegate, UITableVie
     
     @IBAction func Save(_ sender: Any) {
         
-        print("Selected Categories: \(selectedCategories)")
-            
-            // Navigate to the Home Screen (implementation may vary)
-            let homeVC = storyboard?.instantiateViewController(withIdentifier: "UserHomeController") as! UserHome
-            homeVC.selectedCategories = Array(selectedCategories) // Pass selected categories
-            navigationController?.pushViewController(homeVC, animated: true)
+        performSegue(withIdentifier: "toUserHome", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toUserHome", let homeVC = segue.destination as? UserHome {
+            // Pass selected categories to the User Home View Controller
+            homeVC.selectedCategories = selectedCategories
+        }
     }
     
     /*

@@ -107,7 +107,7 @@
                         <barButtonItem key="rightBarButtonItem" image="star.circle" catalog="system" id="8TG-9x-bOF">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="P6q-c6-zIc" kind="show" id="nqS-oM-ZmF"/>
+                                <segue destination="P6q-c6-zIc" kind="show" identifier="toUserHome" id="nqS-oM-ZmF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

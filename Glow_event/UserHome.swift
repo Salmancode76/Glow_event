@@ -83,30 +83,33 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func fetchEvents() {
         
         let ref = Database.database().reference().child("events")
-        ref.observeSingleEvent(of: .value) { snapshot,<#arg#>  in
-            var filteredEvents: [Event] = []
-            
-            if snapshot.childrenCount == 0 {
-                print("No data available in 'events' node")
-                self.events = []
-                self.tableView.reloadData()
-                return
-            }
-            
-            for child in snapshot.children {
-                if let childSnapshot = child as? DataSnapshot,
-                   let eventData = childSnapshot.value as? [String: Any],
-                   let category = eventData["category"] as? String,
-                   let eventName = eventData["EventName"] as? String,
-                   let location = eventData["venue_options"] as? String, // Replace with your actual key
-                   let imageURL = eventData["EventImg"] as? String { // Replace with your actual key
-                    // Filter events by selected categories
-                    if self.selectedCategories.contains(category) {
-                        let event = Event(name: eventName, location: category, imageURL: location, category: imageURL)
-                        filteredEvents.append(event)
-                    }
-                }
-                
+               ref.observeSingleEvent(of: .value) { snapshot in
+                   var filteredEvents: [Event] = []
+
+                   if snapshot.childrenCount == 0 {
+                       print("No data available in 'events' node")
+                       self.events = []
+                       self.tableView.reloadData()
+                       return
+                   }
+
+                   // Iterate over each child in the snapshot
+                   for child in snapshot.children {
+                       if let childSnapshot = child as? DataSnapshot,
+                          let eventData = childSnapshot.value as? [String: Any],
+                          let eventName = eventData["EventName"] as? String,
+                          let location = eventData["venue_options"] as? String,
+                          let imageURL = eventData["EventImg"] as? String,
+                          let category = eventData["category"] as? String {
+                           
+                           // Filter events by selected categories
+                           if self.selectedCategories.contains(category) {
+                               // Create an Event object with the data
+                               let event = Event(name: eventName, location: location, imageURL: imageURL, category: category)
+                               filteredEvents.append(event)
+                           }
+                       }
+                   }
                 
                 
                 
@@ -130,4 +133,4 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
          }
          */
         
-    }}
+    }
