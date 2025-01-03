@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BB47DF392D24D100007D82AB /* OrganizerViewHighlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */; };
-		BB47DF3B2D24D9C3007D82AB /* HiglightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3A2D24D9C3007D82AB /* HiglightList.swift */; };
+		BB47DF3B2D24D9C3007D82AB /* HighlightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */; };
 		BB47DF3D2D24F6F5007D82AB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */; };
 		BB47DF3F2D24FA71007D82AB /* PhotosClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */; };
 		BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */; };
@@ -19,11 +19,13 @@
 		BB9EECB12D1DD5E800F2A19C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECB02D1DD5E800F2A19C /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		BB9EECB32D1DD5E800F2A19C /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECB22D1DD5E800F2A19C /* FirebaseAppCheck */; };
 		BB9EECB52D1DD5E800F2A19C /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECB42D1DD5E800F2A19C /* FirebaseAppDistribution-Beta */; };
-		BBAE3A042D261F39001FFFB0 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE3A032D261F39001FFFB0 /* UserHome.swift */; };
 		BBAE3A062D2624CF001FFFB0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE3A052D2624CF001FFFB0 /* Event.swift */; };
 		BBAE3A082D262750001FFFB0 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE3A072D262750001FFFB0 /* EventTableViewCell.swift */; };
-		BBAE3A0A2D2633A7001FFFB0 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAE3A092D2633A7001FFFB0 /* Firebase.swift */; };
 		BBB191AD2D0851FF007E8845 /* UserHomeScrreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB191AC2D0851FF007E8845 /* UserHomeScrreen.storyboard */; };
+		BBF2E7902D275A7B00661103 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E78F2D275A7B00661103 /* Firebase.swift */; };
+		BBF2E7922D275D2400661103 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7912D275D2400661103 /* UserHome.swift */; };
+		BBF2E7942D2766E100661103 /* ImageSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7932D2766E100661103 /* ImageSwift.swift */; };
+		BBF2E7962D27A13300661103 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7952D27A13300661103 /* InterestViewController.swift */; };
 		BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */; };
 		BBFE270C2D1E455600FAB871 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = BBFE270B2D1E455600FAB871 /* Cloudinary */; };
 		BBFE270E2D1E459400FAB871 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE270D2D1E459400FAB871 /* Cloudinary.swift */; };
@@ -61,18 +63,20 @@
 
 /* Begin PBXFileReference section */
 		BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrganizerViewHighlight.storyboard; sourceTree = "<group>"; };
-		BB47DF3A2D24D9C3007D82AB /* HiglightList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiglightList.swift; sourceTree = "<group>"; };
+		BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightList.swift; sourceTree = "<group>"; };
 		BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
 		BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
 		BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerrPromptViewController.swift; sourceTree = "<group>"; };
 		BB9EECA92D1DCDB400F2A19C /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		BBAE3A032D261F39001FFFB0 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		BBAE3A052D2624CF001FFFB0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		BBAE3A072D262750001FFFB0 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-		BBAE3A092D2633A7001FFFB0 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BBB191AC2D0851FF007E8845 /* UserHomeScrreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserHomeScrreen.storyboard; sourceTree = "<group>"; };
+		BBF2E78F2D275A7B00661103 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		BBF2E7912D275D2400661103 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
+		BBF2E7932D2766E100661103 /* ImageSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSwift.swift; sourceTree = "<group>"; };
+		BBF2E7952D27A13300661103 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBFE270D2D1E459400FAB871 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		C34438632D01E600000A4D52 /* highlights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				BBFE270D2D1E459400FAB871 /* Cloudinary.swift */,
 				BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */,
 				BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */,
+				BBF2E78F2D275A7B00661103 /* Firebase.swift */,
 				D5BB855A2CF45A9C001082C0 /* ViewController.swift */,
 				D5BB855C2CF45A9D001082C0 /* Main.storyboard */,
 				D5BB855F2CF45A9E001082C0 /* Assets.xcassets */,
@@ -151,12 +156,13 @@
 				C34438632D01E600000A4D52 /* highlights.storyboard */,
 				BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */,
 				BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */,
-				BB47DF3A2D24D9C3007D82AB /* HiglightList.swift */,
+				BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */,
 				BBB191AC2D0851FF007E8845 /* UserHomeScrreen.storyboard */,
+				BBF2E7952D27A13300661103 /* InterestViewController.swift */,
 				BBAE3A072D262750001FFFB0 /* EventTableViewCell.swift */,
-				BBAE3A092D2633A7001FFFB0 /* Firebase.swift */,
 				BBAE3A052D2624CF001FFFB0 /* Event.swift */,
-				BBAE3A032D261F39001FFFB0 /* UserHome.swift */,
+				BBF2E7912D275D2400661103 /* UserHome.swift */,
+				BBF2E7932D2766E100661103 /* ImageSwift.swift */,
 			);
 			path = Glow_event;
 			sourceTree = "<group>";
@@ -275,16 +281,18 @@
 				BBAE3A082D262750001FFFB0 /* EventTableViewCell.swift in Sources */,
 				BB47DF3D2D24F6F5007D82AB /* PhotoCell.swift in Sources */,
 				BBAE3A062D2624CF001FFFB0 /* Event.swift in Sources */,
-				BBAE3A0A2D2633A7001FFFB0 /* Firebase.swift in Sources */,
+				BBF2E7902D275A7B00661103 /* Firebase.swift in Sources */,
 				BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */,
 				BBFE270E2D1E459400FAB871 /* Cloudinary.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
 				BB47DF3F2D24FA71007D82AB /* PhotosClassViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
+				BBF2E7922D275D2400661103 /* UserHome.swift in Sources */,
 				BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */,
-				BBAE3A042D261F39001FFFB0 /* UserHome.swift in Sources */,
-				BB47DF3B2D24D9C3007D82AB /* HiglightList.swift in Sources */,
+				BB47DF3B2D24D9C3007D82AB /* HighlightList.swift in Sources */,
+				BBF2E7962D27A13300661103 /* InterestViewController.swift in Sources */,
 				BB95F5062D2571FC00333F32 /* OrganizerrPromptViewController.swift in Sources */,
+				BBF2E7942D2766E100661103 /* ImageSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

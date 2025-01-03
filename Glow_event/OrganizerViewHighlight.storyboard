@@ -129,29 +129,6 @@
             <point key="canvasLocation" x="1693.8931297709923" y="12.67605633802817"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="UAR-gr-nAP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VVQ-ZO-ypW" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mhv-E7-28W">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="diC-dE-0Si" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4083" y="-56"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="tBG-Om-aVg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tmr-Rp-0MQ" sceneMemberID="viewController">

@@ -2,33 +2,80 @@
 //  Firebase.swift
 //  Glow_event
 //
-//  Created by PRINTANICA on 02/01/2025.
+//  Created by PRINTANICA on 03/01/2025.
 //
 
 import Foundation
+import UIKit
+
 import Firebase
+import FirebaseDatabase
+import FirebaseStorage
+import Cloudinary
 
-
-
-func fetchEvents(completion: @escaping ([Event]) -> Void) {
-    let db = Firestore.firestore()
-    db.collection("events").getDocuments { (snapshot, error) in
-        var events: [Event] = []
-        if let error = error {
-            print("Error fetching events: \(error)")
-            completion(events)
-            return
+struct FirebaseDB {
+    
+    // Reference to Firebase Realtime Database
+    static let ref = Database.database(url: "https://glowevent-9be31-default-rtdb.asia-southeast1.firebasedatabase.app").reference()
+    
+    // Function to save event data to Firebase Realtime Database
+    static func saveEventData(eventData: [String: Any], completion: @escaping (Bool, String?) -> Void) {
+        // Push the event data into the "events" node
+        ref.child("events").childByAutoId().setValue(eventData) { (error, reference) in
+            if let error = error {
+                // Print the error and return false
+                print("Error saving event: \(error.localizedDescription)")
+                completion(false, error.localizedDescription)
+            } else {
+                // Event saved successfully
+                print("Event saved successfully!")
+                completion(true, nil)
+            }
+            
         }
-        for document in snapshot!.documents {
-            let data = document.data()
-            if let name = data["name"] as? String,
-               let startDate = data["startDate"] as? String,
-               let location = data["location"] as? String,
-               let imageUrl = data["imageUrl"] as? String {
-                let event = Event(startDate: startDate, name: name, location: location, imageURL: imageUrl)
-                events.append(event)
+    }
+    
+    // Static method to fetch all events from Firebase
+    static func GetAllEvents(completion: @escaping ([Event]) -> Void) {
+        ref.child("events").observe(.value, with: { snapshot in
+            var fetchedEvents: [Event] = []
+            
+            // Loop through the snapshot and create Event objects
+            for child in snapshot.children {
+                if let snapshot = child as? DataSnapshot {
+                //    let event = Event(snapshot: snapshot) // Assuming Event has a DataSnapshot initializer
+                 //   fetchedEvents.append(event) // Add event to the array
+                }
+            }
+            
+            // Once data is fetched, call the completion handler
+            completion(fetchedEvents)
+        })
+    }
+    
+    static func deleteEvent(eventID: String, completion: @escaping (Bool, String?) -> Void) {
+        ref.child("events").child(eventID).removeValue { error, _ in
+            if let error = error {
+                completion(false, error.localizedDescription)
+            } else {
+                completion(true, nil)
             }
         }
-        completion(events)
     }
+    
+    static func updateEvent(eventID: String, updatedData: [String: Any], completion: @escaping (Bool, String?) -> Void) {
+        // Update specific fields of the event in the database
+        ref.child("events").child(eventID).updateChildValues(updatedData) { error, _ in
+            if let error = error {
+                // Print the error and return false
+                print("Error updating event: \(error.localizedDescription)")
+                completion(false, error.localizedDescription)
+            } else {
+                // Event updated successfully
+                print("Event updated successfully!")
+                completion(true, nil)
+            }
+        }
+    }
+    
 }

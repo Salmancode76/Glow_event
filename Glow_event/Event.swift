@@ -7,8 +7,10 @@
 
 import Foundation
 struct Event {
-    let startDate: String
+    
     let name: String
     let location: String
     let imageURL: String
+    let category: String
+    
 }

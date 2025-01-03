@@ -85,6 +85,9 @@
                     <navigationItem key="navigationItem" title="Send Highlights" id="iWP-Ih-HPe">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="EDF-FZ-hnH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="TL7-Gh-boL" kind="show" id="Wav-SB-pGN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -116,6 +119,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm8-F1-gpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-295" y="-511"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="bar-ZK-lpY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="TL7-Gh-boL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Uw9-4d-mJ2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bh9-AM-H1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="-917"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
