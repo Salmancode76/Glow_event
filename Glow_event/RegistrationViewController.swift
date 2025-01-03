@@ -16,7 +16,7 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         
         tableView.reloadData()
         setupTableView()
@@ -57,7 +57,7 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
                     let data = doc.data()
                     guard let title = data["title"] as? String,
                           let category = data["category"] as? String,
-                          let startDate = data["startDate"] as? Timestamp else {
+                          let startDate = data["startTime"] as? Timestamp else {
                         print("Skipping document due to missing fields: \(data)")
                         return nil
                     }
@@ -91,27 +91,6 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
                 return
             }
             
-            /*EventManager.shared.registerForEvent(eventId: eventId, userId: userId) { success in
-                if success {
-                    let registrationData: [String: Any] = [
-                        "userId": userId,
-                        "eventId": eventId,
-                        "registrationTime": Timestamp(date: Date())
-                    ]
-
-                Firestore.firestore().collection("userRegistration").addDocument(data: registrationData) { error in
-                    if let error = error {
-                        print("Error saving registration: \(error.localizedDescription)")
-                        self.showAlert(message: "Error saving registration.")
-                    } else {
-                        self.showAlert(message: "You have registered for the event!")
-                        self.scheduleNotifications(for: eventData, startTime: startTime, userId: userId)
-                    }
-                }
-            } else {
-                self.showAlert(message: "Error registering for the event.")
-            }
-            }*/
             self.saveRegistration(userId: userId, eventId: eventId) {
                 self.scheduleNotifications(for: eventData, startTime: startTime, userId: userId)
             }
@@ -147,8 +126,13 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
             let oneHourBefore = startTime.addingTimeInterval(-3600) // 1 hour before
             let twentyFourHoursBefore = startTime.addingTimeInterval(-86400) // 24 hours before
 
+        if oneHourBefore > Date() {
             NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: oneHourBefore, userId: userId)
+        }
+        
+        if twentyFourHoursBefore > Date() {
             NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: twentyFourHoursBefore, userId: userId)
+        }
         }
     
     // MARK: - TableView DataSource

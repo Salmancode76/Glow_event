@@ -41,21 +41,7 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
         content.sound = .default
         
         print("Scheduling notification: \(title) at \(date) for user: \(userId)")
-        
-        
-        // Add the logo URL as an attachment
-        if let logoURL = URL(string: "https://res.cloudinary.com/doctomog7/image/upload/v1735740154/PHOTO-2025-01-01-15-43-11_esiyqm.jpg") {
-            downloadImage(from: logoURL) { localURL in
-                if let localURL = localURL {
-                    do {
-                        let attachment = try UNNotificationAttachment(identifier: "logo", url: logoURL, options: nil)
-                        content.attachments = [attachment]
-                    } catch {
-                        print("Error creating attachment: \(error.localizedDescription)")
-                    }
-                }
-            }
-            
+                        
             let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
             let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
             
@@ -68,30 +54,5 @@ class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
                     print("Notification scheduled for \(date) for user: \(userId).")
                 }
             }
-        }
-    }
-    
-    func downloadImage(from url: URL, completion: @escaping (URL?) -> Void) {
-        let task = URLSession.shared.downloadTask(with: url) { tempURL, response, error in
-            guard let tempURL = tempURL, error == nil else {
-                completion(nil)
-                return
-            }
-
-            // Get the documents directory
-            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            let localURL = documentsDirectory.appendingPathComponent(url.lastPathComponent)
-
-            do {
-                // Move the downloaded file to the documents directory
-                try FileManager.default.moveItem(at: tempURL, to: localURL)
-                completion(localURL)
-            } catch {
-                print("Error saving file: \(error)")
-                completion(nil)
-            }
-        }
-        task.resume()
-    }
-    
+       }
 }

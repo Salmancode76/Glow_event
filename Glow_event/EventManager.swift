@@ -56,6 +56,7 @@ class EventManager {
                         // Send notification
                         print("Sending notification to user \(userId) for category \(category).")
                         self.sendNotification(to: userId, title: title, body: "Check out the new event: \(title)")
+                        
                         NotificationManager.shared.scheduleLocalNotification(title: title, body: "Check out the new event: \(title)", date: eventStartTime, userId: userId)
                     } else {
                         print("User \(userId) does not have preference for category \(category).")
@@ -67,7 +68,7 @@ class EventManager {
         }
     }
     
-    // Send a notification to the user
+    // Save notifications 
     private func sendNotification(to userId: String, title: String, body: String) {
         let notificationData: [String: Any] = [
             "title": title,

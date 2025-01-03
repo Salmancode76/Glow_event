@@ -46,21 +46,21 @@ class NotificationCell: UITableViewCell {
         contentView.addSubview(logoImageView)
 
         // Configure titleLabel
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         titleLabel.numberOfLines = 1
         titleLabel.textColor = .white
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)
 
         // Configure detailLabel
-        detailLabel.font = UIFont.systemFont(ofSize: 16)
+        detailLabel.font = UIFont.systemFont(ofSize: 14)
         detailLabel.textColor = UIColor.lightGray
         detailLabel.numberOfLines = 0
         detailLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(detailLabel)
 
         // Configure timestampLabel
-        timestampLabel.font = UIFont.systemFont(ofSize: 14)
+        timestampLabel.font = UIFont.systemFont(ofSize: 12)
         timestampLabel.textColor = UIColor.gray
         timestampLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(timestampLabel)
