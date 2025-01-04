@@ -45,4 +45,4 @@
 <img src="images/LocalNotification.png" alt="Local Notification" width="250">
 
 ###### Reminders Notification
-<img src="images/Reminder.png" alt="Reminder Notification" width="250">
+<img src="images/Reminders.png" alt="Reminder Notification" width="250">
