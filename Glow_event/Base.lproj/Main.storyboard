@@ -40,37 +40,6 @@
             </objects>
             <point key="canvasLocation" x="792" y="712"/>
         </scene>
-        <!--NotificationVC-->
-        <scene sceneID="2yd-0Y-GEk">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="NotificationVC" storyboardName="Notification" referencedIdentifier="NotificationVC" id="MK9-Vk-8bP" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="1L3-kr-AnS"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nl7-4z-PUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2253.4351145038167" y="842.95774647887333"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KTx-Ow-xYT">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jJB-Lr-4eo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8T-xx-nRe">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MK9-Vk-8bP" kind="relationship" relationship="rootViewController" id="uFz-fR-E5Q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HCO-UF-CTg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1325.9541984732823" y="842.95774647887333"/>
-        </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

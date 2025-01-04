@@ -13,7 +13,6 @@
 		073A304F2D18A3D5002347B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A304E2D18A3D5002347B1 /* User.swift */; };
 		073A30512D18A411002347B1 /* User1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30502D18A411002347B1 /* User1.swift */; };
 		073A30532D18A441002347B1 /* enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30522D18A441002347B1 /* enums.swift */; };
-		073A30552D18A4FD002347B1 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A30542D18A4FD002347B1 /* AppData.swift */; };
 		073A30592D18B026002347B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 073A30582D18B026002347B1 /* GoogleService-Info.plist */; };
 		07802ECC2D1F5AFD00916BA0 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07802ECB2D1F5AFD00916BA0 /* EventManager.swift */; };
 		078388032D1DD911008B4752 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078388022D1DD911008B4752 /* LogInViewController.swift */; };
@@ -26,7 +25,6 @@
 		07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */; };
 		07DE196C2D23D90000FEFA98 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = 07DE196B2D23D90000FEFA98 /* Cloudinary */; };
 		07DE19722D24458D00FEFA98 /* GlobalUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19712D24458D00FEFA98 /* GlobalUser.swift */; };
-		07DE19742D24B00D00FEFA98 /* Reminder Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */; };
 		07DE19762D2543BA00FEFA98 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19752D2543BA00FEFA98 /* NotificationCell.swift */; };
 		07DE19782D25651200FEFA98 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07DE19772D25651200FEFA98 /* EventTableViewCell.swift */; };
 		07F7A9A62D1ED4CB00E15766 /* AppNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */; };
@@ -72,7 +70,6 @@
 		073A304E2D18A3D5002347B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		073A30502D18A411002347B1 /* User1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User1.swift; sourceTree = "<group>"; };
 		073A30522D18A441002347B1 /* enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enums.swift; sourceTree = "<group>"; };
-		073A30542D18A4FD002347B1 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		073A30582D18B026002347B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		07802ECB2D1F5AFD00916BA0 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		078388022D1DD911008B4752 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +81,6 @@
 		0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		07DE19712D24458D00FEFA98 /* GlobalUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalUser.swift; sourceTree = "<group>"; };
-		07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder Manager.swift"; sourceTree = "<group>"; };
 		07DE19752D2543BA00FEFA98 /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		07DE19772D25651200FEFA98 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		07F7A9A52D1ED4CB00E15766 /* AppNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNotification.swift; sourceTree = "<group>"; };
@@ -169,7 +165,6 @@
 				073A304E2D18A3D5002347B1 /* User.swift */,
 				073A30502D18A411002347B1 /* User1.swift */,
 				073A30522D18A441002347B1 /* enums.swift */,
-				073A30542D18A4FD002347B1 /* AppData.swift */,
 				07C459FE2D1C7F1B00932A95 /* HomeViewController.swift */,
 				078388022D1DD911008B4752 /* LogInViewController.swift */,
 				078388042D1DEF21008B4752 /* AdminHomeViewController.swift */,
@@ -185,7 +180,6 @@
 				0788B1A82D1FC86200B69650 /* createEventVC.swift */,
 				0788B1AA2D1FCF4600B69650 /* RegistrationViewController.swift */,
 				07DE19712D24458D00FEFA98 /* GlobalUser.swift */,
-				07DE19732D24B00C00FEFA98 /* Reminder Manager.swift */,
 				07DE19752D2543BA00FEFA98 /* NotificationCell.swift */,
 				07DE19772D25651200FEFA98 /* EventTableViewCell.swift */,
 			);
@@ -313,7 +307,6 @@
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				07C459FF2D1C7F1B00932A95 /* HomeViewController.swift in Sources */,
 				0788B1A92D1FC86200B69650 /* createEventVC.swift in Sources */,
-				07DE19742D24B00D00FEFA98 /* Reminder Manager.swift in Sources */,
 				073A304B2D18A2FF002347B1 /* SignUpViewController.swift in Sources */,
 				078388072D1DEF50008B4752 /* EventOrganizerHomeViewController.swift in Sources */,
 				073A30532D18A441002347B1 /* enums.swift in Sources */,
@@ -321,7 +314,6 @@
 				078388052D1DEF21008B4752 /* AdminHomeViewController.swift in Sources */,
 				07F7A9B42D1EE6BD00E15766 /* NotificationViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
-				073A30552D18A4FD002347B1 /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +470,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -508,7 +500,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Glow_event/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

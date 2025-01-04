@@ -16,6 +16,9 @@ class LogInViewController: UIViewController {
     
     @IBOutlet weak var passwordTextField: UITextField!
     
+    @IBOutlet weak var togglePasswordButton: UIButton!
+    
+    
     // Variable to store user type
     var userTypeToNavigate: UserType?
     
@@ -28,6 +31,16 @@ class LogInViewController: UIViewController {
         if validateFields() {
             loginUser()
         }
+    }
+   
+    @IBAction func togglePasswordVisibility(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry.toggle()
+        updatePasswordVisibilityButton()
+    }
+    
+    private func updatePasswordVisibilityButton() {
+        let buttonImage = passwordTextField.isSecureTextEntry ? "eye" : "eye.fill"
+        togglePasswordButton.setImage(UIImage(systemName: buttonImage), for: .normal)
     }
     
     // Function to validate input fields

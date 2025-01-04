@@ -12,7 +12,6 @@ class createEventVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
         title = "Main Screen"
 
         let createEventButton = UIButton(type: .system)

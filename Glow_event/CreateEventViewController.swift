@@ -25,19 +25,24 @@ class CreateEventViewController: UIViewController {
     private let startTimePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .dateAndTime
+        picker.backgroundColor = .white
         return picker
     }()
     
     private let createButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Create Event", for: .normal)
+        button.backgroundColor = UIColor.systemIndigo
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(createEventButtonTapped), for: .touchUpInside)
+        button.layer.cornerRadius = 8
         return button
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        title = "Create Event"
         setupLayout()
     }
     

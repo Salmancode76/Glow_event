@@ -57,7 +57,7 @@ class EventManager {
                         print("Sending notification to user \(userId) for category \(category).")
                         self.sendNotification(to: userId, title: title, body: "Check out the new event: \(title)")
                         
-                        NotificationManager.shared.scheduleLocalNotification(title: title, body: "Check out the new event: \(title)", date: eventStartTime, userId: userId)
+                        //NotificationManager.shared.scheduleLocalNotification(title: title, body: "Check out the new event: \(title)", date: eventStartTime, userId: userId)
                     } else {
                         print("User \(userId) does not have preference for category \(category).")
                     }

@@ -9,15 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //@IBOutlet weak var event_photo: UIButton!
-    
-    //@IBAction func Button(_ sender: UIButton) {
-    //}
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //event_photo.layer.cornerRadius = 25
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            // Navigate to SignupViewController
+            let signupVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as! SignUpViewController
+            self.navigationController?.pushViewController(signupVC, animated: true)
+        }
    }
 }
 

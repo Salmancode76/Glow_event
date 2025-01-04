@@ -493,6 +493,18 @@
                                     <segue destination="oSl-Sl-6fb" kind="show" id="wQA-3J-nDq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ua2-14-PfU">
+                                <rect key="frame" x="327" y="448" width="38" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="FWe-xx-uec"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" image="eye.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="togglePasswordVisibility:" destination="4zF-ub-7Nr" eventType="touchUpInside" id="lTZ-UD-M8M"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gbF-Id-P8G"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -500,11 +512,14 @@
                             <constraint firstItem="ALR-tK-XjW" firstAttribute="leading" secondItem="gbF-Id-P8G" secondAttribute="leading" constant="125" id="2eO-0C-d10"/>
                             <constraint firstItem="FsM-Vo-3do" firstAttribute="leading" secondItem="gbF-Id-P8G" secondAttribute="leading" constant="41" id="59n-38-f2V"/>
                             <constraint firstItem="gbF-Id-P8G" firstAttribute="trailing" secondItem="FsM-Vo-3do" secondAttribute="trailing" constant="41" id="5gM-RZ-Rgs"/>
+                            <constraint firstItem="gbF-Id-P8G" firstAttribute="trailing" secondItem="Ua2-14-PfU" secondAttribute="trailing" constant="28" id="6W2-Ci-jlv"/>
                             <constraint firstItem="P6z-df-RIe" firstAttribute="top" secondItem="ALR-tK-XjW" secondAttribute="bottom" constant="35" id="G2E-yd-5eK"/>
                             <constraint firstItem="gbF-Id-P8G" firstAttribute="trailing" secondItem="qiT-Wz-CT2" secondAttribute="trailing" constant="125" id="ORq-go-Vuy"/>
                             <constraint firstItem="gbF-Id-P8G" firstAttribute="trailing" secondItem="P6z-df-RIe" secondAttribute="trailing" constant="20" id="QNd-Rs-QnX"/>
+                            <constraint firstItem="FsM-Vo-3do" firstAttribute="top" secondItem="Ua2-14-PfU" secondAttribute="bottom" constant="120" id="Swu-1M-h4Z"/>
                             <constraint firstItem="qiT-Wz-CT2" firstAttribute="top" secondItem="P6z-df-RIe" secondAttribute="bottom" constant="38" id="VbH-Qd-m3Q"/>
                             <constraint firstItem="gbF-Id-P8G" firstAttribute="trailing" secondItem="ALR-tK-XjW" secondAttribute="trailing" constant="20" id="ZwD-so-YDq"/>
+                            <constraint firstItem="Ua2-14-PfU" firstAttribute="top" secondItem="ALR-tK-XjW" secondAttribute="bottom" constant="43" id="cDm-aM-KQJ"/>
                             <constraint firstItem="ALR-tK-XjW" firstAttribute="leading" secondItem="464-fH-hfo" secondAttribute="trailing" constant="-36" id="cGS-cm-Ln7"/>
                             <constraint firstItem="ALR-tK-XjW" firstAttribute="trailing" secondItem="P6z-df-RIe" secondAttribute="trailing" id="dBA-Z5-bBa"/>
                             <constraint firstItem="di5-dh-icH" firstAttribute="top" secondItem="464-fH-hfo" secondAttribute="bottom" constant="35" id="eBt-CF-fue"/>
@@ -526,6 +541,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="ALR-tK-XjW" id="6UM-wm-aQ6"/>
                         <outlet property="passwordTextField" destination="P6z-df-RIe" id="5Ta-H4-Uf0"/>
+                        <outlet property="togglePasswordButton" destination="Ua2-14-PfU" id="bn3-HH-oLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rD7-s7-WDc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -766,27 +782,28 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="GaP-5f-Jxi"/>
-        <segue reference="DJE-Od-BX1"/>
+        <segue reference="yxQ-gB-RKc"/>
         <segue reference="KCb-Ft-n4e"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="eye.fill" catalog="system" width="128" height="80"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
-            <color red="0.46274509803921571" green="0.46274509803921571" blue="0.50196078431372548" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -17,6 +17,7 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        tableView.backgroundColor = .black
         
         tableView.reloadData()
         setupTableView()
@@ -30,8 +31,6 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
         
         // Register the cell class
         tableView.register(EventTableViewCell.self, forCellReuseIdentifier: "EventCell")
-        
-        tableView.backgroundColor = .lightGray
         
         // Set up Auto Layout
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -120,20 +119,44 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
     
     private func scheduleNotifications(for eventData: [String: Any], startTime: Date, userId: String) {
             let title = eventData["title"] as? String ?? "Event Reminder"
-            let body = "Don't forget: The event is starting soon!"
+            let body = "Don't forget: The event is starting at \(startTime)!"
 
             // Schedule notifications
             let oneHourBefore = startTime.addingTimeInterval(-3600) // 1 hour before
             let twentyFourHoursBefore = startTime.addingTimeInterval(-86400) // 24 hours before
 
-        if oneHourBefore > Date() {
-            NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: oneHourBefore, userId: userId)
+            if oneHourBefore > Date() {
+                //schedule a reminder
+                NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: oneHourBefore, userId: userId)
+                //save reminders to firebase
+                sendNotification(to: userId, title: title, body: body)
+            }
+            
+            if twentyFourHoursBefore > Date() {
+                //schedule a reminder
+                NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: twentyFourHoursBefore, userId: userId)
+                //save reminders to firebase
+                sendNotification(to: userId, title: title, body: body)
+            }
         }
+    
+    // MARK: - SAVE Reminders
+    
+    private func sendNotification(to userId: String, title: String, body: String) {
+        let notificationData: [String: Any] = [
+            "title": title,
+            "body": body,
+            "timestamp": Timestamp(date: Date())
+        ]
         
-        if twentyFourHoursBefore > Date() {
-            NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: twentyFourHoursBefore, userId: userId)
+        Firestore.firestore().collection("notifications").document(userId).collection("userNotifications").addDocument(data: notificationData) { error in
+            if let error = error {
+                print("Error sending notification: \(error.localizedDescription)")
+            } else {
+                print("Notification sent successfully to user: \(userId)")
+            }
         }
-        }
+    }
     
     // MARK: - TableView DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -163,7 +186,7 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
             register(eventId: eventId)
 
             // This alert should be shown only if registration was successful
-            showAlert(message: "You have registered for the event!")
+            //showAlert(message: "You have registered for the event!")
     }
     
     private func showAlert(message: String) {
