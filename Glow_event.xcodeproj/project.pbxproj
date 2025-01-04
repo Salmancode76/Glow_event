@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		BB47DF392D24D100007D82AB /* OrganizerViewHighlight.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */; };
 		BB47DF3B2D24D9C3007D82AB /* HighlightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */; };
-		BB47DF3D2D24F6F5007D82AB /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */; };
-		BB47DF3F2D24FA71007D82AB /* PhotosClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */; };
+		BB4C39702D296F9400160BB9 /* PhotosClassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C396F2D296F9400160BB9 /* PhotosClassViewController.swift */; };
+		BB4C39722D29708400160BB9 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C39712D29708400160BB9 /* PhotoCell.swift */; };
+		BB4C39742D29712900160BB9 /* Event Organizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C39732D29712900160BB9 /* Event Organizer.swift */; };
+		BB4C39762D29716B00160BB9 /* EOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C39752D29716B00160BB9 /* EOLoginViewController.swift */; };
 		BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */; };
-		BB95F5062D2571FC00333F32 /* OrganizerrPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */; };
 		BB9EECAB2D1DCFBB00F2A19C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */; };
 		BB9EECAD2D1DD5E800F2A19C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAC2D1DD5E800F2A19C /* FirebaseAnalytics */; };
 		BB9EECAF2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BB9EECAE2D1DD5E800F2A19C /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -64,10 +65,11 @@
 /* Begin PBXFileReference section */
 		BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OrganizerViewHighlight.storyboard; sourceTree = "<group>"; };
 		BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightList.swift; sourceTree = "<group>"; };
-		BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
-		BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
+		BB4C396F2D296F9400160BB9 /* PhotosClassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosClassViewController.swift; sourceTree = "<group>"; };
+		BB4C39712D29708400160BB9 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		BB4C39732D29712900160BB9 /* Event Organizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event Organizer.swift"; sourceTree = "<group>"; };
+		BB4C39752D29716B00160BB9 /* EOLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOLoginViewController.swift; sourceTree = "<group>"; };
 		BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendHighlights.swift; sourceTree = "<group>"; };
-		BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrganizerrPromptViewController.swift; sourceTree = "<group>"; };
 		BB9EECA92D1DCDB400F2A19C /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBAE3A052D2624CF001FFFB0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -141,9 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */,
-				BB47DF3C2D24F6F5007D82AB /* PhotoCell.swift */,
 				BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */,
-				BB47DF3E2D24FA71007D82AB /* PhotosClassViewController.swift */,
 				BBFE270D2D1E459400FAB871 /* Cloudinary.swift */,
 				BB9EECAA2D1DCFBB00F2A19C /* GoogleService-Info.plist */,
 				BB5D4C9A2D2094A100953AD9 /* SendHighlights.swift */,
@@ -155,12 +155,15 @@
 				D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */,
 				C34438632D01E600000A4D52 /* highlights.storyboard */,
 				BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */,
-				BB95F5052D2571FC00333F32 /* OrganizerrPromptViewController.swift */,
 				BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */,
 				BBB191AC2D0851FF007E8845 /* UserHomeScrreen.storyboard */,
 				BBF2E7952D27A13300661103 /* InterestViewController.swift */,
 				BBAE3A072D262750001FFFB0 /* EventTableViewCell.swift */,
 				BBAE3A052D2624CF001FFFB0 /* Event.swift */,
+				BB4C396F2D296F9400160BB9 /* PhotosClassViewController.swift */,
+				BB4C39732D29712900160BB9 /* Event Organizer.swift */,
+				BB4C39752D29716B00160BB9 /* EOLoginViewController.swift */,
+				BB4C39712D29708400160BB9 /* PhotoCell.swift */,
 				BBF2E7912D275D2400661103 /* UserHome.swift */,
 				BBF2E7932D2766E100661103 /* ImageSwift.swift */,
 			);
@@ -278,20 +281,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4C39722D29708400160BB9 /* PhotoCell.swift in Sources */,
 				BBAE3A082D262750001FFFB0 /* EventTableViewCell.swift in Sources */,
-				BB47DF3D2D24F6F5007D82AB /* PhotoCell.swift in Sources */,
+				BB4C39762D29716B00160BB9 /* EOLoginViewController.swift in Sources */,
 				BBAE3A062D2624CF001FFFB0 /* Event.swift in Sources */,
 				BBF2E7902D275A7B00661103 /* Firebase.swift in Sources */,
 				BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */,
 				BBFE270E2D1E459400FAB871 /* Cloudinary.swift in Sources */,
+				BB4C39742D29712900160BB9 /* Event Organizer.swift in Sources */,
 				D5BB855B2CF45A9C001082C0 /* ViewController.swift in Sources */,
-				BB47DF3F2D24FA71007D82AB /* PhotosClassViewController.swift in Sources */,
 				D5BB85592CF45A9C001082C0 /* SceneDelegate.swift in Sources */,
 				BBF2E7922D275D2400661103 /* UserHome.swift in Sources */,
+				BB4C39702D296F9400160BB9 /* PhotosClassViewController.swift in Sources */,
 				BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */,
 				BB47DF3B2D24D9C3007D82AB /* HighlightList.swift in Sources */,
 				BBF2E7962D27A13300661103 /* InterestViewController.swift in Sources */,
-				BB95F5062D2571FC00333F32 /* OrganizerrPromptViewController.swift in Sources */,
 				BBF2E7942D2766E100661103 /* ImageSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -83,40 +83,45 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     func fetchEvents() {
         
         let ref = Database.database().reference().child("events")
-               ref.observeSingleEvent(of: .value) { snapshot in
-                   var filteredEvents: [Event] = []
+            ref.observeSingleEvent(of: .value) { snapshot in
+                var fetchedEvents: [Event] = []
 
-                   if snapshot.childrenCount == 0 {
-                       print("No data available in 'events' node")
-                       self.events = []
-                       self.tableView.reloadData()
-                       return
+                // Check if the snapshot contains children
+                guard snapshot.exists(), snapshot.childrenCount > 0 else {
+                    print("No data available in 'events' node")
+                    self.events = []
+                    self.tableView.reloadData()
+                    return
                    }
 
                    // Iterate over each child in the snapshot
-                   for child in snapshot.children {
-                       if let childSnapshot = child as? DataSnapshot,
-                          let eventData = childSnapshot.value as? [String: Any],
-                          let eventName = eventData["EventName"] as? String,
-                          let location = eventData["venue_options"] as? String,
-                          let imageURL = eventData["EventImg"] as? String,
-                          let category = eventData["category"] as? String {
-                           
-                           // Filter events by selected categories
-                           if self.selectedCategories.contains(category) {
-                               // Create an Event object with the data
-                               let event = Event(name: eventName, location: location, imageURL: imageURL, category: category)
-                               filteredEvents.append(event)
-                           }
-                       }
-                   }
-                
-                
-                
-                
-                self.events = filteredEvents
-                self.tableView.reloadData() // Refresh table view to display events
-            }
+                for child in snapshot.children {
+                            if let childSnapshot = child as? DataSnapshot,
+                               let eventData = childSnapshot.value as? [String: Any] {
+                                
+                                // Extract event details
+                                let eventName = eventData["EventName"] as? String ?? "No Name"
+                                let location = eventData["venue_options"] as? String ?? "No Location"
+                                let imageURL = eventData["EventImg"] as? String ?? ""
+                                let category = eventData["category"] as? String ?? "No Category"
+                                
+                                // Print debug information
+                                print("Fetched Event: \(eventName), \(location)")
+
+                                // Filter events by selected categories
+                                if self.selectedCategories.isEmpty || self.selectedCategories.contains(category) {
+                                    let event = Event(name: eventName, location: location, imageURL: imageURL, category: category)
+                                    fetchedEvents.append(event)
+                                }
+                            }
+                        }
+
+                        // Update the events array and refresh the table view
+                        self.events = fetchedEvents
+                        print("Total Events Fetched: \(self.events.count)")
+                        self.tableView.reloadData()
+                    }
+                }
         }
         
         // Do any additional setup after loading the view.
@@ -133,4 +138,4 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
          }
          */
         
-    }
+    
