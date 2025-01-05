@@ -118,16 +118,16 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - Schedule Notifications
     
     private func scheduleNotifications(for eventData: [String: Any], startTime: Date, userId: String) {
-            let title = eventData["title"] as? String ?? "Event Reminder"
+            let title = "Glow Event"
             var body = "Don't forget: The event is starting soon!"
-
+            let eventTitle = eventData["title"] as? String ?? "Event Reminder"
             // Schedule notifications
             let oneHourBefore = startTime.addingTimeInterval(-3600) // 1 hour before
             let twentyFourHoursBefore = startTime.addingTimeInterval(-86400) // 24 hours before
 
             if oneHourBefore > Date() {
                 //schedule a reminder
-                body = "Don't forget: The event is starting after 1 hour"
+                body = "Don't forget: The event \(eventTitle) is starting after 1 hour"
                 NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: oneHourBefore, userId: userId)
                 //save reminders to firebase
                 sendNotification(to: userId, title: title, body: body)
@@ -135,7 +135,7 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
             
             if twentyFourHoursBefore > Date() {
                 //schedule a reminder
-                body = "Don't forget: The event is starting after 24 hours"
+                body = "Don't forget: The event \(eventTitle) is starting after 24 hours"
                 NotificationManager.shared.scheduleLocalNotification(title: title, body: body, date: twentyFourHoursBefore, userId: userId)
                 //save reminders to firebase
                 sendNotification(to: userId, title: title, body: body)
