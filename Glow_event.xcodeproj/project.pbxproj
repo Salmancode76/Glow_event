@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,7 +66,6 @@
 		BDDFEA1B2D260839003689FF /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */; };
 		BDDFEA1D2D26083F003689FF /* AdminEditEventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */; };
 		BDDFEA1F2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */; };
-		BDDFEA232D260858003689FF /* AdminHomeOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */; };
 		BDDFEA252D260861003689FF /* AdminEventDetailOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */; };
 		BDDFEA272D260868003689FF /* AdminFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */; };
 		BDDFEA292D26086E003689FF /* AdminSearchEventOrgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */; };
@@ -106,6 +105,13 @@
 		D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5BB85612CF45A9E001082C0 /* LaunchScreen.storyboard */; };
 		D5EE64F82D003E0400AE45A4 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = D5EE64F72D003E0400AE45A4 /* Cloudinary */; };
 		D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */; };
+		EE0A009D2D29919F0068E9A5 /* ahmed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A009C2D29919F0068E9A5 /* ahmed.storyboard */; };
+		EE0A009F2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A009E2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift */; };
+		EE0A00A32D29A0210068E9A5 /* Ahmed_EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */; };
+		EE4B50572D2AB44600683745 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B50562D2AB44300683745 /* Review.swift */; };
+		EE4B50592D2AC4FB00683745 /* Ahmed_CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */; };
+		EE4B505B2D2ACBE800683745 /* Ahmed_PayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */; };
+		EE4B505D2D2ADB8A00683745 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B505C2D2ADB8800683745 /* Ticket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -169,7 +175,6 @@
 		BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEditEventTableViewController.swift; sourceTree = "<group>"; };
 		BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventDetailOrgTableViewCell.swift; sourceTree = "<group>"; };
-		BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminHomeOrgViewController.swift; path = "../../Mine full/Glow_event/Glow_event/AdminHomeOrgViewController.swift"; sourceTree = "<group>"; };
 		BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminEventDetailOrgViewController.swift; sourceTree = "<group>"; };
 		BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminFilterTableViewController.swift; sourceTree = "<group>"; };
 		BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminSearchEventOrgViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +191,13 @@
 		D5BB85622CF45A9E001082C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5BB85642CF45A9E001082C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5F10C9D2CFF4464003F5A5C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE0A009C2D29919F0068E9A5 /* ahmed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ahmed.storyboard; sourceTree = "<group>"; };
+		EE0A009E2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_EventsTableViewController.swift; sourceTree = "<group>"; };
+		EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_EventViewController.swift; sourceTree = "<group>"; };
+		EE4B50562D2AB44300683745 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_CartViewController.swift; sourceTree = "<group>"; };
+		EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_PayTableViewController.swift; sourceTree = "<group>"; };
+		EE4B505C2D2ADB8800683745 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,7 +317,6 @@
 				BDDFEA282D26086E003689FF /* AdminSearchEventOrgViewController.swift */,
 				BDDFEA262D260868003689FF /* AdminFilterTableViewController.swift */,
 				BDDFEA242D260861003689FF /* AdminEventDetailOrgViewController.swift */,
-				BDDFEA222D260858003689FF /* AdminHomeOrgViewController.swift */,
 				BDDFEA1E2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift */,
 				BDDFEA1C2D26083F003689FF /* AdminEditEventTableViewController.swift */,
 				BDDFEA1A2D260839003689FF /* UserDetailViewController.swift */,
@@ -340,6 +351,8 @@
 		D51AF41C2D09A7A400002CD4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE4B505C2D2ADB8800683745 /* Ticket.swift */,
+				EE4B50562D2AB44300683745 /* Review.swift */,
 				BDDFEA2E2D260890003689FF /* Admin.swift */,
 				BDDFEA2C2D26088B003689FF /* User.swift */,
 				BBD5EDBB2D25C6A500EAB60C /* Cloudinary.swift */,
@@ -368,6 +381,7 @@
 		D5BB85552CF45A9C001082C0 /* Glow_event */ = {
 			isa = PBXGroup;
 			children = (
+				EE0A009B2D29917B0068E9A5 /* Ahmed_Work */,
 				BDDFE9FD2D2607B2003689FF /* zainab_features */,
 				D51AF41C2D09A7A400002CD4 /* Models */,
 				BBD5EDAA2D25C48300EAB60C /* Salman_featurrres */,
@@ -385,6 +399,18 @@
 				BDDFE9FB2D26071B003689FF /* zainab.storyboard */,
 			);
 			path = Glow_event;
+			sourceTree = "<group>";
+		};
+		EE0A009B2D29917B0068E9A5 /* Ahmed_Work */ = {
+			isa = PBXGroup;
+			children = (
+				EE0A009C2D29919F0068E9A5 /* ahmed.storyboard */,
+				EE0A009E2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift */,
+				EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */,
+				EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */,
+				EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */,
+			);
+			path = Ahmed_Work;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +476,7 @@
 				};
 			};
 			buildConfigurationList = D5BB854E2CF45A9C001082C0 /* Build configuration list for PBXProject "Glow_event" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -480,6 +506,7 @@
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */,
 				D5BB85602CF45A9E001082C0 /* Assets.xcassets in Resources */,
+				EE0A009D2D29919F0068E9A5 /* ahmed.storyboard in Resources */,
 				D0EB8A022D0986ED00D78EC9 /* highlights.storyboard in Resources */,
 				D5F10C9E2CFF4464003F5A5C /* GoogleService-Info.plist in Resources */,
 				BDDFE9FC2D26071B003689FF /* zainab.storyboard in Resources */,
@@ -498,6 +525,7 @@
 				BBD5EDB32D25C60400EAB60C /* HomeOrgViewController.swift in Sources */,
 				6CF9DBD02D25F80B00C27F91 /* CreateEventTableViewController 2.swift in Sources */,
 				6CF9DBC22D25F44C00C27F91 /* CategoryCell.swift in Sources */,
+				EE0A009F2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift in Sources */,
 				6CF9DBA52D25F3A800C27F91 /* EditCategoryVC.swift in Sources */,
 				6CF9DBBF2D25F42800C27F91 /* TabBarVC.swift in Sources */,
 				BDDFEA0B2D26080B003689FF /* AdminSettingsTableViewController.swift in Sources */,
@@ -516,16 +544,18 @@
 				BBD5EDB62D25C60400EAB60C /* EventDetailOrgViewController.swift in Sources */,
 				BDDFEA1F2D260845003689FF /* AdminEventDetailOrgTableViewCell.swift in Sources */,
 				BDDFEA132D260823003689FF /* EditUserViewController.swift in Sources */,
-				BDDFEA232D260858003689FF /* AdminHomeOrgViewController.swift in Sources */,
 				BDDFEA032D2607F4003689FF /* UserProfileViewController.swift in Sources */,
 				6CF9DB9F2D25F39D00C27F91 /* CategoriesListVC.swift in Sources */,
 				BDDFEA072D2607FF003689FF /* UserChangePasswordViewController.swift in Sources */,
 				6CF9DBA72D25F3AC00C27F91 /* Extension.swift in Sources */,
 				BDDFEA1D2D26083F003689FF /* AdminEditEventTableViewController.swift in Sources */,
+				EE0A00A32D29A0210068E9A5 /* Ahmed_EventViewController.swift in Sources */,
+				EE4B50592D2AC4FB00683745 /* Ahmed_CartViewController.swift in Sources */,
 				BDDFEA172D26082E003689FF /* UserTableViewCell.swift in Sources */,
 				6CF9DBA32D25F3A500C27F91 /* DropdownTextField.swift in Sources */,
 				6CF9DBAF2D25F3C100C27F91 /* OrganizerProfileVC.swift in Sources */,
 				BBD5EDBE2D25C6A700EAB60C /* Cloudinary.swift in Sources */,
+				EE4B505B2D2ACBE800683745 /* Ahmed_PayTableViewController.swift in Sources */,
 				BDDFEA2D2D26088B003689FF /* User.swift in Sources */,
 				0F88AAE12D25AFCD006E4C06 /* PhotosClassViewController.swift in Sources */,
 				0F88AAE22D25AFCD006E4C06 /* HiglightList.swift in Sources */,
@@ -539,9 +569,11 @@
 				BDDFEA152D260828003689FF /* AddUserTestViewController.swift in Sources */,
 				0F88AAE42D25AFCD006E4C06 /* PhotoCell.swift in Sources */,
 				BDDFEA292D26086E003689FF /* AdminSearchEventOrgViewController.swift in Sources */,
+				EE4B505D2D2ADB8A00683745 /* Ticket.swift in Sources */,
 				0F88AAE52D25AFCD006E4C06 /* Cloudinary1.swift in Sources */,
 				6CF9DBAB2D25F3B900C27F91 /* HomeTabVC.swift in Sources */,
 				0F88AAE62D25AFCD006E4C06 /* OrganizerrPromptViewController.swift in Sources */,
+				EE4B50572D2AB44600683745 /* Review.swift in Sources */,
 				6CF9DB9B2D25F39300C27F91 /* AddOrganizerVC.swift in Sources */,
 				BBD5EDB82D25C60400EAB60C /* FilterTableViewController.swift in Sources */,
 				BDDFEA252D260861003689FF /* AdminEventDetailOrgViewController.swift in Sources */,

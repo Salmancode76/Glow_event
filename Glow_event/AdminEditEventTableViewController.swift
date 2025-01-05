@@ -216,9 +216,9 @@ class AdminEditEventTableViewController: UITableViewController, UIImagePickerCon
         
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             if let navigationController = self.navigationController {
-                if let homeViewController = navigationController.viewControllers.first(where: { $0 is AdminHomeOrgViewController }) {
-                    navigationController.popToViewController(homeViewController, animated: true)
-                }
+//                if let homeViewController = navigationController.viewControllers.first(where: { $0 is AdminHomeOrgViewController }) {
+//                    navigationController.popToViewController(homeViewController, animated: true)
+//                }
             }
         }
         

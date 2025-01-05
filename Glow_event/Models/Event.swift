@@ -52,7 +52,7 @@ import Foundation
 import Firebase
 import FirebaseDatabase
 
-struct Event {
+public struct Event {
     var id: String
     var EventName: String
     var venu_options: String
