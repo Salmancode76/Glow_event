@@ -1,7 +1,15 @@
-## Brief
-GLOW EVENTS
+# GLOW EVENTS
 
 Our project involves the development of an IOS Application named "Glow Events" utilizing the Swift Programming language. This Application is exclusively designed for Apple devices, ensuring a seamless experience for users within Apple Ecosystem. The app aims to provide a user-friendly platform that simplifies the booking process for varrious events, allowing users to easily navigate and access the services. Moreovere, Event Orrganizers can also have access to the app such as creating and manipulating their events. Lastly, Admins who built the application can monitor and manipulate the whole application mainly considering the events and users.
+
+
+## Group Members
+
+- **Layla Marhoon - 202200394**
+- **Zainab Abdulhussain - 202201685**
+- **Sharmin Ali - 202203334**
+- **Ahmed Awadhi - 202201533**
+- **Salman Khamis - 202201782**
 
 ## Features 
 
@@ -61,8 +69,18 @@ Thuraya Alsatrawi:
 | User            | fatima@gmail.com               | fatima23      |
 --------------------------------------------------------------------
 
+## Libraries, Packages, External Code Implementation
+
+- **UIKit**
+- **Firebase**
+- **UNUserNotificationCenterDelegate**
+
+## Simulators
+
+- **iPhone 15 Pro**
+
 ## Screenshots
-- Layla Marhoon 
+- **Layla Marhoon** 
 ###### Launch Page
 <img src="images/LaunchScreen.png" alt="Launch Page" width="250">
 
