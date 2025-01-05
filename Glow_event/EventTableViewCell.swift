@@ -31,6 +31,7 @@ class EventTableViewCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         contentView.addSubview(categoryLabel)
         setupConstraints()
+        contentView.backgroundColor = UIColor.systemGray4
     }
     
     required init?(coder: NSCoder) {
@@ -40,13 +41,13 @@ class EventTableViewCell: UITableViewCell {
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             categoryLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
             categoryLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             categoryLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            categoryLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -12)
         ])
     }
 }

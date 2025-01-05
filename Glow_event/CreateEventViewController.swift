@@ -12,6 +12,12 @@ class CreateEventViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Event Title"
         textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor.systemGray6
+        textField.textColor = UIColor.label
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Event Title",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
+        )
         return textField
     }()
     
@@ -19,13 +25,20 @@ class CreateEventViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder = "Event Category"
         textField.borderStyle = .roundedRect
+        textField.backgroundColor = UIColor.systemGray6
+        textField.textColor = UIColor.label
+        textField.attributedPlaceholder = NSAttributedString(
+            string: "Event Category",
+            attributes: [NSAttributedString.Key.foregroundColor: UIColor.secondaryLabel]
+        )
         return textField
     }()
     
     private let startTimePicker: UIDatePicker = {
         let picker = UIDatePicker()
         picker.datePickerMode = .dateAndTime
-        picker.backgroundColor = .white
+        picker.backgroundColor = UIColor.systemGray6
+        picker.setValue(UIColor.label, forKey: "textColor")
         return picker
     }()
     
