@@ -51,20 +51,29 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mdT-QJ-rVg">
-                                                    <rect key="frame" x="340.66666666666669" y="13" width="20.333333333333314" height="31"/>
+                                                    <rect key="frame" x="266.66666666666669" y="13" width="94.333333333333314" height="31"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jw0-ei-2Wo">
+                                                    <rect key="frame" x="159" y="0.0" width="70.333333333333314" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="wuE-pd-DlQ" firstAttribute="leading" secondItem="MVn-cW-fh4" secondAttribute="trailing" constant="8" symbolic="YES" id="18I-oo-DOg"/>
                                                 <constraint firstAttribute="trailing" secondItem="MVn-cW-fh4" secondAttribute="trailing" constant="214" id="5aP-dy-dHU"/>
                                                 <constraint firstItem="X6P-fS-x0x" firstAttribute="top" secondItem="mdT-QJ-rVg" secondAttribute="bottom" constant="28" id="69J-iY-d0b"/>
+                                                <constraint firstItem="mdT-QJ-rVg" firstAttribute="leading" secondItem="jw0-ei-2Wo" secondAttribute="trailing" constant="37.329999999999998" id="6UG-rZ-51v"/>
                                                 <constraint firstItem="X6P-fS-x0x" firstAttribute="leading" secondItem="MVn-cW-fh4" secondAttribute="trailing" constant="12" id="AYh-DO-278"/>
                                                 <constraint firstItem="MVn-cW-fh4" firstAttribute="centerY" secondItem="V5J-v8-vJM" secondAttribute="centerY" id="DlS-mJ-cfL"/>
+                                                <constraint firstItem="jw0-ei-2Wo" firstAttribute="leading" secondItem="MVn-cW-fh4" secondAttribute="trailing" constant="12" id="H4W-zc-NmF"/>
                                                 <constraint firstItem="wuE-pd-DlQ" firstAttribute="top" secondItem="V5J-v8-vJM" secondAttribute="topMargin" constant="18" id="HOD-Qg-eQz"/>
                                                 <constraint firstItem="MVn-cW-fh4" firstAttribute="top" secondItem="V5J-v8-vJM" secondAttribute="topMargin" constant="-11" id="LWl-Qo-bm4"/>
                                                 <constraint firstItem="X6P-fS-x0x" firstAttribute="bottom" secondItem="V5J-v8-vJM" secondAttribute="bottomMargin" id="OcN-dt-5pb"/>
                                                 <constraint firstAttribute="trailing" secondItem="mdT-QJ-rVg" secondAttribute="trailing" id="RuF-8K-bkJ"/>
+                                                <constraint firstItem="jw0-ei-2Wo" firstAttribute="top" secondItem="MVn-cW-fh4" secondAttribute="top" id="Twh-fe-vsJ"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="X6P-fS-x0x" secondAttribute="trailing" constant="19" id="VIT-YM-mPV"/>
                                                 <constraint firstItem="MVn-cW-fh4" firstAttribute="leading" secondItem="V5J-v8-vJM" secondAttribute="leading" id="lf5-g2-BDM"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="wuE-pd-DlQ" secondAttribute="trailing" constant="19" id="m4S-db-0il"/>
@@ -73,6 +82,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="eventCategory" destination="jw0-ei-2Wo" id="KLg-Nm-CcW"/>
                                             <outlet property="eventImage" destination="MVn-cW-fh4" id="r2u-0a-ITS"/>
                                             <outlet property="eventLocation" destination="X6P-fS-x0x" id="8eq-Ug-ii6"/>
                                             <outlet property="eventName" destination="wuE-pd-DlQ" id="a8V-p9-9Dq"/>

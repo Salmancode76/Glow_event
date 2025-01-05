@@ -45,6 +45,7 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         // Set the event details
         cell.eventName.text = event.name
         cell.eventLocation.text = event.location
+        cell.eventCategory.text = event.category
         
         if let url = URL(string: event.imageURL) {
             cell.eventImage.loadImage(from: url)
@@ -103,7 +104,7 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
                                 let eventName = eventData["EventName"] as? String ?? "No Name"
                                 let location = eventData["venue_options"] as? String ?? "No Location"
                                 let imageURL = eventData["EventImg"] as? String ?? ""
-                                let category = eventData["category"] as? String ?? "No Category"
+                                let category = eventData["EventCategory"] as? String ?? "No Category"
                                 
                                 // Print debug information
                                 print("Fetched Event: \(eventName), \(location)")
