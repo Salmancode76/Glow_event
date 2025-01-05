@@ -73,10 +73,10 @@ https://github.com/Salmancode76/Glow_event.git
 <img src="images/Notification.png" alt="Notification Page" width="250">
 
 ###### Lock Screen Notification
-<img src="images/LockScreenNotification.png" alt="Notifications" width="250">
+<img src="images/LockScreenNotification1.png" alt="Notifications" width="250">
 
 ###### Local Notification
-<img src="images/LocalNotification.png" alt="Local Notification" width="250">
+<img src="images/LocalNotification1.png" alt="Local Notification" width="250">
 
 ###### Reminders Notification
 <img src="images/Reminders1.png" alt="Reminder Notification" width="250">
