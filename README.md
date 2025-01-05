@@ -130,5 +130,30 @@ https://github.com/Salmancode76/Glow_event.git
 ###### Admin View User Details
 <img src="images/UserDetail.png" alt="User Details" width="250">
 
-###### Admin Edit User Details
-<img src="images/AdminEditUser.png" alt="Admin Edit User Details" width="250">
+
+- **Sharmin Ali** 
+- **User Screens**
+###### User Send Higlight
+<img src="images/User_Send_Highlights.png" alt="User Send Highlight" width="250">
+
+###### User Select Organizer
+<img src="images/pickOrganizer.png" alt="User Select Organizer" width="250">
+
+###### User Upload Photo
+<img src="images/choosePhoto.png" alt="User Upload Photo" width="250">
+
+###### User Successfull message
+<img src="images/UserChangePassword.png" alt="User Successfull message" width="250">
+
+###### User Home Screen
+<img src="images/UserHome.png" alt="User Home Screen" width="250">
+
+
+- **Event Organizer**
+###### Event Organizer login
+<img src="images/EOlogin.png" alt="Event Organizer login" width="250">
+
+###### Event Organizer Delete Highlight
+<img src="images/eoDelete.png" alt="Event Organizer Delete Highlight" width="250">
+
+
