@@ -24,9 +24,6 @@
 		BD517A092D2A71420079A6C0 /* EventOrgProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD517A082D2A71420079A6C0 /* EventOrgProfileViewController.swift */; };
 		BD6239752D1971E700279271 /* AdminChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */; };
 		BD7B47CD2D26155800D40767 /* EventOrganizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B47CC2D26155800D40767 /* EventOrganizer.swift */; };
-		BD7B47CF2D2620F900D40767 /* EOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B47CE2D2620F900D40767 /* EOLoginViewController.swift */; };
-		BD7B47D12D26214A00D40767 /* EOSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B47D02D26214A00D40767 /* EOSettingsViewController.swift */; };
-		BD7B47D32D2621AC00D40767 /* EOProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7B47D22D2621AC00D40767 /* EOProfileViewController.swift */; };
 		BD8CA7442D1E763100C5965C /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */; };
 		BD8CA7462D1E76BE00C5965C /* ViewUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */; };
 		BD8CA7482D1EE86300C5965C /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */; };
@@ -44,7 +41,6 @@
 		BDDA6DD42D23CAED00F49D1F /* Admin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDA6DD32D23CAED00F49D1F /* Admin.swift */; };
 		BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E952D1A842500D68913 /* AddUserViewController.swift */; };
 		BDDB8E982D1AA0BD00D68913 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */; };
-		BDDB8E9A2D1ADF0E00D68913 /* AddUserTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */; };
 		D5A8C8702CF5FC0E004299BC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C86F2CF5FC0E004299BC /* FirebaseAnalytics */; };
 		D5A8C8722CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8712CF5FC0E004299BC /* FirebaseAnalyticsOnDeviceConversion */; };
 		D5A8C8742CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D5A8C8732CF5FC0E004299BC /* FirebaseAnalyticsWithoutAdIdSupport */; };
@@ -95,9 +91,6 @@
 		BD517A082D2A71420079A6C0 /* EventOrgProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrgProfileViewController.swift; sourceTree = "<group>"; };
 		BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminChangePasswordViewController.swift; sourceTree = "<group>"; };
 		BD7B47CC2D26155800D40767 /* EventOrganizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventOrganizer.swift; sourceTree = "<group>"; };
-		BD7B47CE2D2620F900D40767 /* EOLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOLoginViewController.swift; sourceTree = "<group>"; };
-		BD7B47D02D26214A00D40767 /* EOSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOSettingsViewController.swift; sourceTree = "<group>"; };
-		BD7B47D22D2621AC00D40767 /* EOProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOProfileViewController.swift; sourceTree = "<group>"; };
 		BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUsersViewController.swift; sourceTree = "<group>"; };
 		BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +107,6 @@
 		BDDA6DD32D23CAED00F49D1F /* Admin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Admin.swift; sourceTree = "<group>"; };
 		BDDB8E952D1A842500D68913 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
-		BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserTestViewController.swift; sourceTree = "<group>"; };
 		D5BB85532CF45A9C001082C0 /* Glow_event.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glow_event.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5BB85562CF45A9C001082C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5BB85582CF45A9C001082C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,7 +206,6 @@
 				BD6239742D1971E700279271 /* AdminChangePasswordViewController.swift */,
 				BDDB8E952D1A842500D68913 /* AddUserViewController.swift */,
 				BDDB8E972D1AA0BD00D68913 /* EditUserViewController.swift */,
-				BDDB8E992D1ADF0E00D68913 /* AddUserTestViewController.swift */,
 				BD8CA7432D1E763100C5965C /* UserTableViewCell.swift */,
 				BD8CA7452D1E76BE00C5965C /* ViewUsersViewController.swift */,
 				BD8CA7472D1EE86300C5965C /* UserDetailViewController.swift */,
@@ -226,9 +217,6 @@
 				B33469372D25630100FF4267 /* AdminFilterTableViewController.swift */,
 				B33469382D25630100FF4267 /* AdminSearchEventOrgViewController.swift */,
 				B33469392D25630100FF4267 /* EventOrgTableViewCell.swift */,
-				BD7B47CE2D2620F900D40767 /* EOLoginViewController.swift */,
-				BD7B47D02D26214A00D40767 /* EOSettingsViewController.swift */,
-				BD7B47D22D2621AC00D40767 /* EOProfileViewController.swift */,
 				BD517A042D2A69AC0079A6C0 /* EventOrgLoginViewController.swift */,
 				BD517A062D2A6C030079A6C0 /* EventOrgSettingsTableViewController.swift */,
 				BD517A082D2A71420079A6C0 /* EventOrgProfileViewController.swift */,
@@ -343,9 +331,7 @@
 			files = (
 				BDDB8E962D1A842500D68913 /* AddUserViewController.swift in Sources */,
 				BD9180602D15C6120051323A /* UserEditProfileViewController.swift in Sources */,
-				BD7B47CF2D2620F900D40767 /* EOLoginViewController.swift in Sources */,
 				BDA48DFD2D1445E200016A51 /* UserLoginViewController.swift in Sources */,
-				BD7B47D12D26214A00D40767 /* EOSettingsViewController.swift in Sources */,
 				BDDA6DD42D23CAED00F49D1F /* Admin.swift in Sources */,
 				BDA48DFF2D144BF300016A51 /* UserProfileViewController.swift in Sources */,
 				BD517A092D2A71420079A6C0 /* EventOrgProfileViewController.swift in Sources */,
@@ -356,10 +342,8 @@
 				BDA48DEC2D142AA900016A51 /* Cloudinary.swift in Sources */,
 				BDA48DF92D14395900016A51 /* User.swift in Sources */,
 				BD8CA7482D1EE86300C5965C /* UserDetailViewController.swift in Sources */,
-				BDDB8E9A2D1ADF0E00D68913 /* AddUserTestViewController.swift in Sources */,
 				BD517A052D2A69AC0079A6C0 /* EventOrgLoginViewController.swift in Sources */,
 				B334693A2D25630100FF4267 /* AdminEventDetailOrgTableViewCell.swift in Sources */,
-				BD7B47D32D2621AC00D40767 /* EOProfileViewController.swift in Sources */,
 				B334693B2D25630100FF4267 /* AdminEditEventTableViewController.swift in Sources */,
 				B334693C2D25630100FF4267 /* AdminEventDetailOrgViewController.swift in Sources */,
 				B334693D2D25630100FF4267 /* AdminHomeOrgViewController.swift in Sources */,

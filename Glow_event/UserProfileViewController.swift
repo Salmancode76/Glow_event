@@ -131,6 +131,18 @@ class UserProfileViewController: UIViewController {
         profileImageView.layer.borderWidth = 2.0
         profileImageView.layer.borderColor = UIColor.white.cgColor // Optional border for better visuals
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let editProfileVC = segue.destination as? UserEditProfileViewController {
+            editProfileVC.delegate = self
+        }
+    }
+}
+
+extension UserProfileViewController: UserEditProfileDelegate {
+    func didUpdateProfile() {
+        fetchUserData()
+    }
 }
     /*
     // MARK: - Navigation

@@ -135,4 +135,9 @@ class ViewUsersViewController: UIViewController {
                 destinationVC.user = selectedUser
             }
         }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            fetchUsersFromFirebase() 
+        }
     }

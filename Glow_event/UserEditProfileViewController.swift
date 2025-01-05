@@ -13,6 +13,7 @@ class UserEditProfileViewController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var saveButton: UIButton!
     
+    weak var delegate: UserEditProfileDelegate?
     
     // MARK: - Properties
         let genderPicker = UIPickerView()
@@ -164,6 +165,8 @@ class UserEditProfileViewController: UIViewController, UIPickerViewDelegate, UIP
                 self.showAlert(title: "Error", message: error.localizedDescription)
             } else {
                 self.showAlert(title: "Success", message: "Profile updated successfully.")
+                self.delegate?.didUpdateProfile()
+                                self.navigationController?.popViewController(animated: true)
             }
         }
     }
@@ -175,3 +178,7 @@ class UserEditProfileViewController: UIViewController, UIPickerViewDelegate, UIP
             present(alert, animated: true)
         }
     }
+
+protocol UserEditProfileDelegate: AnyObject {
+    func didUpdateProfile()
+}
