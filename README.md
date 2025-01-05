@@ -2,7 +2,7 @@
 
 Our project involves the development of an IOS Application named "Glow Events" utilizing the Swift Programming language. This Application is exclusively designed for Apple devices, ensuring a seamless experience for users within Apple Ecosystem. The app aims to provide a user-friendly platform that simplifies the booking process for varrious events, allowing users to easily navigate and access the services. Moreovere, Event Orrganizers can also have access to the app such as creating and manipulating their events. Lastly, Admins who built the application can monitor and manipulate the whole application mainly considering the events and users.
 
-## Github Link
+## GitHub Link
 
 https://github.com/Salmancode76/Glow_event.git
 
