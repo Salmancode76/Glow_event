@@ -131,4 +131,4 @@ https://github.com/Salmancode76/Glow_event.git
 <img src="images/UserDetail.png" alt="User Details" width="250">
 
 ###### Admin Edit User Details
-<img src="images/AdminEditUserDetails.png" alt="Admin Edit User Details" width="250">
+<img src="images/AdminEditUser.png" alt="Admin Edit User Details" width="250">
