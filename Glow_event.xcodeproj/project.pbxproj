@@ -26,7 +26,6 @@
 		BBF2E7902D275A7B00661103 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E78F2D275A7B00661103 /* Firebase.swift */; };
 		BBF2E7922D275D2400661103 /* UserHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7912D275D2400661103 /* UserHome.swift */; };
 		BBF2E7942D2766E100661103 /* ImageSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7932D2766E100661103 /* ImageSwift.swift */; };
-		BBF2E7962D27A13300661103 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF2E7952D27A13300661103 /* InterestViewController.swift */; };
 		BBF3EDD62D1A142D00B3D0D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */; };
 		BBFE270C2D1E455600FAB871 /* Cloudinary in Frameworks */ = {isa = PBXBuildFile; productRef = BBFE270B2D1E455600FAB871 /* Cloudinary */; };
 		BBFE270E2D1E459400FAB871 /* Cloudinary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE270D2D1E459400FAB871 /* Cloudinary.swift */; };
@@ -78,7 +77,6 @@
 		BBF2E78F2D275A7B00661103 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		BBF2E7912D275D2400661103 /* UserHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHome.swift; sourceTree = "<group>"; };
 		BBF2E7932D2766E100661103 /* ImageSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSwift.swift; sourceTree = "<group>"; };
-		BBF2E7952D27A13300661103 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		BBF3EDD52D1A142D00B3D0D5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBFE270D2D1E459400FAB871 /* Cloudinary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloudinary.swift; sourceTree = "<group>"; };
 		C34438632D01E600000A4D52 /* highlights.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = highlights.storyboard; sourceTree = "<group>"; };
@@ -157,7 +155,6 @@
 				BB47DF382D24D100007D82AB /* OrganizerViewHighlight.storyboard */,
 				BB47DF3A2D24D9C3007D82AB /* HighlightList.swift */,
 				BBB191AC2D0851FF007E8845 /* UserHomeScrreen.storyboard */,
-				BBF2E7952D27A13300661103 /* InterestViewController.swift */,
 				BBAE3A072D262750001FFFB0 /* EventTableViewCell.swift */,
 				BBAE3A052D2624CF001FFFB0 /* Event.swift */,
 				BB4C396F2D296F9400160BB9 /* PhotosClassViewController.swift */,
@@ -295,7 +292,6 @@
 				BB4C39702D296F9400160BB9 /* PhotosClassViewController.swift in Sources */,
 				BB5D4C9B2D2094A100953AD9 /* SendHighlights.swift in Sources */,
 				BB47DF3B2D24D9C3007D82AB /* HighlightList.swift in Sources */,
-				BBF2E7962D27A13300661103 /* InterestViewController.swift in Sources */,
 				BBF2E7942D2766E100661103 /* ImageSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
