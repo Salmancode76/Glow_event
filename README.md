@@ -8,38 +8,39 @@ Our project involves the development of an IOS Application named "Glow Events" u
 - **Layla Marhoon - 202200394**
 - **Zainab Abdulhussain - 202201685**
 - **Sharmin Ali - 202203334**
+- **Thuraya Alsatrawi - 202201823**
 - **Ahmed Awadhi - 202201533**
 - **Salman Khamis - 202201782**
 
 ## Features 
 
-Layla Marhoon: 
+**Layla Marhoon:** 
 
 1. Account and Role Based Features
 2. User Notification
 
-Sharmin Ali: 
+**Sharmin Ali:** 
 
 1. Personalized Event Recommendation
 2. Event Highlights
 
 
-Salman Khamis: 
+**Salman Khamis:** 
 
 1. Organizer Event Browsing and Search
 2. Event Management
 
-Ahmed Awadhi: 
+**Ahmed Awadhi:** 
 
 1. Event Enrollment
 2. Event Details and Reviews
 
-Zainab Abdulhusain: 
+**Zainab Abdulhusain:** 
 
 1. User Profile and Preferences
 2. Content Moderation and Control
 
-Thuraya Alsatrawi: 
+**Thuraya Alsatrawi:** 
 
 1. Event Insights
 2. Administrative Control Panel
