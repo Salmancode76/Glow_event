@@ -1,9 +1,7 @@
-import Firebase
 import FirebaseAuth
-import FirebaseDatabase
 import UIKit
 
-class EOLoginViewController: UIViewController {
+class EventOrgLoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -12,7 +10,6 @@ class EOLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     @IBAction func loginTapped(_ sender: UIButton) {
         guard let email = emailTextField.text, !email.isEmpty,
@@ -43,10 +40,10 @@ class EOLoginViewController: UIViewController {
     }
     
     private func navigateToSettingsScreen() {
-        print("Attempting to navigate to EOSettingsViewController")
+        print("Attempting to navigate to EventOrgSettingsTableViewController")
         
-        if let settingsVC = storyboard?.instantiateViewController(withIdentifier: "EOSettingsViewController") {
-            print("Successfully instantiated EOSettingsViewController")
+        if let settingsVC = storyboard?.instantiateViewController(withIdentifier: "EventOrgSettings") {
+            print("Successfully instantiated EventOrgSettingsTableViewController")
             
             settingsVC.modalPresentationStyle = .fullScreen
             
@@ -67,7 +64,7 @@ class EOLoginViewController: UIViewController {
                 }
             }
         } else {
-            print("Failed to instantiate EOSettingsViewController. Check storyboard ID.")
+            print("Failed to instantiate EventOrgSettingsTableViewController. Check storyboard ID.")
         }
     }
     

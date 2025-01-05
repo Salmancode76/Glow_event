@@ -1,20 +1,20 @@
-import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import UIKit
 
-class EOProfileViewController: UIViewController {
+class EventOrgProfileViewController: UIViewController {
     
-    // UI Outlets
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var headerNameLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Fetch and display event organizer data
         fetchOrganizerData()
         
