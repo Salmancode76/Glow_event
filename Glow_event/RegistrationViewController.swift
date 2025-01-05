@@ -179,16 +179,9 @@ class RegisterationViewController: UIViewController, UITableViewDelegate, UITabl
         let selectedEvent = events[indexPath.row] // Assuming events is an array of Event objects
             let eventId = selectedEvent.id // Access the event ID correctly
 
-        //guard let userId = GlobalUser.shared.getCurrentUserId() else {
-          //      showAlert(message: "Error: Unable to register for event (missing event ID or user ID).")
-            //    return
-            //}
             print("Selected event ID: \(eventId)")
             // Proceed to register for the event
             register(eventId: eventId)
-
-            // This alert should be shown only if registration was successful
-            //showAlert(message: "You have registered for the event!")
     }
     
     private func showAlert(message: String) {

@@ -19,13 +19,6 @@ class NotificationsViewController: UIViewController, UITableViewDataSource, UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tableView.dataSource = self
-        //tableView.delegate = self
-        
-        // Setup table view layout
-        //tableView.frame = view.bounds
-        //view.addSubview(tableView)
-        
         setupTableView()
         setupTableViewConstraints()
         fetchNotifications()
