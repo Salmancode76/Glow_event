@@ -6,55 +6,30 @@ Our project involves the development of an IOS Application named "Glow Events" u
 ## Group Members
 
 - **Layla Marhoon - 202200394**
-- **Zainab Abdulhussain - 202201685**
+- **Zainab Abdulhusain - 202201685**
 - **Sharmin Ali - 202203334**
 - **Thuraya Alsatrawi - 202201823**
 - **Ahmed Awadhi - 202201533**
 - **Salman Khamis - 202201782**
 
-## Features 
+## Main Features (Developer & Tester)
 
-**Layla Marhoon:** 
-
-1. Account and Role Based Features
-2. User Notification
-
-**Sharmin Ali:** 
-
-1. Personalized Event Recommendation
-2. Event Highlights
-
-
-**Salman Khamis:** 
-
-1. Organizer Event Browsing and Search
-2. Event Management
-
-**Ahmed Awadhi:** 
-
-1. Event Enrollment
-2. Event Details and Reviews
-
-**Zainab Abdulhusain:** 
-
-1. User Profile and Preferences
-2. Content Moderation and Control
-
-**Thuraya Alsatrawi:** 
-
-1. Event Insights
-2. Administrative Control Panel
-
-
-
-
-
-
-
-
-
-
-
+---------------------------------------------------------------------------------------------------------------
+|           Main Features                 |            Main Developer          |          Main Tester         |
+| --------------------------------------- | ---------------------------------- | ---------------------------- |
+| 1. Account and Role Based Features      |            Layla Marhoon           |       Thuraya Alsatrawi      |
+| 2. User Notification                    |            Layla Marhoon           |       Salman Khamis          |
+| 3. Personalized Event Recommendation    |            Sharmin Ali             |       Ahmed Awadhi           |
+| 4. Event Highlights                     |            Sharmin Ali             |       Ahmed Awadhi           |
+| 5. Organizer Event Browsing and Search  |            Salman Khamis           |       Zainab Abdulhusain     |
+| 6. Event Management                     |            Salman Khamis           |       Layla Marhoon          |
+| 7. Event Enrollment                     |            Ahmed Awadhi            |       Sharmin Ali            |
+| 8. Event Details and Reviews            |            Ahmed Awadhi            |       Thuraya Alsatrawi      |
+| 9. User Profile and Preferences         |            Zainab Abdulhusain      |       Layla Marhoon          |
+| 10. Content Moderation and Control      |            Zainab Abdulhusain      |       Salman Khamis          |
+| 11. Event Insights                      |            Thuraya Alsatrawi       |       Ahmed Awadhi           |
+| 12. Administrative Control Panel        |            Thuraya Alsatrawi       |       Zainab Abdulhusain     |
+---------------------------------------------------------------------------------------------------------------
 
 
 ## Additional Features 
