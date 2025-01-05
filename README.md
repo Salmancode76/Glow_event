@@ -80,3 +80,55 @@ https://github.com/Salmancode76/Glow_event.git
 
 ###### Reminders Notification
 <img src="images/Reminders1.png" alt="Reminder Notification" width="250">
+
+
+- **Zainab Abdulhusain** 
+- **User Screens**
+###### User Settings
+<img src="images/UserSettings.png" alt="User Settings" width="250">
+
+###### User Profile
+<img src="images/UserProfile.png" alt="User Profile" width="250">
+
+###### User Edit Profile
+<img src="images/UserEditProfile.png" alt="User Edit Profile" width="250">
+
+###### User Change Password
+<img src="images/UserChangePassword.png" alt="Change Password" width="250">
+
+
+- **Event Organizer**
+###### Event Organizer Settings
+<img src="images/EOSettings.png" alt="Event Organizer Settings" width="250">
+
+###### Event Organizer Profile 
+<img src="images/EOProfile.png" alt="Event Organizer Profile" width="250">
+
+
+- **Admin Screens**
+###### Admin Settings
+<img src="images/AdminSettings.png" alt="Admin Settings" width="250">
+
+###### Admin Profile
+<img src="images/AdminProfile.png" alt="Admin Profile" width="250">
+
+###### Admin Change Password
+<img src="images/AdminChangePassword.png" alt="Admin Change Password" width="250">
+
+###### Admin Event Detail
+<img src="images/AdminEventDetail.png" alt="Admin Event Detail" width="250">
+
+###### Admin Edit Event
+<img src="images/AdminEditEvent.png" alt="Admin Edit Event" width="250">
+
+###### Admin View Users
+<img src="images/AdminViewUsers.png" alt="Admin View Users" width="250">
+
+###### Admin Add User
+<img src="images/AdminAddUser.png" alt="Admin Add User" width="250">
+
+###### Admin View User Details
+<img src="images/UserDetail.png" alt="User Details" width="250">
+
+###### Admin Edit User Details
+<img src="images/AdminEditUserDetails.png" alt="Admin Edit User Details" width="250">
