@@ -143,7 +143,7 @@ https://github.com/Salmancode76/Glow_event.git
 <img src="images/choosePhoto.png" alt="User Upload Photo" width="250">
 
 ###### User Successfull message
-<img src="images/UserChangePassword.png" alt="User Successfull message" width="250">
+<img src="images/SuccessfulAlert.png" alt="User Successfull message" width="250">
 
 ###### User Home Screen
 <img src="images/UserHome.png" alt="User Home Screen" width="250">
