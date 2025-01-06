@@ -1,10 +1,4 @@
-//
-//  UserHome.swift
-//  Glow_event
-//
-//  Created by PRINTANICA on 03/01/2025.
-//
-
+import FirebaseAuth
 import UIKit
 import Firebase
 import FirebaseDatabase
@@ -77,54 +71,53 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         searchBar.resignFirstResponder() // Dismiss the keyboard
     }
     
-    
-    
-    
-    
     func fetchEvents() {
-        
-        let ref = Database.database().reference().child("events")
-        ref.observeSingleEvent(of: .value) { snapshot in
-            var fetchedEvents: [Event] = []
-            
-            // Check if the snapshot contains children
-            guard snapshot.exists(), snapshot.childrenCount > 0 else {
-                print("No data available in 'events' node")
-                self.events = []
-                self.tableView.reloadData()
-                return
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        let ref = Database.database().reference()
+
+        ref.child("userInterests").child(userId).observeSingleEvent(of: .value) { snapshot in
+            if let interests = snapshot.value as? [String: Bool] {
+                self.selectedCategories = interests.filter { $0.value }.map { $0.key }
+            } else {
+                self.selectedCategories = []
             }
-            
-            // Iterate over each child in the snapshot
-            for child in snapshot.children {
-                if let childSnapshot = child as? DataSnapshot,
-                   let eventData = childSnapshot.value as? [String: Any] {
-                    
-                    // Extract event details
-                    let eventName = eventData["EventName"] as? String ?? "No Name"
-                    let location = eventData["venue_options"] as? String ?? "No Location"
-                    let imageURL = eventData["EventImg"] as? String ?? ""
-                    let category = eventData["EventCategory"] as? String ?? "No Category"
-                    
-                    // Print debug information
-                    print("Fetched Event: \(eventName), \(location),\(category)")
-                    
-                    // Filter events by selected categories
-                    if self.selectedCategories.isEmpty || self.selectedCategories.contains(category) {
-                        let event = Event(name: eventName, location: location, imageURL: imageURL, category: category)
-                        fetchedEvents.append(event)
+
+            ref.child("events").observeSingleEvent(of: .value) { snapshot in
+                var fetchedEvents: [Event] = []
+
+                guard snapshot.exists(), snapshot.childrenCount > 0 else {
+                    print("No data available in 'events' node")
+                    self.events = []
+                    self.tableView.reloadData()
+                    return
+                }
+
+                for child in snapshot.children {
+                    if let childSnapshot = child as? DataSnapshot,
+                       let eventData = childSnapshot.value as? [String: Any] {
+                        let eventName = eventData["EventName"] as? String ?? "No Name"
+                        let location = eventData["venue_options"] as? String ?? "No Location"
+                        let imageURL = eventData["EventImg"] as? String ?? ""
+                        let category = eventData["EventCategory"] as? String ?? "No Category"
+
+                        if self.selectedCategories.isEmpty || self.selectedCategories.contains(category) {
+                            let event = Event(name: eventName, location: location, imageURL: imageURL, category: category)
+                            fetchedEvents.append(event)
+                        }
                     }
                 }
+
+                self.events = fetchedEvents
+                print("Total Events Fetched: \(self.events.count)")
+                self.tableView.reloadData()
             }
-            
-            // Update the events array and refresh the table view
-            self.events = fetchedEvents
-            print("Total Events Fetched: \(self.events.count)")
-            self.tableView.reloadData()
         }
-     }
+    }
     
-    // Update the events array and refresh the table view
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            fetchEvents() 
+        }
    
     
 }

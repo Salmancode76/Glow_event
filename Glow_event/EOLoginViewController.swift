@@ -45,17 +45,18 @@ class EOLoginViewController: UIViewController {
             }
             
             print("Sign-in successful. User ID: \(authResult?.user.uid ?? "Unknown UID")")
-            self.navigateToSettingsScreen()
+            self.navigateToMainScreen()
         }
     }
     
-    private func navigateToSettingsScreen() {
-        print("Attempting to navigate to ViewHighlightsViewController")
+    private func navigateToMainScreen() {
+        print("Attempting to navigate to Main ViewController")
         
-        if let settingsVC = storyboard?.instantiateViewController(withIdentifier: "ViewHighlights") {
-            print("Successfully instantiated ViewHighlights")
+        // Instantiate the main view controller using the storyboard ID
+        if let mainVC = storyboard?.instantiateViewController(withIdentifier: "Main") {
+            print("Successfully instantiated Main ViewController")
             
-            settingsVC.modalPresentationStyle = .fullScreen
+            mainVC.modalPresentationStyle = .fullScreen
             
             DispatchQueue.main.async { [weak self] in
                 guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
@@ -64,13 +65,13 @@ class EOLoginViewController: UIViewController {
                     return
                 }
                 
-                // Set the settings screen as the root view controller
-                let navigationController = UINavigationController(rootViewController: settingsVC)
+                // Set the Main view controller as the root view controller
+                let navigationController = UINavigationController(rootViewController: mainVC)
                 window.rootViewController = navigationController
                 window.makeKeyAndVisible()
             }
         } else {
-            print("Failed to instantiate ViewHighlightsViewController. Check storyboard ID.")
+            print("Failed to instantiate Main ViewController. Check storyboard ID.")
         }
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KuA-8b-1vb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KuA-8b-1vb">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,9 +85,6 @@
                     <navigationItem key="navigationItem" title="Send Highlights" id="iWP-Ih-HPe">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward" catalog="system" id="EDF-FZ-hnH">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="TL7-Gh-boL" kind="show" id="Wav-SB-pGN"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -119,16 +116,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qm8-F1-gpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-295" y="-511"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="bar-ZK-lpY">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="TL7-Gh-boL" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Uw9-4d-mJ2"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bh9-AM-H1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="172" y="-917"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
