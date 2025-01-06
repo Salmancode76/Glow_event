@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IPV-Ga-EYR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jgs-kO-i6g">
     <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
@@ -42,10 +42,11 @@
                             <outlet property="delegate" destination="IPV-Ga-EYR" id="VTZ-A3-y8K"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="FVf-eq-wRk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zcM-t6-GDX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="-166"/>
+            <point key="canvasLocation" x="2103.0534351145038" y="-166.19718309859155"/>
         </scene>
         <!--Ahmed Event View Controller-->
         <scene sceneID="gBm-xY-ggu">
@@ -213,11 +214,11 @@
                                 <rect key="frame" x="20" y="617" width="353" height="142.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ahmed_reviewCell" rowHeight="150" id="Itx-kP-l1y">
-                                        <rect key="frame" x="0.0" y="50" width="353" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ahmed_reviewCell" rowHeight="100" id="Itx-kP-l1y">
+                                        <rect key="frame" x="0.0" y="50" width="353" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Itx-kP-l1y" id="ccg-C2-0fe">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="20" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WkP-F7-VTL">
@@ -235,7 +236,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="30" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lDh-sC-i5w">
-                                                    <rect key="frame" x="60" y="61" width="268" height="82"/>
+                                                    <rect key="frame" x="60" y="61" width="268" height="32"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</string>
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -383,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsJ-zh-1il" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107.6335877862596" y="-166.19718309859155"/>
+            <point key="canvasLocation" x="2961.0687022900761" y="-166.19718309859155"/>
         </scene>
         <!--Ahmed Cart View Controller-->
         <scene sceneID="8Us-nO-bDj">
@@ -502,7 +503,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdJ-zx-DOR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896.9465648854962" y="-166.19718309859155"/>
+            <point key="canvasLocation" x="3750.3816793893129" y="-166.19718309859155"/>
         </scene>
         <!--Ahmed Pay Table View Controller-->
         <scene sceneID="LZT-Rb-LQF">
@@ -717,13 +718,91 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WMi-2W-NtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2587" y="-166"/>
+            <point key="canvasLocation" x="4438.9312977099235" y="-166.19718309859155"/>
+        </scene>
+        <!--Ahmed Tickets Table View Controller-->
+        <scene sceneID="yXR-4P-sKI">
+            <objects>
+                <tableViewController storyboardIdentifier="Ahmed_TicketsTableViewController" id="pPP-Fj-zbb" customClass="Ahmed_TicketsTableViewController" customModule="Glow_event" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="ZC6-gi-Wl4">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="pPP-Fj-zbb" id="Pxq-ta-V2n"/>
+                            <outlet property="delegate" destination="pPP-Fj-zbb" id="Swi-K4-qsa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="o0Z-mI-oqh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ODX-rL-a0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078.6259541984732" y="568.30985915492965"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="AYc-7c-NnH">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jgs-kO-i6g" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Msh-L3-7Ui">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Pvl-XI-x8D" kind="relationship" relationship="viewControllers" id="rm9-D5-y1C"/>
+                        <segue destination="a3P-Ec-cgi" kind="relationship" relationship="viewControllers" id="zxO-GR-GCD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UST-bO-j8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="249.61832061068702" y="-166.19718309859155"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="kI6-Wv-Bp4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pvl-XI-x8D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="fm7-rN-7Dg"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rNa-1B-WrW">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IPV-Ga-EYR" kind="relationship" relationship="rootViewController" id="SwL-rN-7Vt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jg2-1c-6fm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.3358778625955" y="-166.19718309859155"/>
+        </scene>
+        <!--My Tickets-->
+        <scene sceneID="XEe-Xv-pst">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a3P-Ec-cgi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Tickets" image="ticket" catalog="system" id="Pfy-IU-0Ug"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5Un-B4-lH5">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pPP-Fj-zbb" kind="relationship" relationship="rootViewController" id="KZ6-pO-7d4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WP-In-lUO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151.9083969465648" y="568.30985915492965"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
         <image name="mappin.and.ellipse" catalog="system" width="110" height="128"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="star" catalog="system" width="128" height="116"/>
+        <image name="ticket" catalog="system" width="128" height="86"/>
         <namedColor name="OurAccentColor">
             <color red="0.231372565" green="0.1411764771" blue="0.45490193369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

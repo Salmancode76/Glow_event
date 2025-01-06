@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ahmed_eventCell" rowHeight="100" id="KGk-i7-Jjw" customClass="EventTableViewCell" customModule="Glow_event" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PMq-PJ-8RP">
+                        <rect key="frame" x="10" y="13.333333333333336" width="100" height="73.666666666666657"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="Czn-UZ-Hy8"/>
+                            <constraint firstAttribute="width" constant="100" id="Mbj-0q-aal"/>
+                        </constraints>
+                        <imageReference key="image" image="person" catalog="system" symbolScale="small"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y22-oS-Tfh">
+                        <rect key="frame" x="120" y="9.9999999999999982" width="190" height="19.333333333333329"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: 50 BD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-hd-sah">
+                        <rect key="frame" x="120" y="29.333333333333332" width="190" height="15.666666666666668"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozj-AW-Ogd">
+                        <rect key="frame" x="120" y="45" width="190" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category: Concert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0H-TM-rcw">
+                        <rect key="frame" x="120" y="59.333333333333336" width="190" height="14.333333333333336"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organizer: Al Dana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUZ-9p-5In">
+                        <rect key="frame" x="120" y="73.666666666666671" width="190" height="14.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ozj-AW-Ogd" firstAttribute="leading" secondItem="PMq-PJ-8RP" secondAttribute="trailing" constant="10" id="0LJ-Sn-mEs"/>
+                    <constraint firstItem="ozj-AW-Ogd" firstAttribute="top" secondItem="Uho-hd-sah" secondAttribute="bottom" id="2IO-PC-35p"/>
+                    <constraint firstAttribute="trailing" secondItem="Y22-oS-Tfh" secondAttribute="trailing" constant="10" id="4jd-nz-GfR"/>
+                    <constraint firstItem="PMq-PJ-8RP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="7Bj-y1-6aU"/>
+                    <constraint firstItem="Y22-oS-Tfh" firstAttribute="leading" secondItem="PMq-PJ-8RP" secondAttribute="trailing" constant="10" id="ARC-Aq-5y7"/>
+                    <constraint firstAttribute="trailing" secondItem="w0H-TM-rcw" secondAttribute="trailing" constant="10" id="BlG-Bf-gLs"/>
+                    <constraint firstAttribute="trailing" secondItem="VUZ-9p-5In" secondAttribute="trailing" constant="10" id="CB8-1M-i3f"/>
+                    <constraint firstAttribute="bottom" secondItem="PMq-PJ-8RP" secondAttribute="bottom" constant="10" id="CJC-vc-ARn"/>
+                    <constraint firstItem="VUZ-9p-5In" firstAttribute="top" secondItem="w0H-TM-rcw" secondAttribute="bottom" id="DIF-7h-TLw"/>
+                    <constraint firstItem="w0H-TM-rcw" firstAttribute="top" secondItem="ozj-AW-Ogd" secondAttribute="bottom" id="FtI-in-21K"/>
+                    <constraint firstItem="Y22-oS-Tfh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="MN6-dy-YXl"/>
+                    <constraint firstItem="VUZ-9p-5In" firstAttribute="leading" secondItem="PMq-PJ-8RP" secondAttribute="trailing" constant="10" id="Wja-t5-6X5"/>
+                    <constraint firstItem="PMq-PJ-8RP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fkX-qJ-kI3"/>
+                    <constraint firstItem="Uho-hd-sah" firstAttribute="leading" secondItem="PMq-PJ-8RP" secondAttribute="trailing" constant="10" id="jie-lv-M11"/>
+                    <constraint firstItem="Uho-hd-sah" firstAttribute="top" secondItem="Y22-oS-Tfh" secondAttribute="bottom" id="tUw-ul-bqw"/>
+                    <constraint firstAttribute="trailing" secondItem="Uho-hd-sah" secondAttribute="trailing" constant="10" id="ued-HK-DCk"/>
+                    <constraint firstAttribute="trailing" secondItem="ozj-AW-Ogd" secondAttribute="trailing" constant="10" id="vcm-JV-rpI"/>
+                    <constraint firstItem="w0H-TM-rcw" firstAttribute="leading" secondItem="PMq-PJ-8RP" secondAttribute="trailing" constant="10" id="xWI-tQ-BFe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="w0H-TM-rcw" id="bGb-J4-UhM"/>
+                <outlet property="dateLabel" destination="ozj-AW-Ogd" id="32n-A1-WNq"/>
+                <outlet property="eventImageView" destination="PMq-PJ-8RP" id="Z32-p3-83t"/>
+                <outlet property="imageView" destination="PMq-PJ-8RP" id="4SZ-5y-Wye"/>
+                <outlet property="nameLabel" destination="Y22-oS-Tfh" id="wgd-ZZ-XaW"/>
+                <outlet property="organizerLabel" destination="VUZ-9p-5In" id="2lC-Xg-EIy"/>
+                <outlet property="priceLabel" destination="Uho-hd-sah" id="6GI-nB-oEG"/>
+            </connections>
+            <point key="canvasLocation" x="-29.007633587786259" y="40.140845070422536"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

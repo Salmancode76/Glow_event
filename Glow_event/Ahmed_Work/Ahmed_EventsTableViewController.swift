@@ -12,6 +12,7 @@ class Ahmed_EventsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Events"
         loadData()
     }
     

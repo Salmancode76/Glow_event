@@ -108,6 +108,9 @@
 		EE0A009D2D29919F0068E9A5 /* ahmed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE0A009C2D29919F0068E9A5 /* ahmed.storyboard */; };
 		EE0A009F2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A009E2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift */; };
 		EE0A00A32D29A0210068E9A5 /* Ahmed_EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */; };
+		EE2EA88C2D2BFBC100038BED /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2EA88A2D2BFBC100038BED /* EventTableViewCell.swift */; };
+		EE2EA88D2D2BFBC100038BED /* EventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE2EA88B2D2BFBC100038BED /* EventTableViewCell.xib */; };
+		EE2EA88F2D2C183600038BED /* Ahmed_TicketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2EA88E2D2C183600038BED /* Ahmed_TicketsTableViewController.swift */; };
 		EE4B50572D2AB44600683745 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B50562D2AB44300683745 /* Review.swift */; };
 		EE4B50592D2AC4FB00683745 /* Ahmed_CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */; };
 		EE4B505B2D2ACBE800683745 /* Ahmed_PayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */; };
@@ -194,6 +197,9 @@
 		EE0A009C2D29919F0068E9A5 /* ahmed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ahmed.storyboard; sourceTree = "<group>"; };
 		EE0A009E2D2995BB0068E9A5 /* Ahmed_EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_EventsTableViewController.swift; sourceTree = "<group>"; };
 		EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_EventViewController.swift; sourceTree = "<group>"; };
+		EE2EA88A2D2BFBC100038BED /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		EE2EA88B2D2BFBC100038BED /* EventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTableViewCell.xib; sourceTree = "<group>"; };
+		EE2EA88E2D2C183600038BED /* Ahmed_TicketsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_TicketsTableViewController.swift; sourceTree = "<group>"; };
 		EE4B50562D2AB44300683745 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_CartViewController.swift; sourceTree = "<group>"; };
 		EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahmed_PayTableViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +415,9 @@
 				EE0A00A22D29A0210068E9A5 /* Ahmed_EventViewController.swift */,
 				EE4B50582D2AC4FB00683745 /* Ahmed_CartViewController.swift */,
 				EE4B505A2D2ACBE800683745 /* Ahmed_PayTableViewController.swift */,
+				EE2EA88A2D2BFBC100038BED /* EventTableViewCell.swift */,
+				EE2EA88B2D2BFBC100038BED /* EventTableViewCell.xib */,
+				EE2EA88E2D2C183600038BED /* Ahmed_TicketsTableViewController.swift */,
 			);
 			path = Ahmed_Work;
 			sourceTree = "<group>";
@@ -502,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2EA88D2D2BFBC100038BED /* EventTableViewCell.xib in Resources */,
 				D53D71D82D098E7000B88D24 /* Event_Management.storyboard in Resources */,
 				D5BB85632CF45A9E001082C0 /* LaunchScreen.storyboard in Resources */,
 				D0EB8A062D09882900D78EC9 /* Event Browsing and Interest.storyboard in Resources */,
@@ -564,6 +574,7 @@
 				6CF9DBB52D25F41600C27F91 /* ReportsListVC.swift in Sources */,
 				6CF9DBAD2D25F3BD00C27F91 /* LoginVC.swift in Sources */,
 				BBD5EDC02D25C6A700EAB60C /* Event.swift in Sources */,
+				EE2EA88C2D2BFBC100038BED /* EventTableViewCell.swift in Sources */,
 				BDDFEA1B2D260839003689FF /* UserDetailViewController.swift in Sources */,
 				BDDFEA112D26081D003689FF /* AddUserViewController.swift in Sources */,
 				BDDFEA152D260828003689FF /* AddUserTestViewController.swift in Sources */,
@@ -582,6 +593,7 @@
 				D5BB85572CF45A9C001082C0 /* AppDelegate.swift in Sources */,
 				6CF9DBD22D25F82400C27F91 /* EventOrgTableViewCell 2.swift in Sources */,
 				BBD5EDB42D25C60400EAB60C /* SearchEventOrgViewController.swift in Sources */,
+				EE2EA88F2D2C183600038BED /* Ahmed_TicketsTableViewController.swift in Sources */,
 				BDDFEA2F2D260890003689FF /* Admin.swift in Sources */,
 				BDDFE9FF2D2607E7003689FF /* UserSettingsViewController.swift in Sources */,
 				BDDFEA092D260806003689FF /* AdminLoginViewController.swift in Sources */,

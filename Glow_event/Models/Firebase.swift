@@ -176,13 +176,14 @@ struct FirebaseDB {
     static func saveTicket(eventID: String, quantity: Int, price: Double, completion: @escaping (Bool, String?) -> Void) {
         // Create a ticket object with the provided details
         let ticketData: [String: Any] = [
-            "quantity": quantity,
             "userID": userID,
+            "eventID": eventID,
+            "quantity": quantity,
             "price": price
         ]
         
-        // Push the ticket data to the Firebase database under the "tickets" node for the specific event
-        ref.child("tickets").child(eventID).child(userID).childByAutoId().setValue(ticketData) { error, _ in
+        // Push the ticket data to Firebase under the "tickets" node using AutoID
+        ref.child("tickets").childByAutoId().setValue(ticketData) { error, _ in
             if let error = error {
                 print("Error saving ticket: \(error.localizedDescription)")
                 completion(false, error.localizedDescription)
@@ -192,35 +193,31 @@ struct FirebaseDB {
             }
         }
     }
+
     
     static func getTickets(completion: @escaping ([Ticket]) -> Void) {
-        // Observe the "tickets" node to fetch all tickets for the given userID
+        // Observe the "tickets" node to fetch all tickets
         ref.child("tickets").observe(.value, with: { snapshot in
             var userTickets: [Ticket] = []
             
+            // Iterate through all tickets in the snapshot
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot,
-                   let eventTickets = snapshot.value as? [String: Any] {
+                   let ticketData = snapshot.value as? [String: Any] {
                     
-                    // Iterate through the tickets for each event
-                    for (eventID, ticketData) in eventTickets {
-                        if let ticketDict = ticketData as? [String: Any] {
-                            
-                            // Check if the ticket belongs to the userID
-                            if let ticketUserID = ticketDict["userID"] as? String, ticketUserID == self.userID {
-                                
-                                // Create a Ticket object from the ticket data
-                                let ticket = Ticket(
-                                    eventID: eventID,
-                                    quantity: ticketDict["quantity"] as? Int ?? 0,
-                                    userID: ticketUserID,
-                                    price: ticketDict["price"] as? Double ?? 0.0
-                                )
-                                
-                                // Add the ticket to the array
-                                userTickets.append(ticket)
-                            }
-                        }
+                    // Check if the ticket belongs to the userID
+                    if let ticketUserID = ticketData["userID"] as? String, ticketUserID == self.userID {
+                        
+                        // Create a Ticket object from the ticket data
+                        let ticket = Ticket(
+                            eventID: ticketData["eventID"] as? String ?? "",
+                            quantity: ticketData["quantity"] as? Int ?? 0,
+                            userID: ticketUserID,
+                            price: ticketData["price"] as? Double ?? 0.0
+                        )
+                        
+                        // Add the ticket to the array
+                        userTickets.append(ticket)
                     }
                 }
             }
@@ -229,6 +226,23 @@ struct FirebaseDB {
             completion(userTickets)
         })
     }
-
     
+    static func getEventsForUserTickets(completion: @escaping ([Event]) -> Void) {
+        // First, fetch the user's tickets
+        getTickets { tickets in
+            // Extract the eventIDs from the tickets
+            let eventIDs = tickets.map { $0.eventID }
+            
+            // Now, fetch all events
+            GetAllEvents { events in
+                // Filter the events based on the eventIDs from the user's tickets
+                let filteredEvents = events.filter { event in
+                    eventIDs.contains(event.id) // Assuming the Event class has an 'id' property
+                }
+                
+                // Return the filtered events
+                completion(filteredEvents)
+            }
+        }
+    }
 }
