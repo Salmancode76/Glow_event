@@ -10,10 +10,16 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
     var selectedCategories: [String] = []
     var events: [Event] = []
     
+    
+    
+    
+    
     var filteredEvents: [Event] = [] // Array to hold filtered events
     var isSearching = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = 100
         
         fetchEvents()
         
@@ -31,6 +37,8 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         return isSearching ? filteredEvents.count : events.count
     }
     
+  
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventTableViewCell
@@ -41,6 +49,18 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         cell.eventLocation.text = event.location
         cell.eventCategory.text = event.category
         
+        cell.heartButton.addTarget(self, action: #selector(heartButtonTapped(_:)), for: .touchUpInside)
+
+        
+        cell.heartButton.setImage(UIImage(systemName: "heart"), for: .normal)         // Empty heart
+            cell.heartButton.setImage(UIImage(systemName: "heart.fill"), for: .selected) 
+        // Filled heart
+        
+        cell.heartButton.tintColor = .red
+        
+          
+
+        
         if let url = URL(string: event.imageURL) {
             cell.eventImage.loadImage(from: url)
         }
@@ -49,6 +69,14 @@ class UserHome: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         
         return cell
     }
+    
+    
+    @objc func heartButtonTapped(_ sender: UIButton) {
+        
+        sender.isSelected.toggle()
+    }
+    
+   
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {

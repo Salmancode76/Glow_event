@@ -13,8 +13,12 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventLocation: UILabel!
     @IBOutlet weak var eventName: UILabel!
     
+  
     @IBOutlet weak var eventCategory: UILabel!
     
+    @IBOutlet weak var heartButton: UIButton!
+    
+    var isHeartSelected = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +32,9 @@ class EventTableViewCell: UITableViewCell {
     }
     
    
-     
+    
+    
+    
                 
             
         }
